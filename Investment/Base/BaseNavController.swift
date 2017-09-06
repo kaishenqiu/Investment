@@ -12,7 +12,7 @@ class BaseNavController: UINavigationController, UIGestureRecognizerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationBar.setBackgroundImage(getImageWithColor(color: #colorLiteral(red: 0.3333333333, green: 0.7529411765, blue: 0.9019607843, alpha: 1), size: CGSize(width:1,height:1)), for: .any, barMetrics: .default)
+        self.navigationBar.setBackgroundImage(getImageWithColor(color: #colorLiteral(red: 0.9294117647, green: 0.2352941176, blue: 0.2196078431, alpha: 1), size: CGSize(width:1,height:1)), for: .any, barMetrics: .default)
         interactivePopGestureRecognizer?.delegate = self
         // Do any additional setup after loading the view.
         self.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]

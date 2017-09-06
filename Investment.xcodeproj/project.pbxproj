@@ -22,6 +22,10 @@
 		589F31601F5F9E600004E83D /* FourthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589F315F1F5F9E600004E83D /* FourthController.swift */; };
 		589F31621F5FA0050004E83D /* BaseNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589F31611F5FA0050004E83D /* BaseNavController.swift */; };
 		589F31641F5FA0A40004E83D /* GlobalFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589F31631F5FA0A40004E83D /* GlobalFunction.swift */; };
+		589F316D1F5FB5130004E83D /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589F316C1F5FB5130004E83D /* UIView+Extension.swift */; };
+		589F316F1F5FB5660004E83D /* LeftController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589F316E1F5FB5660004E83D /* LeftController.swift */; };
+		589F31711F5FB5720004E83D /* RightController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589F31701F5FB5720004E83D /* RightController.swift */; };
+		589F31731F5FC7520004E83D /* SecondCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589F31721F5FC7520004E83D /* SecondCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +45,10 @@
 		589F315F1F5F9E600004E83D /* FourthController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FourthController.swift; path = Investment/FourthController.swift; sourceTree = SOURCE_ROOT; };
 		589F31611F5FA0050004E83D /* BaseNavController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavController.swift; sourceTree = "<group>"; };
 		589F31631F5FA0A40004E83D /* GlobalFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalFunction.swift; sourceTree = "<group>"; };
+		589F316C1F5FB5130004E83D /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		589F316E1F5FB5660004E83D /* LeftController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftController.swift; sourceTree = "<group>"; };
+		589F31701F5FB5720004E83D /* RightController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightController.swift; sourceTree = "<group>"; };
+		589F31721F5FC7520004E83D /* SecondCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondCell.swift; sourceTree = "<group>"; };
 		AC62D6580094BFC44A6B8EF4 /* Pods_Investment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Investment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADC5CC48A22D8C8EAA110E1A /* Pods-Investment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Investment.release.xcconfig"; path = "Pods/Target Support Files/Pods-Investment/Pods-Investment.release.xcconfig"; sourceTree = "<group>"; };
 		E8A5407F8DC43D5C6BD37496 /* Pods-Investment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Investment.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Investment/Pods-Investment.debug.xcconfig"; sourceTree = "<group>"; };
@@ -107,6 +115,8 @@
 			children = (
 				588755321F16043000602D43 /* First.storyboard */,
 				589F31591F5F9E330004E83D /* FirstController.swift */,
+				589F316E1F5FB5660004E83D /* LeftController.swift */,
+				589F31701F5FB5720004E83D /* RightController.swift */,
 			);
 			path = First;
 			sourceTree = "<group>";
@@ -116,6 +126,7 @@
 			children = (
 				589F315B1F5F9E420004E83D /* SecondController.swift */,
 				588755341F16043C00602D43 /* Second.storyboard */,
+				589F31721F5FC7520004E83D /* SecondCell.swift */,
 			);
 			path = Second;
 			sourceTree = "<group>";
@@ -150,6 +161,7 @@
 		589F316B1F5FA2140004E83D /* Global */ = {
 			isa = PBXGroup;
 			children = (
+				589F316C1F5FB5130004E83D /* UIView+Extension.swift */,
 				589F31631F5FA0A40004E83D /* GlobalFunction.swift */,
 			);
 			path = Global;
@@ -292,8 +304,12 @@
 			files = (
 				589F315A1F5F9E330004E83D /* FirstController.swift in Sources */,
 				589F315E1F5F9E520004E83D /* ThirdController.swift in Sources */,
+				589F316F1F5FB5660004E83D /* LeftController.swift in Sources */,
 				589F315C1F5F9E420004E83D /* SecondController.swift in Sources */,
+				589F316D1F5FB5130004E83D /* UIView+Extension.swift in Sources */,
 				5887551F1F1600FF00602D43 /* AppDelegate.swift in Sources */,
+				589F31711F5FB5720004E83D /* RightController.swift in Sources */,
+				589F31731F5FC7520004E83D /* SecondCell.swift in Sources */,
 				589F31621F5FA0050004E83D /* BaseNavController.swift in Sources */,
 				588755311F16028A00602D43 /* BaseTabbarController.swift in Sources */,
 				589F31641F5FA0A40004E83D /* GlobalFunction.swift in Sources */,

@@ -5,13 +5,15 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Second Controller-->
         <scene sceneID="UK5-pL-U8F">
             <objects>
-                <viewController id="Bhr-m3-y8v" customClass="SecondController" customModule="Investment" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="Bhr-m3-y8v" customClass="SecondController" customModule="Investment" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hHE-1v-klL"/>
                         <viewControllerLayoutGuide type="bottom" id="k5e-dX-yI6"/>
@@ -19,9 +21,47 @@
                     <view key="view" contentMode="scaleToFill" id="dVQ-mE-D7i">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="106" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WpM-sT-poq">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="left" rowHeight="106" id="hsw-wW-8CZ" customClass="SecondCell" customModule="Investment" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="106"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hsw-wW-8CZ" id="AwO-YF-Mcm">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="105.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LnL-xL-Hhy">
+                                                    <rect key="frame" x="15" y="20.5" width="84" height="63"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="LnL-xL-Hhy" secondAttribute="height" multiplier="4:3" id="edD-OL-i5a"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="LnL-xL-Hhy" firstAttribute="height" secondItem="AwO-YF-Mcm" secondAttribute="height" multiplier="0.6" id="JzM-za-kfY"/>
+                                                <constraint firstItem="LnL-xL-Hhy" firstAttribute="centerY" secondItem="AwO-YF-Mcm" secondAttribute="centerY" id="KBj-fU-86y"/>
+                                                <constraint firstItem="LnL-xL-Hhy" firstAttribute="leading" secondItem="AwO-YF-Mcm" secondAttribute="leading" constant="15" id="qgi-F9-g3x"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="WpM-sT-poq" firstAttribute="top" secondItem="hHE-1v-klL" secondAttribute="bottom" id="DOC-Nf-L59"/>
+                            <constraint firstItem="WpM-sT-poq" firstAttribute="leading" secondItem="dVQ-mE-D7i" secondAttribute="leading" id="sPX-pA-u6p"/>
+                            <constraint firstAttribute="trailing" secondItem="WpM-sT-poq" secondAttribute="trailing" id="scF-eL-bw1"/>
+                            <constraint firstItem="k5e-dX-yI6" firstAttribute="top" secondItem="WpM-sT-poq" secondAttribute="bottom" id="xQV-dr-P9S"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="bLU-wc-IwA"/>
+                    <connections>
+                        <outlet property="tableView" destination="WpM-sT-poq" id="7sB-II-EZd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T3x-PI-N9X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
