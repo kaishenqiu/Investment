@@ -18,10 +18,10 @@ class BaseTabbarController: UITabBarController {
         setUpTabbarItemTextArrtibutes()
         
         //添加子控制器
-        setUpChildController(vc:  UIStoryboard.init(name: "First", bundle: nil).instantiateInitialViewController()!, title: "首页", image: #imageLiteral(resourceName: "fangy-30"), selectedImage: #imageLiteral(resourceName: "fangy-30"))
-        setUpChildController(vc: UIStoryboard.init(name: "Second", bundle: nil).instantiateInitialViewController()!, title: "地图", image: #imageLiteral(resourceName: "fangy-30"), selectedImage: #imageLiteral(resourceName: "fangy-30"))
-        setUpChildController(vc: UIStoryboard.init(name: "Third", bundle: nil).instantiateInitialViewController()!, title: "政策", image: #imageLiteral(resourceName: "fangy-30"), selectedImage: #imageLiteral(resourceName: "fangy-30"))
-        setUpChildController(vc: UIStoryboard.init(name: "Fourth", bundle: nil).instantiateInitialViewController()!, title: "我", image: #imageLiteral(resourceName: "fangy-30"), selectedImage: #imageLiteral(resourceName: "fangy-30"))
+        setUpChildController(vc:  UIStoryboard.init(name: "First", bundle: nil).instantiateInitialViewController()!, title: "投资", image: #imageLiteral(resourceName: "fangy-30"), selectedImage: #imageLiteral(resourceName: "fangy-30"))
+        setUpChildController(vc: UIStoryboard.init(name: "Second", bundle: nil).instantiateInitialViewController()!, title: "商城", image: #imageLiteral(resourceName: "fangy-30"), selectedImage: #imageLiteral(resourceName: "fangy-30"))
+        setUpChildController(vc: UIStoryboard.init(name: "Third", bundle: nil).instantiateInitialViewController()!, title: "地图", image: #imageLiteral(resourceName: "fangy-30"), selectedImage: #imageLiteral(resourceName: "fangy-30"))
+        setUpChildController(vc: UIStoryboard.init(name: "Fourth", bundle: nil).instantiateInitialViewController()!, title: "我的", image: #imageLiteral(resourceName: "fangy-30"), selectedImage: #imageLiteral(resourceName: "fangy-30"))
     }
 
     override func didReceiveMemoryWarning() {

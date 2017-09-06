@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--First Controller-->
         <scene sceneID="HKC-ft-VnZ">
             <objects>
-                <viewController id="dcD-ah-3Ld" sceneMemberID="viewController">
+                <viewController id="dcD-ah-3Ld" customClass="FirstController" customModule="Investment" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="m2Z-kw-bwP"/>
                         <viewControllerLayoutGuide type="bottom" id="vdV-Zb-ye8"/>
@@ -27,10 +27,10 @@
             </objects>
             <point key="canvasLocation" x="684" y="22.938530734632685"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Base Nav Controller-->
         <scene sceneID="UpO-IH-qqo">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Rq0-Ai-VvY" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Rq0-Ai-VvY" customClass="BaseNavController" customModule="Investment" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="oWN-VZ-TWY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
