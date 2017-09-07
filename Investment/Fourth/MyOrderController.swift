@@ -1,14 +1,14 @@
 //
-//  FirstController.swift
+//  MyOrderController.swift
 //  Investment
 //
-//  Created by 邱仙凯 on 2017/9/6.
+//  Created by 邱仙凯 on 2017/9/7.
 //  Copyright © 2017年 kaishen. All rights reserved.
 //
 
 import UIKit
 
-class FirstController: UIViewController, UIScrollViewDelegate {
+class MyOrderController: UIViewController, UIScrollViewDelegate {
     
     //UIScrollView
     fileprivate lazy var scrollView: UIScrollView = {
@@ -42,7 +42,7 @@ class FirstController: UIViewController, UIScrollViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
+        
         
         setUpUI()
         
@@ -55,16 +55,16 @@ class FirstController: UIViewController, UIScrollViewDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         let firstTitleButton = titlesView.subviews[0] as! UIButton
- 
-            selectButton.isSelected = false
-            firstTitleButton.isSelected = true
-            selectButton = firstTitleButton
-            titleClick(sender: firstTitleButton)
-     
+        
+        selectButton.isSelected = false
+        firstTitleButton.isSelected = true
+        selectButton = firstTitleButton
+        titleClick(sender: firstTitleButton)
+        
     }
     
 }
-extension FirstController {
+extension MyOrderController {
     func setUpUI() {
         //添加子控制器
         setUpChildViewControllers()
@@ -81,7 +81,7 @@ extension FirstController {
 }
 
 
-extension FirstController {
+extension MyOrderController {
     // MARK:添加子控制器
     fileprivate func setUpChildViewControllers() {
         let storyboard = UIStoryboard(name: "First", bundle: nil)
@@ -111,7 +111,7 @@ extension FirstController {
         view.addSubview(titlesView)
         
         //添加标题
-        let titles = ["投资列表","债券列表"]
+        let titles = ["全部","待付款"]
         let count = titles.count
         let titleButtonW = titlesView.frame.size.width / CGFloat(count)
         let titleButtonH = titlesView.frame.size.height
@@ -168,7 +168,7 @@ extension FirstController {
     }
 }
 
-extension FirstController {
+extension MyOrderController {
     // MARK:UIScrollViewDelegate
     func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
         addChildView()

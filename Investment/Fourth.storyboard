@@ -110,6 +110,9 @@
                                 <state key="normal" title="我的订单" image="我的订单">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="p6G-FN-NAL" kind="show" id="gzD-aW-t6T"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oIH-p3-uDO">
                                 <rect key="frame" x="187.5" y="404" width="187.5" height="50"/>
@@ -180,6 +183,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KD4-S8-ci1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1044" y="125.4872563718141"/>
+        </scene>
+        <!--My Order Controller-->
+        <scene sceneID="KvZ-8w-Niy">
+            <objects>
+                <viewController id="p6G-FN-NAL" customClass="MyOrderController" customModule="Investment" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4pE-Tj-nnR"/>
+                        <viewControllerLayoutGuide type="bottom" id="QHs-Db-2JJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FQW-tF-qL6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hXM-6q-OLc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1866" y="125"/>
         </scene>
         <!--Base Nav Controller-->
         <scene sceneID="gWv-sb-sbx">
