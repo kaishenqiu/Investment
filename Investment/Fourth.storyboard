@@ -38,51 +38,99 @@
                                             <constraint firstAttribute="height" constant="60" id="pAr-nq-cf6"/>
                                         </constraints>
                                     </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="总累计盈利（元）" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qdb-ez-Iba">
+                                        <rect key="frame" x="118" y="30" width="139" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZIl-BR-G8h">
+                                        <rect key="frame" x="166.5" y="81" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fdw-uc-pVC">
+                                        <rect key="frame" x="141" y="132" width="93" height="21"/>
+                                        <state key="normal" title="资产详情" backgroundImage="资产详情">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.92941176470588238" green="0.23529411764705882" blue="0.2196078431372549" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="f8n-ev-I1X" secondAttribute="bottom" id="4Tb-kf-DcY"/>
                                     <constraint firstAttribute="bottom" secondItem="O8S-3c-EzB" secondAttribute="bottom" id="8qd-E8-8pl"/>
                                     <constraint firstItem="f8n-ev-I1X" firstAttribute="leading" secondItem="O8S-3c-EzB" secondAttribute="trailing" id="BZL-GY-Ek2"/>
+                                    <constraint firstItem="Qdb-ez-Iba" firstAttribute="centerX" secondItem="kxa-hm-Qnr" secondAttribute="centerX" id="KzP-4M-m1h"/>
                                     <constraint firstItem="f8n-ev-I1X" firstAttribute="width" secondItem="O8S-3c-EzB" secondAttribute="width" id="M8C-na-qrx"/>
+                                    <constraint firstItem="ZIl-BR-G8h" firstAttribute="centerX" secondItem="kxa-hm-Qnr" secondAttribute="centerX" id="SWy-t0-neo"/>
+                                    <constraint firstItem="fdw-uc-pVC" firstAttribute="centerX" secondItem="kxa-hm-Qnr" secondAttribute="centerX" id="beT-Mz-dFC"/>
+                                    <constraint firstItem="fdw-uc-pVC" firstAttribute="top" secondItem="ZIl-BR-G8h" secondAttribute="bottom" constant="30" id="hIZ-52-5mz"/>
+                                    <constraint firstItem="ZIl-BR-G8h" firstAttribute="top" secondItem="Qdb-ez-Iba" secondAttribute="bottom" constant="30" id="iIk-IQ-5i9"/>
                                     <constraint firstAttribute="trailing" secondItem="f8n-ev-I1X" secondAttribute="trailing" id="iWi-pJ-V3k"/>
+                                    <constraint firstItem="Qdb-ez-Iba" firstAttribute="top" secondItem="kxa-hm-Qnr" secondAttribute="top" constant="30" id="mei-C6-U1m"/>
                                     <constraint firstItem="O8S-3c-EzB" firstAttribute="leading" secondItem="kxa-hm-Qnr" secondAttribute="leading" id="xDy-2k-fRE"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fmd-0j-IV3">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fmd-0j-IV3">
                                 <rect key="frame" x="0.0" y="304" width="187.5" height="50"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="RYo-ru-gnp"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="充值" image="充值">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mnW-4V-9LT">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mnW-4V-9LT">
                                 <rect key="frame" x="187.5" y="304" width="187.5" height="50"/>
-                                <state key="normal" title="Button"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="提现" image="提现">
+                                    <color key="titleColor" red="0.20199476520000001" green="0.1451275953" blue="0.030652782890000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E5f-50-phY">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E5f-50-phY">
                                 <rect key="frame" x="0.0" y="354" width="187.5" height="50"/>
-                                <state key="normal" title="Button"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="我的投资" image="我的投资">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GBs-3c-Nf8">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GBs-3c-Nf8">
                                 <rect key="frame" x="187.5" y="354" width="187.5" height="50"/>
-                                <state key="normal" title="Button"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="银行卡管理" image="银行卡管理">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NiJ-Pa-7Cn">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NiJ-Pa-7Cn">
                                 <rect key="frame" x="0.0" y="404" width="187.5" height="50"/>
-                                <state key="normal" title="Button"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="我的订单" image="我的订单">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oIH-p3-uDO">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oIH-p3-uDO">
                                 <rect key="frame" x="187.5" y="404" width="187.5" height="50"/>
-                                <state key="normal" title="Button"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="安全中心" image="安全中心">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m5q-rm-cem">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m5q-rm-cem">
                                 <rect key="frame" x="0.0" y="454" width="187.5" height="50"/>
-                                <state key="normal" title="Button"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="工资理财" image="工资理财">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zKO-2K-CBx">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zKO-2K-CBx">
                                 <rect key="frame" x="187.5" y="454" width="187.5" height="50"/>
-                                <state key="normal" title="Button"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="关于产品" image="关于产品">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -152,4 +200,15 @@
             <point key="canvasLocation" x="104.8" y="125.4872563718141"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="充值" width="25" height="25"/>
+        <image name="关于产品" width="25" height="25"/>
+        <image name="安全中心" width="25" height="25"/>
+        <image name="工资理财" width="25" height="25"/>
+        <image name="我的投资" width="25" height="25"/>
+        <image name="我的订单" width="25" height="25"/>
+        <image name="提现" width="25" height="25"/>
+        <image name="资产详情" width="93" height="21"/>
+        <image name="银行卡管理" width="25" height="25"/>
+    </resources>
 </document>

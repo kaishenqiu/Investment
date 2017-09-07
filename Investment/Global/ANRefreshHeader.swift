@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import MJRefresh
 class ANRefreshHeader: MJRefreshNormalHeader {
     override func prepare() {
         super.prepare()
