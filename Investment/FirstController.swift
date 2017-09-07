@@ -24,7 +24,7 @@ class FirstController: UIViewController, UIScrollViewDelegate {
     //底部的指示器
     fileprivate lazy var indicatorView: UIView = {
         let indicatorView = UIView()
-        indicatorView.backgroundColor = #colorLiteral(red: 0.09803921569, green: 0.6, blue: 0.9137254902, alpha: 1)
+        indicatorView.backgroundColor = GlobalColor
         return indicatorView
     }()
     

@@ -43,7 +43,7 @@ extension BaseTabbarController {
         item.setTitleTextAttributes(normalAttrs, for: .normal)
         //选中状态下的文字
         var selectAttrs = [String : Any]()
-        selectAttrs[NSForegroundColorAttributeName] = #colorLiteral(red: 0.9294117647, green: 0.2352941176, blue: 0.2196078431, alpha: 1)
+        selectAttrs[NSForegroundColorAttributeName] = GlobalColor
         item.setTitleTextAttributes(selectAttrs, for: .selected)
     }
     
