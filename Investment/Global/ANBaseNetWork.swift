@@ -98,30 +98,22 @@ class ANBaseNetWork: NSObject {
         
         provider.request(target) { result in
 
-            guard result != nil else {
-                if let handle = errorHandle {
-                    handle("暂无数据")
-                }
-                return
-            }
-
             
             switch result {
             case let .success(response):
                 do {
                     let json = try response.mapJSON()
                     let data = JSON(json)
-                                print(data)
                     
-                    if data["flag"].stringValue == "true" {
-                        if let json_array = data["info"].array {
+                    if data["code"].stringValue == "200" {
+                        if let json_array = data["data"].array {
                             if let handle = successHandle {
                                 handle(json_array)
                             }
                         }
                     } else {
                         if let handle = errorHandle {
-                            handle(data["info"].stringValue)
+                            handle(data["msg"].stringValue)
                         }
                     }
                 } catch {

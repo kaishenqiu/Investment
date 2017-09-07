@@ -12,6 +12,16 @@ class LeftController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        ANBaseNetWork.sharedInstance.networkForListNOHUD(.projectList(page: "1"), successHandle: { (result) in
+  
+            print(result)
+        }) { (errorStr) in
+            
+            
+        }
+        
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
