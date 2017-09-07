@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class LeftCell: UITableViewCell {
 
@@ -14,7 +15,20 @@ class LeftCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
+    
+    var oneModel = LeftModel(json:JSON.null) {
+        didSet {
+            title.text = oneModel.name
+      
+            
+            
+        }
+    }
+    
+    @IBOutlet weak var title: UILabel!
 
+    @IBOutlet weak var num: UILabel!
+    @IBOutlet weak var tip: UILabel!
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 

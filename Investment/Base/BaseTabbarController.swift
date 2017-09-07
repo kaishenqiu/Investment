@@ -18,10 +18,10 @@ class BaseTabbarController: UITabBarController {
         setUpTabbarItemTextArrtibutes()
         
         //添加子控制器
-        setUpChildController(vc:  UIStoryboard.init(name: "First", bundle: nil).instantiateInitialViewController()!, title: "投资", image: #imageLiteral(resourceName: "fangy-30"), selectedImage: #imageLiteral(resourceName: "fangy-30"))
-        setUpChildController(vc: UIStoryboard.init(name: "Second", bundle: nil).instantiateInitialViewController()!, title: "商城", image: #imageLiteral(resourceName: "fangy-30"), selectedImage: #imageLiteral(resourceName: "fangy-30"))
-        setUpChildController(vc: UIStoryboard.init(name: "Third", bundle: nil).instantiateInitialViewController()!, title: "地图", image: #imageLiteral(resourceName: "fangy-30"), selectedImage: #imageLiteral(resourceName: "fangy-30"))
-        setUpChildController(vc: UIStoryboard.init(name: "Fourth", bundle: nil).instantiateInitialViewController()!, title: "我的", image: #imageLiteral(resourceName: "fangy-30"), selectedImage: #imageLiteral(resourceName: "fangy-30"))
+        setUpChildController(vc:  UIStoryboard.init(name: "First", bundle: nil).instantiateInitialViewController()!, title: "投资", image: #imageLiteral(resourceName: "tou"), selectedImage: #imageLiteral(resourceName: "tou_enter"))
+        setUpChildController(vc: UIStoryboard.init(name: "Second", bundle: nil).instantiateInitialViewController()!, title: "商城", image: #imageLiteral(resourceName: "buy"), selectedImage: #imageLiteral(resourceName: "buy_enter"))
+        setUpChildController(vc: UIStoryboard.init(name: "Third", bundle: nil).instantiateInitialViewController()!, title: "地图", image: #imageLiteral(resourceName: "search"), selectedImage: #imageLiteral(resourceName: "search_enter"))
+        setUpChildController(vc: UIStoryboard.init(name: "Fourth", bundle: nil).instantiateInitialViewController()!, title: "我的", image: #imageLiteral(resourceName: "my"), selectedImage: #imageLiteral(resourceName: "my_enter"))
     }
 
     override func didReceiveMemoryWarning() {
@@ -43,7 +43,7 @@ extension BaseTabbarController {
         item.setTitleTextAttributes(normalAttrs, for: .normal)
         //选中状态下的文字
         var selectAttrs = [String : Any]()
-        selectAttrs[NSForegroundColorAttributeName] = #colorLiteral(red: 0.09803921569, green: 0.6, blue: 0.9137254902, alpha: 1)
+        selectAttrs[NSForegroundColorAttributeName] = #colorLiteral(red: 0.9294117647, green: 0.2352941176, blue: 0.2196078431, alpha: 1)
         item.setTitleTextAttributes(selectAttrs, for: .selected)
     }
     

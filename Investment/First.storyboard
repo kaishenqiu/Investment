@@ -32,16 +32,16 @@
         <scene sceneID="1AD-Mf-aL2">
             <objects>
                 <tableViewController storyboardIdentifier="left" id="N2a-ox-p7l" customClass="LeftController" customModule="Investment" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="184" sectionHeaderHeight="28" sectionFooterHeight="28" id="Ldh-0k-Gj4">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="138" sectionHeaderHeight="28" sectionFooterHeight="28" id="Ldh-0k-Gj4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LeftCell" rowHeight="184" id="TWY-dI-7Zh" customClass="LeftCell" customModule="Investment" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="184"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LeftCell" rowHeight="138" id="TWY-dI-7Zh" customClass="LeftCell" customModule="Investment" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="138"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TWY-dI-7Zh" id="xjk-AH-wpU">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="183.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="137.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jkO-bJ-PCk">
@@ -122,6 +122,11 @@
                                         <constraint firstItem="xlq-qH-bQD" firstAttribute="top" secondItem="xbD-h8-ikT" secondAttribute="bottom" constant="5" id="xeG-gZ-UHq"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="num" destination="xlg-L7-bJh" id="6SF-i4-CSh"/>
+                                    <outlet property="tip" destination="z6h-qK-LNI" id="UPl-EJ-GUq"/>
+                                    <outlet property="title" destination="jkO-bJ-PCk" id="RSa-md-QbT"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

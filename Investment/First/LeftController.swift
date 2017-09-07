@@ -54,7 +54,7 @@ class LeftController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "LeftCell", for: indexPath) as! LeftCell
-//        cell.oneModel = dataArray[indexPath.row]
+        cell.oneModel = dataArray[indexPath.row]
  
         return cell
     }
