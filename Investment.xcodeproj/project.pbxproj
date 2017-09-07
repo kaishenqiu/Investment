@@ -26,6 +26,9 @@
 		589F316F1F5FB5660004E83D /* LeftController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589F316E1F5FB5660004E83D /* LeftController.swift */; };
 		589F31711F5FB5720004E83D /* RightController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589F31701F5FB5720004E83D /* RightController.swift */; };
 		589F31731F5FC7520004E83D /* SecondCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589F31721F5FC7520004E83D /* SecondCell.swift */; };
+		589F31991F5FF3AD0004E83D /* ITService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589F31981F5FF3AD0004E83D /* ITService.swift */; };
+		589F319B1F5FF5AC0004E83D /* ANBaseNetWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589F319A1F5FF5AC0004E83D /* ANBaseNetWork.swift */; };
+		589F31A11F5FF7DC0004E83D /* ANLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589F31A01F5FF7DC0004E83D /* ANLog.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +52,10 @@
 		589F316E1F5FB5660004E83D /* LeftController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftController.swift; sourceTree = "<group>"; };
 		589F31701F5FB5720004E83D /* RightController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightController.swift; sourceTree = "<group>"; };
 		589F31721F5FC7520004E83D /* SecondCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondCell.swift; sourceTree = "<group>"; };
+		589F31981F5FF3AD0004E83D /* ITService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITService.swift; sourceTree = "<group>"; };
+		589F319A1F5FF5AC0004E83D /* ANBaseNetWork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ANBaseNetWork.swift; sourceTree = "<group>"; };
+		589F319C1F5FF6110004E83D /* Investment-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Investment-Bridging-Header.h"; sourceTree = "<group>"; };
+		589F31A01F5FF7DC0004E83D /* ANLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ANLog.swift; sourceTree = "<group>"; };
 		AC62D6580094BFC44A6B8EF4 /* Pods_Investment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Investment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADC5CC48A22D8C8EAA110E1A /* Pods-Investment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Investment.release.xcconfig"; path = "Pods/Target Support Files/Pods-Investment/Pods-Investment.release.xcconfig"; sourceTree = "<group>"; };
 		E8A5407F8DC43D5C6BD37496 /* Pods-Investment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Investment.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Investment/Pods-Investment.debug.xcconfig"; sourceTree = "<group>"; };
@@ -163,6 +170,10 @@
 			children = (
 				589F316C1F5FB5130004E83D /* UIView+Extension.swift */,
 				589F31631F5FA0A40004E83D /* GlobalFunction.swift */,
+				589F319A1F5FF5AC0004E83D /* ANBaseNetWork.swift */,
+				589F31A01F5FF7DC0004E83D /* ANLog.swift */,
+				589F31981F5FF3AD0004E83D /* ITService.swift */,
+				589F319C1F5FF6110004E83D /* Investment-Bridging-Header.h */,
 			);
 			path = Global;
 			sourceTree = "<group>";
@@ -211,6 +222,7 @@
 					5887551A1F1600FF00602D43 = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = Z7VUQFZ74Q;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -309,10 +321,13 @@
 				589F316D1F5FB5130004E83D /* UIView+Extension.swift in Sources */,
 				5887551F1F1600FF00602D43 /* AppDelegate.swift in Sources */,
 				589F31711F5FB5720004E83D /* RightController.swift in Sources */,
+				589F31A11F5FF7DC0004E83D /* ANLog.swift in Sources */,
 				589F31731F5FC7520004E83D /* SecondCell.swift in Sources */,
 				589F31621F5FA0050004E83D /* BaseNavController.swift in Sources */,
 				588755311F16028A00602D43 /* BaseTabbarController.swift in Sources */,
 				589F31641F5FA0A40004E83D /* GlobalFunction.swift in Sources */,
+				589F31991F5FF3AD0004E83D /* ITService.swift in Sources */,
+				589F319B1F5FF5AC0004E83D /* ANBaseNetWork.swift in Sources */,
 				589F31601F5F9E600004E83D /* FourthController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -429,12 +444,15 @@
 			baseConfigurationReference = E8A5407F8DC43D5C6BD37496 /* Pods-Investment.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = Z7VUQFZ74Q;
 				INFOPLIST_FILE = Investment/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kaishen.Investment;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Investment/Global/Investment-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -444,12 +462,14 @@
 			baseConfigurationReference = ADC5CC48A22D8C8EAA110E1A /* Pods-Investment.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = Z7VUQFZ74Q;
 				INFOPLIST_FILE = Investment/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kaishen.Investment;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Investment/Global/Investment-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
