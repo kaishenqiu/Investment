@@ -36,6 +36,8 @@
 		589F31AB1F60ED990004E83D /* MyOrderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589F31AA1F60ED990004E83D /* MyOrderController.swift */; };
 		589F31AD1F60EE3B0004E83D /* OrderListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589F31AC1F60EE3B0004E83D /* OrderListController.swift */; };
 		589F31AF1F611B190004E83D /* AppDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589F31AE1F611B190004E83D /* AppDefine.swift */; };
+		589F31B21F627A5A0004E83D /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 589F31B11F627A5A0004E83D /* Login.storyboard */; };
+		589F31B41F627A6D0004E83D /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589F31B31F627A6D0004E83D /* LoginController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +72,8 @@
 		589F31AA1F60ED990004E83D /* MyOrderController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyOrderController.swift; sourceTree = "<group>"; };
 		589F31AC1F60EE3B0004E83D /* OrderListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderListController.swift; sourceTree = "<group>"; };
 		589F31AE1F611B190004E83D /* AppDefine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDefine.swift; sourceTree = "<group>"; };
+		589F31B11F627A5A0004E83D /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		589F31B31F627A6D0004E83D /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		AC62D6580094BFC44A6B8EF4 /* Pods_Investment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Investment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADC5CC48A22D8C8EAA110E1A /* Pods-Investment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Investment.release.xcconfig"; path = "Pods/Target Support Files/Pods-Investment/Pods-Investment.release.xcconfig"; sourceTree = "<group>"; };
 		E8A5407F8DC43D5C6BD37496 /* Pods-Investment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Investment.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Investment/Pods-Investment.debug.xcconfig"; sourceTree = "<group>"; };
@@ -117,6 +121,7 @@
 		5887551D1F1600FF00602D43 /* Investment */ = {
 			isa = PBXGroup;
 			children = (
+				589F31B01F627A1F0004E83D /* Login */,
 				589F316B1F5FA2140004E83D /* Global */,
 				589F316A1F5FA20A0004E83D /* Base */,
 				589F31681F5FA0C40004E83D /* Fourth */,
@@ -199,6 +204,15 @@
 			path = Global;
 			sourceTree = "<group>";
 		};
+		589F31B01F627A1F0004E83D /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				589F31B11F627A5A0004E83D /* Login.storyboard */,
+				589F31B31F627A6D0004E83D /* LoginController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		DDFD7388A5BD36C21DED7DA1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -273,6 +287,7 @@
 			files = (
 				588755351F16043C00602D43 /* Second.storyboard in Resources */,
 				588755291F1600FF00602D43 /* LaunchScreen.storyboard in Resources */,
+				589F31B21F627A5A0004E83D /* Login.storyboard in Resources */,
 				588755261F1600FF00602D43 /* Assets.xcassets in Resources */,
 				588755331F16043000602D43 /* First.storyboard in Resources */,
 				588755391F16045F00602D43 /* Fourth.storyboard in Resources */,
@@ -344,6 +359,7 @@
 				5887551F1F1600FF00602D43 /* AppDelegate.swift in Sources */,
 				589F31AD1F60EE3B0004E83D /* OrderListController.swift in Sources */,
 				589F31711F5FB5720004E83D /* RightController.swift in Sources */,
+				589F31B41F627A6D0004E83D /* LoginController.swift in Sources */,
 				589F31AB1F60ED990004E83D /* MyOrderController.swift in Sources */,
 				589F31A51F60D1DA0004E83D /* ANRefreshHeader.swift in Sources */,
 				589F31A71F60D5190004E83D /* LeftModel.swift in Sources */,
