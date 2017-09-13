@@ -21,6 +21,15 @@ class FourthController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func zichanAction(_ sender: Any) {
+        
+        guard (UserDefaults.standard.value(forKey: TOKEN) != nil) else {
+            let vc = UIStoryboard.init(name: "Login", bundle: nil).instantiateInitialViewController()!
+            self.present(vc, animated: true, completion: nil)
+            return
+        }
+        
+    }
 
     /*
     // MARK: - Navigation

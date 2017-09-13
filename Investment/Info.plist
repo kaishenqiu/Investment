@@ -2,6 +2,23 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSContactsUsageDescription</key>
+	<string>开启通讯录好友</string>
+    <key>NSCameraUsageDescription</key>
+    <string>访问相机</string>
+    <key>NSContactsUsageDescription</key>
+    <string>访问通讯录</string>
+    <key>NSLocationUsageDescription</key>
+    <string>访问位置</string>
+    <key>NSMicrophoneUsageDescription</key>
+    <string>访问麦克风</string>
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>访问相册</string>
+	<key>MOBAppSecret</key>
+	<string>e8b6531fa2b897858dd578f68b1950da</string>
+	<key>MOBAppKey</key>
+	<string>20c0bc9c035af
+20c0bc9c035af</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
@@ -22,6 +39,11 @@
 	<true/>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
+    <key>NSAppTransportSecurity</key>
+    <dict>
+        <key>NSAllowsArbitraryLoads</key>
+        <true/>
+    </dict>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

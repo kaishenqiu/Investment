@@ -27,15 +27,7 @@ func SCREEN_ADAPTER_W (x:Float) -> CGFloat
 
 let GlobalColor = #colorLiteral(red: 0.9294117647, green: 0.2352941176, blue: 0.2196078431, alpha: 1)
 
-// MARK: - 通知标识
-let CALL_PIGFILEMGMT_REFRESH = "callpigfilemgmtrefresh"
-let CALL_PIGBOARFILEMGMT_REFRESH = "callpigboarfilemgmtrefresh"
-let CALL_ABLACTATION_REFRESH = "callablactationrefresh"
-let CALL_BIRTH_REFRESH = "callbirthrefresh"
-let CALL_CHECK_REFRESH = "callcheckrefresh"
-let CALL_SEMEN_REFRESH = "callsemenrefresh"
-let CALL_BREED_REFRESH = "callbreedrefresh"
-
+let TOKEN = "token"
 
 
 //当前日期

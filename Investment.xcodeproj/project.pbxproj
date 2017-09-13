@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2461ABDB1DC7CC939BC305C2 /* Pods_Investment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC62D6580094BFC44A6B8EF4 /* Pods_Investment.framework */; };
+		582E79E41F68DC7100A81F67 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582E79E31F68DC7100A81F67 /* LoginController.swift */; };
+		582E79E61F68DC8900A81F67 /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582E79E51F68DC8900A81F67 /* RegisterController.swift */; };
 		5887551F1F1600FF00602D43 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5887551E1F1600FF00602D43 /* AppDelegate.swift */; };
 		588755261F1600FF00602D43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 588755251F1600FF00602D43 /* Assets.xcassets */; };
 		588755291F1600FF00602D43 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 588755271F1600FF00602D43 /* LaunchScreen.storyboard */; };
@@ -37,10 +39,11 @@
 		589F31AD1F60EE3B0004E83D /* OrderListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589F31AC1F60EE3B0004E83D /* OrderListController.swift */; };
 		589F31AF1F611B190004E83D /* AppDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589F31AE1F611B190004E83D /* AppDefine.swift */; };
 		589F31B21F627A5A0004E83D /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 589F31B11F627A5A0004E83D /* Login.storyboard */; };
-		589F31B41F627A6D0004E83D /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589F31B31F627A6D0004E83D /* LoginController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		582E79E31F68DC7100A81F67 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		582E79E51F68DC8900A81F67 /* RegisterController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
 		5887551B1F1600FF00602D43 /* Investment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Investment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5887551E1F1600FF00602D43 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		588755251F1600FF00602D43 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -73,7 +76,6 @@
 		589F31AC1F60EE3B0004E83D /* OrderListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderListController.swift; sourceTree = "<group>"; };
 		589F31AE1F611B190004E83D /* AppDefine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDefine.swift; sourceTree = "<group>"; };
 		589F31B11F627A5A0004E83D /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
-		589F31B31F627A6D0004E83D /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		AC62D6580094BFC44A6B8EF4 /* Pods_Investment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Investment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADC5CC48A22D8C8EAA110E1A /* Pods-Investment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Investment.release.xcconfig"; path = "Pods/Target Support Files/Pods-Investment/Pods-Investment.release.xcconfig"; sourceTree = "<group>"; };
 		E8A5407F8DC43D5C6BD37496 /* Pods-Investment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Investment.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Investment/Pods-Investment.debug.xcconfig"; sourceTree = "<group>"; };
@@ -208,7 +210,8 @@
 			isa = PBXGroup;
 			children = (
 				589F31B11F627A5A0004E83D /* Login.storyboard */,
-				589F31B31F627A6D0004E83D /* LoginController.swift */,
+				582E79E51F68DC8900A81F67 /* RegisterController.swift */,
+				582E79E31F68DC7100A81F67 /* LoginController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -359,7 +362,7 @@
 				5887551F1F1600FF00602D43 /* AppDelegate.swift in Sources */,
 				589F31AD1F60EE3B0004E83D /* OrderListController.swift in Sources */,
 				589F31711F5FB5720004E83D /* RightController.swift in Sources */,
-				589F31B41F627A6D0004E83D /* LoginController.swift in Sources */,
+				582E79E41F68DC7100A81F67 /* LoginController.swift in Sources */,
 				589F31AB1F60ED990004E83D /* MyOrderController.swift in Sources */,
 				589F31A51F60D1DA0004E83D /* ANRefreshHeader.swift in Sources */,
 				589F31A71F60D5190004E83D /* LeftModel.swift in Sources */,
@@ -370,6 +373,7 @@
 				589F31641F5FA0A40004E83D /* GlobalFunction.swift in Sources */,
 				589F31991F5FF3AD0004E83D /* ITService.swift in Sources */,
 				589F31AF1F611B190004E83D /* AppDefine.swift in Sources */,
+				582E79E61F68DC8900A81F67 /* RegisterController.swift in Sources */,
 				589F31A41F60D1DA0004E83D /* ANRefreshFooter.swift in Sources */,
 				589F319B1F5FF5AC0004E83D /* ANBaseNetWork.swift in Sources */,
 				589F31601F5F9E600004E83D /* FourthController.swift in Sources */,
