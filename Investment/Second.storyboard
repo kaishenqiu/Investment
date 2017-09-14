@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Second Controller-->
+        <!--商城-->
         <scene sceneID="UK5-pL-U8F">
             <objects>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="Bhr-m3-y8v" customClass="SecondController" customModule="Investment" customModuleProvider="target" sceneMemberID="viewController">
@@ -33,16 +33,57 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="105.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LnL-xL-Hhy">
-                                                    <rect key="frame" x="15" y="20.5" width="84" height="63"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="raw_1499416460" translatesAutoresizingMaskIntoConstraints="NO" id="LnL-xL-Hhy">
+                                                    <rect key="frame" x="15" y="10" width="112.5" height="84"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="LnL-xL-Hhy" secondAttribute="height" multiplier="4:3" id="edD-OL-i5a"/>
                                                     </constraints>
                                                 </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="傲农自养--野生黑猪肉，傲农猪场全程供养，生鲜食材" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8kj-44-eDh">
+                                                    <rect key="frame" x="142.5" y="5" width="217.5" height="36"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="￥28.9" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T1r-3L-vxH">
+                                                    <rect key="frame" x="142.5" y="46.5" width="52" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.89803921568627454" green="0.10980392156862745" blue="0.13725490196078433" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/500g" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JK9-ro-EoS">
+                                                    <rect key="frame" x="199.5" y="48.5" width="39" height="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="顺丰生鲜包邮" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OSC-mU-DQe">
+                                                    <rect key="frame" x="274" y="77" width="86" height="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99%好评" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3M3-Lq-UNO">
+                                                    <rect key="frame" x="142.5" y="77" width="57" height="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="LnL-xL-Hhy" firstAttribute="height" secondItem="AwO-YF-Mcm" secondAttribute="height" multiplier="0.6" id="JzM-za-kfY"/>
+                                                <constraint firstItem="T1r-3L-vxH" firstAttribute="leading" secondItem="8kj-44-eDh" secondAttribute="leading" id="76k-5G-Eof"/>
+                                                <constraint firstItem="8kj-44-eDh" firstAttribute="top" secondItem="AwO-YF-Mcm" secondAttribute="top" constant="5" id="AZI-FA-UFR"/>
+                                                <constraint firstItem="3M3-Lq-UNO" firstAttribute="top" secondItem="T1r-3L-vxH" secondAttribute="bottom" constant="10" id="DbK-06-N5a"/>
+                                                <constraint firstItem="OSC-mU-DQe" firstAttribute="bottom" secondItem="3M3-Lq-UNO" secondAttribute="bottom" id="HwP-di-b6D"/>
+                                                <constraint firstItem="LnL-xL-Hhy" firstAttribute="height" secondItem="AwO-YF-Mcm" secondAttribute="height" multiplier="0.8" id="JzM-za-kfY"/>
                                                 <constraint firstItem="LnL-xL-Hhy" firstAttribute="centerY" secondItem="AwO-YF-Mcm" secondAttribute="centerY" id="KBj-fU-86y"/>
+                                                <constraint firstItem="8kj-44-eDh" firstAttribute="leading" secondItem="LnL-xL-Hhy" secondAttribute="trailing" constant="15" id="Kpz-4d-nWQ"/>
+                                                <constraint firstItem="OSC-mU-DQe" firstAttribute="trailing" secondItem="8kj-44-eDh" secondAttribute="trailing" id="YGk-Sv-ueZ"/>
+                                                <constraint firstAttribute="trailing" secondItem="OSC-mU-DQe" secondAttribute="trailing" constant="15" id="Yvp-BC-Do6"/>
+                                                <constraint firstItem="JK9-ro-EoS" firstAttribute="centerY" secondItem="T1r-3L-vxH" secondAttribute="centerY" id="b97-zC-xFu"/>
+                                                <constraint firstItem="JK9-ro-EoS" firstAttribute="leading" secondItem="T1r-3L-vxH" secondAttribute="trailing" constant="5" id="e5F-KX-fja"/>
+                                                <constraint firstItem="3M3-Lq-UNO" firstAttribute="leading" secondItem="8kj-44-eDh" secondAttribute="leading" id="idC-iR-4N4"/>
+                                                <constraint firstItem="3M3-Lq-UNO" firstAttribute="bottom" secondItem="LnL-xL-Hhy" secondAttribute="bottom" id="kAd-wW-yLL"/>
                                                 <constraint firstItem="LnL-xL-Hhy" firstAttribute="leading" secondItem="AwO-YF-Mcm" secondAttribute="leading" constant="15" id="qgi-F9-g3x"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -58,14 +99,72 @@
                             <constraint firstItem="k5e-dX-yI6" firstAttribute="top" secondItem="WpM-sT-poq" secondAttribute="bottom" id="xQV-dr-P9S"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="bLU-wc-IwA"/>
+                    <navigationItem key="navigationItem" title="商城" id="bLU-wc-IwA"/>
                     <connections>
                         <outlet property="tableView" destination="WpM-sT-poq" id="7sB-II-EZd"/>
+                        <segue destination="TUU-Ho-iS9" kind="show" identifier="goodsdetailsegue" id="d7v-Fm-brP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T3x-PI-N9X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="927.20000000000005" y="-45.42728635682159"/>
+        </scene>
+        <!--详情-->
+        <scene sceneID="iM8-KW-hC8">
+            <objects>
+                <viewController id="TUU-Ho-iS9" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ys1-gM-POw"/>
+                        <viewControllerLayoutGuide type="bottom" id="ePB-o3-SRC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="R9q-Ue-t9h">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="raw_1499416460" translatesAutoresizingMaskIntoConstraints="NO" id="aR5-Ew-bii">
+                                <rect key="frame" x="0.0" y="64" width="375" height="180"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="ywq-bX-427"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="傲农全程养殖野生黑猪，猪腿肉，生鲜食材，可烧烤，500g" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ELw-RG-rUr">
+                                <rect key="frame" x="10" y="249" width="355" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(两件八折，顺丰生鲜真空冰袋包装)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vpD-Qi-pLF">
+                                <rect key="frame" x="10" y="295" width="271.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.89803921568627454" green="0.10980392156862745" blue="0.13725490196078433" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="￥ 28.9" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g2R-Jm-bIN">
+                                <rect key="frame" x="10" y="321" width="56" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.89803921568627454" green="0.10980392156862745" blue="0.15686274509803921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vpD-Qi-pLF" firstAttribute="leading" secondItem="R9q-Ue-t9h" secondAttribute="leading" constant="10" id="77N-tK-zx3"/>
+                            <constraint firstItem="ELw-RG-rUr" firstAttribute="top" secondItem="aR5-Ew-bii" secondAttribute="bottom" constant="5" id="7eF-o9-hvo"/>
+                            <constraint firstItem="vpD-Qi-pLF" firstAttribute="top" secondItem="ELw-RG-rUr" secondAttribute="bottom" constant="5" id="EB0-lS-RrU"/>
+                            <constraint firstItem="ELw-RG-rUr" firstAttribute="leading" secondItem="R9q-Ue-t9h" secondAttribute="leading" constant="10" id="EpP-wu-ICq"/>
+                            <constraint firstAttribute="trailing" secondItem="ELw-RG-rUr" secondAttribute="trailing" constant="10" id="R5e-pz-bSA"/>
+                            <constraint firstItem="aR5-Ew-bii" firstAttribute="top" secondItem="Ys1-gM-POw" secondAttribute="bottom" id="ZEX-6P-11M"/>
+                            <constraint firstAttribute="trailing" secondItem="aR5-Ew-bii" secondAttribute="trailing" id="ZZq-h1-4ly"/>
+                            <constraint firstItem="g2R-Jm-bIN" firstAttribute="top" secondItem="vpD-Qi-pLF" secondAttribute="bottom" constant="5" id="hDB-uP-cRC"/>
+                            <constraint firstItem="aR5-Ew-bii" firstAttribute="leading" secondItem="R9q-Ue-t9h" secondAttribute="leading" id="huK-ac-aC5"/>
+                            <constraint firstItem="g2R-Jm-bIN" firstAttribute="leading" secondItem="R9q-Ue-t9h" secondAttribute="leading" constant="10" id="nn3-Jq-0xV"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="详情" id="42W-Zi-W1H"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5UC-uK-j0R" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1880.8" y="-45.42728635682159"/>
         </scene>
         <!--Base Nav Controller-->
         <scene sceneID="ofI-3y-tqh">
@@ -86,4 +185,7 @@
             <point key="canvasLocation" x="-12" y="-45.42728635682159"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="raw_1499416460" width="277" height="237"/>
+    </resources>
 </document>

@@ -10,6 +10,10 @@
 		2461ABDB1DC7CC939BC305C2 /* Pods_Investment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC62D6580094BFC44A6B8EF4 /* Pods_Investment.framework */; };
 		582E79E41F68DC7100A81F67 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582E79E31F68DC7100A81F67 /* LoginController.swift */; };
 		582E79E61F68DC8900A81F67 /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582E79E51F68DC8900A81F67 /* RegisterController.swift */; };
+		582E79E81F69234700A81F67 /* MyInvestmentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582E79E71F69234700A81F67 /* MyInvestmentController.swift */; };
+		582E79EC1F6A26BC00A81F67 /* CardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582E79EB1F6A26BC00A81F67 /* CardController.swift */; };
+		582E79EF1F6A319400A81F67 /* MyInvestmentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582E79EE1F6A319400A81F67 /* MyInvestmentCell.swift */; };
+		582E79F11F6A31A100A81F67 /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582E79F01F6A31A100A81F67 /* CardCell.swift */; };
 		5887551F1F1600FF00602D43 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5887551E1F1600FF00602D43 /* AppDelegate.swift */; };
 		588755261F1600FF00602D43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 588755251F1600FF00602D43 /* Assets.xcassets */; };
 		588755291F1600FF00602D43 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 588755271F1600FF00602D43 /* LaunchScreen.storyboard */; };
@@ -44,6 +48,10 @@
 /* Begin PBXFileReference section */
 		582E79E31F68DC7100A81F67 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		582E79E51F68DC8900A81F67 /* RegisterController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
+		582E79E71F69234700A81F67 /* MyInvestmentController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyInvestmentController.swift; sourceTree = "<group>"; };
+		582E79EB1F6A26BC00A81F67 /* CardController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardController.swift; sourceTree = "<group>"; };
+		582E79EE1F6A319400A81F67 /* MyInvestmentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyInvestmentCell.swift; sourceTree = "<group>"; };
+		582E79F01F6A31A100A81F67 /* CardCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
 		5887551B1F1600FF00602D43 /* Investment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Investment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5887551E1F1600FF00602D43 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		588755251F1600FF00602D43 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -100,6 +108,15 @@
 				ADC5CC48A22D8C8EAA110E1A /* Pods-Investment.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		582E79ED1F6A315900A81F67 /* v */ = {
+			isa = PBXGroup;
+			children = (
+				582E79EE1F6A319400A81F67 /* MyInvestmentCell.swift */,
+				582E79F01F6A31A100A81F67 /* CardCell.swift */,
+			);
+			path = v;
 			sourceTree = "<group>";
 		};
 		588755121F1600FF00602D43 = {
@@ -173,10 +190,13 @@
 		589F31681F5FA0C40004E83D /* Fourth */ = {
 			isa = PBXGroup;
 			children = (
+				582E79ED1F6A315900A81F67 /* v */,
 				589F315F1F5F9E600004E83D /* FourthController.swift */,
 				588755381F16045F00602D43 /* Fourth.storyboard */,
 				589F31AA1F60ED990004E83D /* MyOrderController.swift */,
 				589F31AC1F60EE3B0004E83D /* OrderListController.swift */,
+				582E79E71F69234700A81F67 /* MyInvestmentController.swift */,
+				582E79EB1F6A26BC00A81F67 /* CardController.swift */,
 			);
 			path = Fourth;
 			sourceTree = "<group>";
@@ -353,11 +373,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				582E79E81F69234700A81F67 /* MyInvestmentController.swift in Sources */,
 				589F31A91F60D9870004E83D /* LeftCell.swift in Sources */,
 				589F315A1F5F9E330004E83D /* FirstController.swift in Sources */,
 				589F315E1F5F9E520004E83D /* ThirdController.swift in Sources */,
 				589F316F1F5FB5660004E83D /* LeftController.swift in Sources */,
 				589F315C1F5F9E420004E83D /* SecondController.swift in Sources */,
+				582E79EC1F6A26BC00A81F67 /* CardController.swift in Sources */,
+				582E79F11F6A31A100A81F67 /* CardCell.swift in Sources */,
 				589F316D1F5FB5130004E83D /* UIView+Extension.swift in Sources */,
 				5887551F1F1600FF00602D43 /* AppDelegate.swift in Sources */,
 				589F31AD1F60EE3B0004E83D /* OrderListController.swift in Sources */,
@@ -366,6 +389,7 @@
 				589F31AB1F60ED990004E83D /* MyOrderController.swift in Sources */,
 				589F31A51F60D1DA0004E83D /* ANRefreshHeader.swift in Sources */,
 				589F31A71F60D5190004E83D /* LeftModel.swift in Sources */,
+				582E79EF1F6A319400A81F67 /* MyInvestmentCell.swift in Sources */,
 				589F31A11F5FF7DC0004E83D /* ANLog.swift in Sources */,
 				589F31731F5FC7520004E83D /* SecondCell.swift in Sources */,
 				589F31621F5FA0050004E83D /* BaseNavController.swift in Sources */,
