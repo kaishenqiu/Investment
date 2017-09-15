@@ -28,7 +28,7 @@ class ANBaseNetWork: NSObject {
                 do {
                     let json = try response.mapJSON()
                     let data = JSON(json)
-                    if data["flag"].stringValue == "true" {
+                    if data["code"].stringValue == "200" {
 
                             if let handle = successHandle {
                                 handle(true)

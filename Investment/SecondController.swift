@@ -17,6 +17,25 @@ class SecondController: UIViewController,UITableViewDelegate,UITableViewDataSour
         tableView.dataSource = self
 
         // Do any additional setup after loading the view.
+        
+        
+        ANBaseNetWork.sharedInstance.networkForListNOHUD(.goodsList(page: "1"), successHandle: { (result) in
+            print(result)
+//            for item in result {
+//                let one = LeftModel(json: item)
+//                self.dataArray.append(one)
+//                
+//            }
+//            //            self.tableView.mj_footer.endRefreshing()
+//            self.tableView.mj_header.endRefreshing()
+//            self.tableView.reloadData()
+        }) { (errorStr) in
+            //            self.tableView.mj_footer.endRefreshing()
+//            self.tableView.mj_header.endRefreshing()
+            
+        }
+        
+        
     }
 
     override func didReceiveMemoryWarning() {

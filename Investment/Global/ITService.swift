@@ -11,7 +11,9 @@ import Moya
 
 public enum ITService {
     case login(name: String, pass: String)
+    case register(mobile: String, password: String, code:String)
     case projectList(page:String)
+    case goodsList(page:String)
     
 }
 
@@ -27,8 +29,12 @@ extension ITService: TargetType {
             
         case .login:
             return "Login"
+        case .register:
+            return "register"
         case .projectList:
             return "project/list"
+        case .goodsList:
+            return "goods/list"
 
             
         }
@@ -40,9 +46,13 @@ extension ITService: TargetType {
         switch self {
         case .login(let name, let pass):
             return ["name": name, "pass": pass]
+            
+        case .register(let mobile,let password,let code):
+            return ["mobile": mobile, "password": password, "code":code ]
         case .projectList(let page):
             return ["page":page]
-
+        case .goodsList(let page):
+            return ["page":page]
             
 
         }

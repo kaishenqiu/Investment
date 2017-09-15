@@ -19,7 +19,8 @@ class LeftCell: UITableViewCell {
     var oneModel = LeftModel(json:JSON.null) {
         didSet {
             title.text = oneModel.name
-      
+            num.text = oneModel.accrual
+            
             
             
         }

@@ -17,6 +17,7 @@
 		582E79F31F6A618C00A81F67 /* SalaryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582E79F21F6A618C00A81F67 /* SalaryController.swift */; };
 		582E79F51F6A693B00A81F67 /* Fourth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 582E79F41F6A693B00A81F67 /* Fourth.storyboard */; };
 		582E79F71F6A741D00A81F67 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582E79F61F6A741D00A81F67 /* AppDelegate.swift */; };
+		582E79FA1F6BA81A00A81F67 /* SwiftCountdownButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582E79F91F6BA81A00A81F67 /* SwiftCountdownButton.swift */; };
 		588755261F1600FF00602D43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 588755251F1600FF00602D43 /* Assets.xcassets */; };
 		588755291F1600FF00602D43 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 588755271F1600FF00602D43 /* LaunchScreen.storyboard */; };
 		588755311F16028A00602D43 /* BaseTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588755301F16028A00602D43 /* BaseTabbarController.swift */; };
@@ -56,6 +57,7 @@
 		582E79F21F6A618C00A81F67 /* SalaryController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SalaryController.swift; sourceTree = "<group>"; };
 		582E79F41F6A693B00A81F67 /* Fourth.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Fourth.storyboard; sourceTree = "<group>"; };
 		582E79F61F6A741D00A81F67 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		582E79F91F6BA81A00A81F67 /* SwiftCountdownButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftCountdownButton.swift; sourceTree = "<group>"; };
 		5887551B1F1600FF00602D43 /* Investment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Investment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		588755251F1600FF00602D43 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		588755281F1600FF00602D43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -122,6 +124,14 @@
 			path = v;
 			sourceTree = "<group>";
 		};
+		582E79F81F6BA80200A81F67 /* vendor */ = {
+			isa = PBXGroup;
+			children = (
+				582E79F91F6BA81A00A81F67 /* SwiftCountdownButton.swift */,
+			);
+			path = vendor;
+			sourceTree = "<group>";
+		};
 		588755121F1600FF00602D43 = {
 			isa = PBXGroup;
 			children = (
@@ -143,6 +153,7 @@
 		5887551D1F1600FF00602D43 /* Investment */ = {
 			isa = PBXGroup;
 			children = (
+				582E79F81F6BA80200A81F67 /* vendor */,
 				589F31B01F627A1F0004E83D /* Login */,
 				589F316B1F5FA2140004E83D /* Global */,
 				589F316A1F5FA20A0004E83D /* Base */,
@@ -403,6 +414,7 @@
 				589F31AF1F611B190004E83D /* AppDefine.swift in Sources */,
 				582E79E61F68DC8900A81F67 /* RegisterController.swift in Sources */,
 				589F31A41F60D1DA0004E83D /* ANRefreshFooter.swift in Sources */,
+				582E79FA1F6BA81A00A81F67 /* SwiftCountdownButton.swift in Sources */,
 				589F319B1F5FF5AC0004E83D /* ANBaseNetWork.swift in Sources */,
 				589F31601F5F9E600004E83D /* FourthController.swift in Sources */,
 			);

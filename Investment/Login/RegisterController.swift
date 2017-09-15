@@ -15,11 +15,29 @@ class RegisterController: UIViewController {
     @IBOutlet var phoneTF: UITextField!
     @IBOutlet var pwdTF: UITextField!
 
-    
+    @IBOutlet weak var countdownBtn: SwiftCountdownButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//        countdownBtn.setTitle("second秒", for: .disabled)
   
+        
+    }
+    @IBAction func countDownAction(_ sender: Any) {
+//        countdownBtn.countdown = true
+        
+        SMSSDK.getVerificationCode(by: SMSGetCodeMethodSMS, phoneNumber: "17706019256", zone: "86") { (error) in
+            if (error != nil)
+            {
+                // 请求成功
+                SVProgressHUD.showSuccess(withStatus: "发送成功")
+            }
+            else
+            {
+                // error
+                SVProgressHUD.showError(withStatus: "发送失败")
+            }
+        }
         
     }
 
@@ -31,20 +49,9 @@ class RegisterController: UIViewController {
     @IBAction func registerClick(_ sender: Any) {
         
 
+
         
-        SMSSDK.getVerificationCode(by: SMSGetCodeMethodSMS, phoneNumber: "17706019256", zone: "86") { (error) in
-            if (error != nil)
-            {
-                // 请求成功
-            }
-            else
-            {
-                // error
-            }
-        }
-        
-        
-        
+//        
 //        if pwdTF.text != checkPwdTF.text {
 //            SVProgressHUD.showError(withStatus: "两次密码不相同")
 //            return
@@ -56,10 +63,15 @@ class RegisterController: UIViewController {
 //                SVProgressHUD.showError(withStatus: "打*号为必填项")
 //                return
 //        }
-//        loginVM.userRegister(username: phoneNum, pwd: password, personName: personname, rid: cardNoTF.text!, rpd: cardPwdTF.text!) {
-//            SVProgressHUD.showSuccess(withStatus: "注册成功")
-//            _ = self.navigationController?.popViewController(animated: true)
-//        }
+
+        ANBaseNetWork.sharedInstance.networkForBool(.register(mobile: "17706019256", password: "123456", code: self.pwdTF.text!), successHandle: { (result) in
+            SVProgressHUD.showInfo(withStatus: "注册成功")
+ 
+            
+        }, errorHandle: { (error) in
+            SVProgressHUD.showInfo(withStatus: error)
+        })
+
     }
 
 }
