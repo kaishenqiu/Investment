@@ -14,14 +14,15 @@
 		582E79EC1F6A26BC00A81F67 /* CardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582E79EB1F6A26BC00A81F67 /* CardController.swift */; };
 		582E79EF1F6A319400A81F67 /* MyInvestmentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582E79EE1F6A319400A81F67 /* MyInvestmentCell.swift */; };
 		582E79F11F6A31A100A81F67 /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582E79F01F6A31A100A81F67 /* CardCell.swift */; };
-		5887551F1F1600FF00602D43 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5887551E1F1600FF00602D43 /* AppDelegate.swift */; };
+		582E79F31F6A618C00A81F67 /* SalaryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582E79F21F6A618C00A81F67 /* SalaryController.swift */; };
+		582E79F51F6A693B00A81F67 /* Fourth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 582E79F41F6A693B00A81F67 /* Fourth.storyboard */; };
+		582E79F71F6A741D00A81F67 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582E79F61F6A741D00A81F67 /* AppDelegate.swift */; };
 		588755261F1600FF00602D43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 588755251F1600FF00602D43 /* Assets.xcassets */; };
 		588755291F1600FF00602D43 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 588755271F1600FF00602D43 /* LaunchScreen.storyboard */; };
 		588755311F16028A00602D43 /* BaseTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588755301F16028A00602D43 /* BaseTabbarController.swift */; };
 		588755331F16043000602D43 /* First.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 588755321F16043000602D43 /* First.storyboard */; };
 		588755351F16043C00602D43 /* Second.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 588755341F16043C00602D43 /* Second.storyboard */; };
 		588755371F16044700602D43 /* Third.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 588755361F16044700602D43 /* Third.storyboard */; };
-		588755391F16045F00602D43 /* Fourth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 588755381F16045F00602D43 /* Fourth.storyboard */; };
 		589F315A1F5F9E330004E83D /* FirstController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589F31591F5F9E330004E83D /* FirstController.swift */; };
 		589F315C1F5F9E420004E83D /* SecondController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589F315B1F5F9E420004E83D /* SecondController.swift */; };
 		589F315E1F5F9E520004E83D /* ThirdController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589F315D1F5F9E520004E83D /* ThirdController.swift */; };
@@ -52,8 +53,10 @@
 		582E79EB1F6A26BC00A81F67 /* CardController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardController.swift; sourceTree = "<group>"; };
 		582E79EE1F6A319400A81F67 /* MyInvestmentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyInvestmentCell.swift; sourceTree = "<group>"; };
 		582E79F01F6A31A100A81F67 /* CardCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
+		582E79F21F6A618C00A81F67 /* SalaryController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SalaryController.swift; sourceTree = "<group>"; };
+		582E79F41F6A693B00A81F67 /* Fourth.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Fourth.storyboard; sourceTree = "<group>"; };
+		582E79F61F6A741D00A81F67 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5887551B1F1600FF00602D43 /* Investment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Investment.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		5887551E1F1600FF00602D43 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		588755251F1600FF00602D43 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		588755281F1600FF00602D43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5887552A1F1600FF00602D43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -61,7 +64,6 @@
 		588755321F16043000602D43 /* First.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = First.storyboard; path = Investment/First.storyboard; sourceTree = SOURCE_ROOT; };
 		588755341F16043C00602D43 /* Second.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Second.storyboard; path = Investment/Second.storyboard; sourceTree = SOURCE_ROOT; };
 		588755361F16044700602D43 /* Third.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Third.storyboard; path = Investment/Third.storyboard; sourceTree = SOURCE_ROOT; };
-		588755381F16045F00602D43 /* Fourth.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Fourth.storyboard; path = Investment/Fourth.storyboard; sourceTree = SOURCE_ROOT; };
 		589F31591F5F9E330004E83D /* FirstController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FirstController.swift; path = Investment/FirstController.swift; sourceTree = SOURCE_ROOT; };
 		589F315B1F5F9E420004E83D /* SecondController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SecondController.swift; path = Investment/SecondController.swift; sourceTree = SOURCE_ROOT; };
 		589F315D1F5F9E520004E83D /* ThirdController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ThirdController.swift; path = Investment/ThirdController.swift; sourceTree = SOURCE_ROOT; };
@@ -113,6 +115,7 @@
 		582E79ED1F6A315900A81F67 /* v */ = {
 			isa = PBXGroup;
 			children = (
+				582E79F41F6A693B00A81F67 /* Fourth.storyboard */,
 				582E79EE1F6A319400A81F67 /* MyInvestmentCell.swift */,
 				582E79F01F6A31A100A81F67 /* CardCell.swift */,
 			);
@@ -147,7 +150,6 @@
 				589F31671F5FA0BC0004E83D /* Third */,
 				589F31661F5FA0B60004E83D /* Second */,
 				589F31651F5FA0AB0004E83D /* First */,
-				5887551E1F1600FF00602D43 /* AppDelegate.swift */,
 				588755251F1600FF00602D43 /* Assets.xcassets */,
 				588755271F1600FF00602D43 /* LaunchScreen.storyboard */,
 				5887552A1F1600FF00602D43 /* Info.plist */,
@@ -192,11 +194,11 @@
 			children = (
 				582E79ED1F6A315900A81F67 /* v */,
 				589F315F1F5F9E600004E83D /* FourthController.swift */,
-				588755381F16045F00602D43 /* Fourth.storyboard */,
 				589F31AA1F60ED990004E83D /* MyOrderController.swift */,
 				589F31AC1F60EE3B0004E83D /* OrderListController.swift */,
 				582E79E71F69234700A81F67 /* MyInvestmentController.swift */,
 				582E79EB1F6A26BC00A81F67 /* CardController.swift */,
+				582E79F21F6A618C00A81F67 /* SalaryController.swift */,
 			);
 			path = Fourth;
 			sourceTree = "<group>";
@@ -213,6 +215,7 @@
 		589F316B1F5FA2140004E83D /* Global */ = {
 			isa = PBXGroup;
 			children = (
+				582E79F61F6A741D00A81F67 /* AppDelegate.swift */,
 				589F31AE1F611B190004E83D /* AppDefine.swift */,
 				589F31A21F60D1DA0004E83D /* ANRefreshFooter.swift */,
 				589F31A31F60D1DA0004E83D /* ANRefreshHeader.swift */,
@@ -308,12 +311,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				582E79F51F6A693B00A81F67 /* Fourth.storyboard in Resources */,
 				588755351F16043C00602D43 /* Second.storyboard in Resources */,
 				588755291F1600FF00602D43 /* LaunchScreen.storyboard in Resources */,
 				589F31B21F627A5A0004E83D /* Login.storyboard in Resources */,
 				588755261F1600FF00602D43 /* Assets.xcassets in Resources */,
 				588755331F16043000602D43 /* First.storyboard in Resources */,
-				588755391F16045F00602D43 /* Fourth.storyboard in Resources */,
 				588755371F16044700602D43 /* Third.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -382,7 +385,6 @@
 				582E79EC1F6A26BC00A81F67 /* CardController.swift in Sources */,
 				582E79F11F6A31A100A81F67 /* CardCell.swift in Sources */,
 				589F316D1F5FB5130004E83D /* UIView+Extension.swift in Sources */,
-				5887551F1F1600FF00602D43 /* AppDelegate.swift in Sources */,
 				589F31AD1F60EE3B0004E83D /* OrderListController.swift in Sources */,
 				589F31711F5FB5720004E83D /* RightController.swift in Sources */,
 				582E79E41F68DC7100A81F67 /* LoginController.swift in Sources */,
@@ -391,11 +393,13 @@
 				589F31A71F60D5190004E83D /* LeftModel.swift in Sources */,
 				582E79EF1F6A319400A81F67 /* MyInvestmentCell.swift in Sources */,
 				589F31A11F5FF7DC0004E83D /* ANLog.swift in Sources */,
+				582E79F71F6A741D00A81F67 /* AppDelegate.swift in Sources */,
 				589F31731F5FC7520004E83D /* SecondCell.swift in Sources */,
 				589F31621F5FA0050004E83D /* BaseNavController.swift in Sources */,
 				588755311F16028A00602D43 /* BaseTabbarController.swift in Sources */,
 				589F31641F5FA0A40004E83D /* GlobalFunction.swift in Sources */,
 				589F31991F5FF3AD0004E83D /* ITService.swift in Sources */,
+				582E79F31F6A618C00A81F67 /* SalaryController.swift in Sources */,
 				589F31AF1F611B190004E83D /* AppDefine.swift in Sources */,
 				582E79E61F68DC8900A81F67 /* RegisterController.swift in Sources */,
 				589F31A41F60D1DA0004E83D /* ANRefreshFooter.swift in Sources */,

@@ -119,7 +119,7 @@ extension FirstController {
             let titleButton = UIButton()
             titleButton.tag = i
             titleButton.setTitleColor(#colorLiteral(red: 0.6392156863, green: 0.6392156863, blue: 0.6392156863, alpha: 1), for: .normal)
-            titleButton.setTitleColor(#colorLiteral(red: 0.09803921569, green: 0.6, blue: 0.9137254902, alpha: 1), for: .selected)
+            titleButton.setTitleColor(GlobalColor, for: .selected)
             titleButton.addTarget(self, action: #selector(titleClick), for: .touchUpInside)
             titlesView.addSubview(titleButton)
             titleButton.titleLabel?.font = UIFont.systemFont(ofSize: 14)
@@ -131,7 +131,7 @@ extension FirstController {
         
         indicatorView.st_height = 3
         indicatorView.st_y = titlesView.st_height - indicatorView.st_height
-        indicatorView.st_width = firstTitleButton.st_width / 2
+        indicatorView.st_width = firstTitleButton.st_width - 2
         indicatorView.st_centerX = firstTitleButton.st_centerX
         
         titlesView.addSubview(indicatorView)
@@ -159,7 +159,7 @@ extension FirstController {
         selectButton = sender
         //指示器
         UIView.animate(withDuration: 0.25) {
-            self.indicatorView.st_width = sender.st_width / 2
+            self.indicatorView.st_width = sender.st_width - 2
             self.indicatorView.st_centerX = sender.st_centerX
         }
         var offset = scrollView.contentOffset

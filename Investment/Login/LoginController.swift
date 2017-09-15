@@ -16,19 +16,24 @@ class LoginController: UIViewController {
     @IBOutlet weak var pwdField: UITextField!
     
     
+    @IBOutlet weak var loginBtn: UIButton!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        loginBtn.layer.masksToBounds = true
+        loginBtn.layer.borderWidth = 1
+        loginBtn.layer.borderColor = GlobalColor.cgColor
+        
 
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-        self.navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationController?.navigationBar.isTranslucent = true
+//        
+//        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+//        self.navigationController?.navigationBar.shadowImage = UIImage()
+//        self.navigationController?.navigationBar.isTranslucent = true
     }
 
     @IBAction func cancelAction(_ sender: Any) {

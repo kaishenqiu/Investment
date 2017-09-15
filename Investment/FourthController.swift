@@ -17,27 +17,24 @@ class FourthController: UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+ 
+        
+        guard (UserDefaults.standard.value(forKey: TOKEN) != nil) else {
+            
+            let tabbar = UIApplication.shared.keyWindow?.rootViewController as! BaseTabbarController
+            tabbar.selectedIndex = 0
+            return
+        }
+        
         self .navigationController?.navigationBar.setBackgroundImage(getImageWithColor(color: GlobalColor, size: CGSize(width:1,height:1)), for: .any, barMetrics: .default)
         self .navigationController?.navigationBar.shadowImage = UIImage()
         self .navigationController?.navigationBar.isTranslucent = false
      
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    @IBAction func zichanAction(_ sender: Any) {
         
-        guard (UserDefaults.standard.value(forKey: TOKEN) != nil) else {
-            let vc = UIStoryboard.init(name: "Login", bundle: nil).instantiateInitialViewController()!
-            self.present(vc, animated: true, completion: nil)
-            return
-        }
+        
         
     }
-
+ 
     /*
     // MARK: - Navigation
 

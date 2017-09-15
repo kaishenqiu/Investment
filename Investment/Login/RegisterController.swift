@@ -32,17 +32,17 @@ class RegisterController: UIViewController {
         
 
         
-//        SMSSDK.getVerificationCode(by: SMSGetCodeMethodSMS, phoneNumber: "17706019256", zone: "86") { (error) in
-//            if (error != nil)
-//            {
-//                // 请求成功
-//            }
-//            else
-//            {
-//                // error
-//            }
-//        }
-//        
+        SMSSDK.getVerificationCode(by: SMSGetCodeMethodSMS, phoneNumber: "17706019256", zone: "86") { (error) in
+            if (error != nil)
+            {
+                // 请求成功
+            }
+            else
+            {
+                // error
+            }
+        }
+        
         
         
 //        if pwdTF.text != checkPwdTF.text {
