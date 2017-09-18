@@ -7,9 +7,22 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class CardCell: UITableViewCell {
+    
+    
+    var oneModel = CardModel(json:JSON.null) {
+        didSet {
+        titleLab.text = oneModel.bankNm
+        numLab.text = oneModel.bankNo
+            
+            
+        }
+    }
+    @IBOutlet weak var numLab: UILabel!
 
+    @IBOutlet weak var titleLab: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

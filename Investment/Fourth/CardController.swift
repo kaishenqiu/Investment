@@ -9,38 +9,45 @@
 import UIKit
 
 class CardController: UITableViewController {
+    
+     var dataArray = [CardModel]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         tableView.tableFooterView = UIView()
+        tableView.separatorStyle = .none
         
+        
+        tableView.mj_header = ANRefreshHeader {
+            self.network()
+        }
+ 
+        
+        tableView.mj_header.beginRefreshing()
+        
+
+        
+    }
+    
+    func network() {
         
         ANBaseNetWork.sharedInstance.networkForListNOHUDWithHeader(.mybank, successHandle: { (result) in
             
-            print(result)
+            self.dataArray.removeAll()
+            for item in result {
+                let one = CardModel(json: item)
+                self.dataArray.append(one)
+                
+            }
+            self.tableView.mj_header.endRefreshing()
             
-//            if self.pageflag == 1 {
-//                self.dataArray.removeAll()
-//            }
-//            for item in result {
-//                let one = LeftModel(json: item)
-//                self.dataArray.append(one)
-//                
-//            }
-//            self.tableView.mj_footer.endRefreshing()
-//            self.tableView.mj_header.endRefreshing()
-//            self.tableView.reloadData()
+            self.tableView.reloadData()
         }) { (errorStr) in
-//            self.tableView.mj_footer.endRefreshing()
-//            self.tableView.mj_header.endRefreshing()
+            self.tableView.mj_header.endRefreshing()
             
         }
+        
         
     }
 
@@ -51,12 +58,13 @@ class CardController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 3
+        return self.dataArray.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "CardCell", for: indexPath) as! CardCell
+        cell.oneModel = dataArray[indexPath.row]
         
         return cell
     }

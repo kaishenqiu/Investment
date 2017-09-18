@@ -807,6 +807,10 @@
                                         <constraint firstItem="Jtk-Fq-fax" firstAttribute="top" secondItem="EWh-hV-5Xp" secondAttribute="top" constant="5" id="cZB-2N-3DT"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="numLab" destination="IF9-S1-zIt" id="ICj-LL-aS3"/>
+                                    <outlet property="titleLab" destination="0Cx-Up-ChV" id="9bl-a7-98P"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -814,7 +818,11 @@
                             <outlet property="delegate" destination="KGm-eZ-8sa" id="fkV-aL-pPR"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="银行卡" id="NAE-74-GyP"/>
+                    <navigationItem key="navigationItem" title="银行卡" id="NAE-74-GyP">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="KYK-cn-eNM">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w22-Xb-kVD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -837,6 +845,115 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="adC-MK-M5B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="104.8" y="125.4872563718141"/>
+        </scene>
+        <!--绑定银行卡-->
+        <scene sceneID="lP0-1z-q50">
+            <objects>
+                <viewController id="or1-aP-sfP" customClass="RegisterController" customModule="Investment" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kwe-6v-dPY"/>
+                        <viewControllerLayoutGuide type="bottom" id="ccC-bf-I7c"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SwZ-ps-MbV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="银行名称" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OZO-sm-LIu">
+                                <rect key="frame" x="15" y="94" width="345" height="44"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Gwr-Mn-NbI"/>
+                                </constraints>
+                                <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="银行卡号" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8qx-y5-NCy">
+                                <rect key="frame" x="15" y="144" width="345" height="44"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="9kU-rT-fwi"/>
+                                </constraints>
+                                <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="开户行" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Sj-QG-EiK">
+                                <rect key="frame" x="15" y="194" width="345" height="44"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="pn2-m2-xa3"/>
+                                </constraints>
+                                <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JQK-Dg-1lj">
+                                <rect key="frame" x="15" y="263" width="345" height="42"/>
+                                <color key="backgroundColor" red="0.92941176469999998" green="0.23529411759999999" blue="0.21960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="qBH-ml-qgz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                <state key="normal" title="绑定">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="registerClick:" destination="or1-aP-sfP" eventType="touchUpInside" id="a25-fY-N7K"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yqU-zy-hwT">
+                                <rect key="frame" x="14.5" y="188" width="345" height="1"/>
+                                <color key="backgroundColor" red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="rpq-uO-A21"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3cH-po-0kS">
+                                <rect key="frame" x="15" y="238" width="345" height="1"/>
+                                <color key="backgroundColor" red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="Ve2-y0-azq"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hze-wC-UBA">
+                                <rect key="frame" x="15" y="138" width="345" height="1"/>
+                                <color key="backgroundColor" red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="cmo-1t-LlN"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="OZO-sm-LIu" firstAttribute="leading" secondItem="SwZ-ps-MbV" secondAttribute="leading" constant="15" id="18h-pg-g1o"/>
+                            <constraint firstAttribute="trailing" secondItem="1Sj-QG-EiK" secondAttribute="trailing" constant="15" id="5sP-9U-vSS"/>
+                            <constraint firstItem="hze-wC-UBA" firstAttribute="centerX" secondItem="OZO-sm-LIu" secondAttribute="centerX" id="6UE-bC-tcO"/>
+                            <constraint firstItem="hze-wC-UBA" firstAttribute="top" secondItem="OZO-sm-LIu" secondAttribute="bottom" id="8II-fd-sGb"/>
+                            <constraint firstItem="JQK-Dg-1lj" firstAttribute="leading" secondItem="SwZ-ps-MbV" secondAttribute="leading" constant="15" id="DRn-JN-ddu"/>
+                            <constraint firstItem="1Sj-QG-EiK" firstAttribute="top" secondItem="yqU-zy-hwT" secondAttribute="bottom" constant="5" id="DlG-ar-CTe"/>
+                            <constraint firstAttribute="trailing" secondItem="JQK-Dg-1lj" secondAttribute="trailing" constant="15" id="FDN-Xy-jfe"/>
+                            <constraint firstItem="JQK-Dg-1lj" firstAttribute="top" secondItem="1Sj-QG-EiK" secondAttribute="bottom" constant="25" id="KTf-VY-Vnr"/>
+                            <constraint firstItem="yqU-zy-hwT" firstAttribute="width" secondItem="8qx-y5-NCy" secondAttribute="width" id="Mng-8Z-l3N"/>
+                            <constraint firstItem="3cH-po-0kS" firstAttribute="top" secondItem="1Sj-QG-EiK" secondAttribute="bottom" id="NqH-F7-tHd"/>
+                            <constraint firstItem="yqU-zy-hwT" firstAttribute="top" secondItem="8qx-y5-NCy" secondAttribute="bottom" id="Shu-PX-PWz"/>
+                            <constraint firstItem="yqU-zy-hwT" firstAttribute="centerX" secondItem="8qx-y5-NCy" secondAttribute="centerX" id="YMu-jX-7kZ"/>
+                            <constraint firstItem="OZO-sm-LIu" firstAttribute="top" secondItem="kwe-6v-dPY" secondAttribute="bottom" constant="30" id="bop-fa-0EZ"/>
+                            <constraint firstItem="hze-wC-UBA" firstAttribute="width" secondItem="OZO-sm-LIu" secondAttribute="width" id="eNI-97-WDL"/>
+                            <constraint firstItem="3cH-po-0kS" firstAttribute="width" secondItem="1Sj-QG-EiK" secondAttribute="width" id="fB5-Bj-Qv3"/>
+                            <constraint firstAttribute="trailing" secondItem="OZO-sm-LIu" secondAttribute="trailing" constant="15" id="fwn-le-Nb7"/>
+                            <constraint firstItem="8qx-y5-NCy" firstAttribute="width" secondItem="OZO-sm-LIu" secondAttribute="width" id="fx5-LI-4oc"/>
+                            <constraint firstItem="8qx-y5-NCy" firstAttribute="top" secondItem="hze-wC-UBA" secondAttribute="bottom" constant="5" id="gft-bz-2Yh"/>
+                            <constraint firstItem="8qx-y5-NCy" firstAttribute="leading" secondItem="SwZ-ps-MbV" secondAttribute="leading" constant="15" id="n8g-uU-VPc"/>
+                            <constraint firstItem="3cH-po-0kS" firstAttribute="centerX" secondItem="1Sj-QG-EiK" secondAttribute="centerX" id="vbi-rb-Xbl"/>
+                            <constraint firstItem="1Sj-QG-EiK" firstAttribute="leading" secondItem="SwZ-ps-MbV" secondAttribute="leading" constant="15" id="ztC-RI-4av"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="绑定银行卡" id="TnH-uF-uVn"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xfx-wh-aG6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3484" y="-36"/>
         </scene>
     </scenes>
     <resources>
