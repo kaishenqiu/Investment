@@ -28,7 +28,10 @@ func SCREEN_ADAPTER_W (x:Float) -> CGFloat
 let GlobalColor = #colorLiteral(red: 0.9294117647, green: 0.2352941176, blue: 0.2196078431, alpha: 1)
 
 let TOKEN = "token"
-
+let LOGINNAME = "loginname"
+let ID = "loginid"
+let MONEY = "money"
+let TOKENAuthorization = "tokenAuthorization"
 
 //当前日期
 func today_s() -> String {

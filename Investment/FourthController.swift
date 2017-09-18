@@ -10,6 +10,7 @@ import UIKit
 
 class FourthController: UIViewController {
 
+    @IBOutlet weak var moneyLab: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -29,10 +30,11 @@ class FourthController: UIViewController {
         self .navigationController?.navigationBar.setBackgroundImage(getImageWithColor(color: GlobalColor, size: CGSize(width:1,height:1)), for: .any, barMetrics: .default)
         self .navigationController?.navigationBar.shadowImage = UIImage()
         self .navigationController?.navigationBar.isTranslucent = false
-     
-        
-        
-        
+
+        moneyLab.text = UserDefaults.standard.value(forKey: MONEY) as! String!
+    
+    
+    
     }
  
     /*

@@ -48,15 +48,32 @@ class LoginController: UIViewController {
                 SVProgressHUD.showError(withStatus: "手机号与密码不能为空")
                 return
         }
-//        loginVM.loginData(username: phoneNum, password: password, successCallback: {
-//            
-//            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "Userinforefresh"), object: nil)
-//            self.dismiss(animated: true, completion: { 
-//                
-//            })
-//        }) { 
-//            
-//        }
+ 
+        
+        ANBaseNetWork.sharedInstance.networkForOriginal(.login(username: self.mobileField.text!, password: self.pwdField.text!), resultHandle: { (result) in
+            SVProgressHUD.showInfo(withStatus: "登录成功")
+            
+            
+            UserDefaults.standard.set(result?["data"]["token"].stringValue, forKey: TOKEN)
+             UserDefaults.standard.set(result?["data"]["user"]["id"].stringValue, forKey: ID)
+             UserDefaults.standard.set(result?["data"]["user"]["login_nm"].stringValue, forKey: LOGINNAME)
+            UserDefaults.standard.set(result?["data"]["user"]["money"].stringValue, forKey: MONEY)
+            let tokenA = "Bearer " + (result?["data"]["token"].stringValue)!
+            UserDefaults.standard.set(tokenA, forKey: TOKENAuthorization)
+            
+            
+
+            let deadlineTime = DispatchTime.now() + .seconds(1)
+            DispatchQueue.main.asyncAfter(deadline: deadlineTime) {
+                self.dismiss(animated: true, completion: nil)
+            }
+     
+            
+            
+        })
+        
+        
+
         
     }
     override func didReceiveMemoryWarning() {

@@ -10,10 +10,11 @@ import UIKit
 import Moya
 
 public enum ITService {
-    case login(name: String, pass: String)
+    case login(username: String, password: String)
     case register(mobile: String, password: String, code:String)
     case projectList(page:String)
     case goodsList(page:String)
+    case mybank
     
 }
 
@@ -28,14 +29,15 @@ extension ITService: TargetType {
         switch self {
             
         case .login:
-            return "Login"
+            return "login"
         case .register:
             return "register"
         case .projectList:
             return "project/list"
         case .goodsList:
             return "goods/list"
-
+        case .mybank:
+            return "user/mybank"
             
         }
     }
@@ -45,7 +47,7 @@ extension ITService: TargetType {
         
         switch self {
         case .login(let name, let pass):
-            return ["name": name, "pass": pass]
+            return ["username": name, "password": pass]
             
         case .register(let mobile,let password,let code):
             return ["mobile": mobile, "password": password, "code":code ]
@@ -53,6 +55,8 @@ extension ITService: TargetType {
             return ["page":page]
         case .goodsList(let page):
             return ["page":page]
+        case .mybank():
+            return [:]
             
 
         }

@@ -242,6 +242,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="我的" id="bse-jD-kBC"/>
+                    <connections>
+                        <outlet property="moneyLab" destination="ZIl-BR-G8h" id="ZNf-xI-Y8l"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KD4-S8-ci1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -609,7 +612,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="VGd-7t-c3L">
                                 <rect key="frame" x="15" y="79" width="345" height="588"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <mutableString key="text">猪OK计划：是猪OK金服推出的“投资人在锁定期内对借款项目进行优先自动投资及到期退出或提前退出时优先自动转让债权”的服务计划，是便捷、高效的自动投标工具。
+                                <string key="text">猪OK计划：是猪OK金服推出的“投资人在锁定期内对借款项目进行优先自动投资及到期退出或提前退出时优先自动转让债权”的服务计划，是便捷、高效的自动投标工具。
 运作方式：猪OK计划在用户认可的标的范围内，对符合要求的标的进行优先自动投标，且回款本息在相应期限内自动复投，优化资金利用率，省去投资人个人安排投资的时间和精力。期限结束后猪OK计划会通过猪OK金服债权转让平台进行转让退出。
 收益方式：锁定期结束后一次性还本付息
 提前退出手续费：加入计划金额的2%
@@ -631,7 +634,7 @@
 经验丰富的借款审查人员，对借款申请材料、借款及担保协议等进行综合判断，结合猪OK金服信用风险分析系统的评估结果，按照“审贷分离”的原则进行双重审核并最终决定批核结果。
 3、借后管理：
 借款发放后，猪OK金服定期对借款人进行还款提醒、电话回访、跟进调查等，以确保借款的安全及还款的准时、足额。
-*预期收益不代表实际收益</mutableString>
+*预期收益不代表实际收益</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>

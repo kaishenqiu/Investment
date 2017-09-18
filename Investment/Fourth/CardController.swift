@@ -19,6 +19,29 @@ class CardController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         tableView.tableFooterView = UIView()
+        
+        
+        ANBaseNetWork.sharedInstance.networkForListNOHUDWithHeader(.mybank, successHandle: { (result) in
+            
+            print(result)
+            
+//            if self.pageflag == 1 {
+//                self.dataArray.removeAll()
+//            }
+//            for item in result {
+//                let one = LeftModel(json: item)
+//                self.dataArray.append(one)
+//                
+//            }
+//            self.tableView.mj_footer.endRefreshing()
+//            self.tableView.mj_header.endRefreshing()
+//            self.tableView.reloadData()
+        }) { (errorStr) in
+//            self.tableView.mj_footer.endRefreshing()
+//            self.tableView.mj_header.endRefreshing()
+            
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {
