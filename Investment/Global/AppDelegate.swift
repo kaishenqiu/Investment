@@ -8,6 +8,7 @@
 
 import UIKit
 import SVProgressHUD
+import IQKeyboardManagerSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate,UITabBarControllerDelegate {
@@ -19,6 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,UITabBarControllerDelegate
         // Override point for customization after application launch.
         
         hudConfig()
+        keyBoardManager()
         window = UIWindow.init(frame: UIScreen.main.bounds)
         let baseTabbarC = BaseTabbarController()
         baseTabbarC.delegate = self
@@ -48,6 +50,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate,UITabBarControllerDelegate
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+    // MARK: 私人定义
+    func keyBoardManager() {
+        IQKeyboardManager.sharedManager().enable = true
+        IQKeyboardManager.sharedManager().shouldResignOnTouchOutside = true
+        IQKeyboardManager.sharedManager().keyboardDistanceFromTextField = 60
     }
     func hudConfig () {
         SVProgressHUD.setDefaultMaskType(.clear)
