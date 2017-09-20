@@ -15,6 +15,7 @@ public enum ITService {
     case projectList(page:String)
     case goodsList(page:String)
     case mybank
+    case bindbank(account_nm:String, bank_no:String, bank_nm:String)
     
 }
 
@@ -38,7 +39,9 @@ extension ITService: TargetType {
             return "goods/list"
         case .mybank:
             return "user/mybank"
-            
+        case .bindbank:
+            return "user/bindbank"
+        
         }
     }
     
@@ -57,7 +60,8 @@ extension ITService: TargetType {
             return ["page":page]
         case .mybank():
             return [:]
-            
+        case .bindbank(let account_nm,let bank_no,let bank_nm):
+            return ["account_nm":account_nm, "bank_no":bank_no, "bank_nm":bank_nm]
 
         }
     }

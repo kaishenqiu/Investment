@@ -33,6 +33,12 @@ let ID = "loginid"
 let MONEY = "money"
 let TOKENAuthorization = "tokenAuthorization"
 
+
+
+// MARK: - 通知标识
+
+let CALL_CARD_REFRESH = "callcardrefresh"
+
 //当前日期
 func today_s() -> String {
     let formatter = DateFormatter()

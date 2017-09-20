@@ -59,6 +59,40 @@ class ANBaseNetWork: NSObject {
         }
 
     }
+    
+    // MARK: - 请求网络获取操作结果 成或败  带请求头
+    
+    func networkForBoolWithHeader(_ target: ITService, successHandle: ((Bool) -> Void)?, errorHandle: ((String) -> Void)?) {
+        
+        SVProgressHUD.show()
+        providerWithHeader.request(target) { result in
+            SVProgressHUD.dismiss()
+            switch result {
+            case let .success(response):
+                do {
+                    let json = try response.mapJSON()
+                    let data = JSON(json)
+                    if data["code"].stringValue == "200" {
+                        
+                        if let handle = successHandle {
+                            handle(true)
+                        }
+                    } else {
+                        
+                        if let handle = errorHandle {
+                            handle(data["msg"].stringValue)
+                        }
+                        
+                    }
+                } catch {
+                    ANLog("❌: Network connection is successful, but mapJSON error")
+                }
+            case let .failure(error):
+                ANLog(error.errorDescription)
+            }
+        }
+        
+    }
 
     // MARK: - 请求网络获取列表
 

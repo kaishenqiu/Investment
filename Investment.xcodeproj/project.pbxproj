@@ -24,6 +24,8 @@
 		582E7A041F6F689300A81F67 /* STCountDownButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582E7A031F6F689300A81F67 /* STCountDownButton.swift */; };
 		582E7A061F6FC44600A81F67 /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582E7A051F6FC44600A81F67 /* CardModel.swift */; };
 		582E7A081F6FC8B500A81F67 /* AddCardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582E7A071F6FC8B500A81F67 /* AddCardController.swift */; };
+		582E7A0A1F70C04500A81F67 /* SettingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582E7A091F70C04500A81F67 /* SettingController.swift */; };
+		582E7A0C1F70C14500A81F67 /* PersonButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582E7A0B1F70C14500A81F67 /* PersonButton.swift */; };
 		588755261F1600FF00602D43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 588755251F1600FF00602D43 /* Assets.xcassets */; };
 		588755291F1600FF00602D43 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 588755271F1600FF00602D43 /* LaunchScreen.storyboard */; };
 		588755311F16028A00602D43 /* BaseTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588755301F16028A00602D43 /* BaseTabbarController.swift */; };
@@ -70,6 +72,8 @@
 		582E7A031F6F689300A81F67 /* STCountDownButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STCountDownButton.swift; sourceTree = "<group>"; };
 		582E7A051F6FC44600A81F67 /* CardModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
 		582E7A071F6FC8B500A81F67 /* AddCardController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCardController.swift; sourceTree = "<group>"; };
+		582E7A091F70C04500A81F67 /* SettingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingController.swift; sourceTree = "<group>"; };
+		582E7A0B1F70C14500A81F67 /* PersonButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonButton.swift; sourceTree = "<group>"; };
 		5887551B1F1600FF00602D43 /* Investment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Investment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		588755251F1600FF00602D43 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		588755281F1600FF00602D43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -140,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				582E7A031F6F689300A81F67 /* STCountDownButton.swift */,
+				582E7A0B1F70C14500A81F67 /* PersonButton.swift */,
 			);
 			path = vendor;
 			sourceTree = "<group>";
@@ -228,6 +233,7 @@
 				582E79EB1F6A26BC00A81F67 /* CardController.swift */,
 				582E79F21F6A618C00A81F67 /* SalaryController.swift */,
 				582E7A071F6FC8B500A81F67 /* AddCardController.swift */,
+				582E7A091F70C04500A81F67 /* SettingController.swift */,
 			);
 			path = Fourth;
 			sourceTree = "<group>";
@@ -417,6 +423,7 @@
 				589F316D1F5FB5130004E83D /* UIView+Extension.swift in Sources */,
 				589F31AD1F60EE3B0004E83D /* OrderListController.swift in Sources */,
 				589F31711F5FB5720004E83D /* RightController.swift in Sources */,
+				582E7A0C1F70C14500A81F67 /* PersonButton.swift in Sources */,
 				582E7A021F6D242200A81F67 /* RecordCell.swift in Sources */,
 				582E79E41F68DC7100A81F67 /* LoginController.swift in Sources */,
 				589F31AB1F60ED990004E83D /* MyOrderController.swift in Sources */,
@@ -435,6 +442,7 @@
 				582E7A041F6F689300A81F67 /* STCountDownButton.swift in Sources */,
 				589F31991F5FF3AD0004E83D /* ITService.swift in Sources */,
 				582E79F31F6A618C00A81F67 /* SalaryController.swift in Sources */,
+				582E7A0A1F70C04500A81F67 /* SettingController.swift in Sources */,
 				589F31AF1F611B190004E83D /* AppDefine.swift in Sources */,
 				582E79E61F68DC8900A81F67 /* RegisterController.swift in Sources */,
 				589F31A41F60D1DA0004E83D /* ANRefreshFooter.swift in Sources */,

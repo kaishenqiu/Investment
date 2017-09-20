@@ -27,7 +27,11 @@ class CardController: UITableViewController {
         tableView.mj_header.beginRefreshing()
         
 
-        
+        NotificationCenter.default.addObserver(self, selector: #selector(network), name: NSNotification.Name(rawValue: CALL_CARD_REFRESH), object: nil)
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
     }
     
     func network() {
