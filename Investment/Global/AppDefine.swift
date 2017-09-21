@@ -37,6 +37,7 @@ let TOKENAuthorization = "tokenAuthorization"
 
 // MARK: - 通知标识
 let CALL_CARD_REFRESH = "callcardrefresh"
+let CALL_ADDR_REFRESH = "calladdrrefresh"
 
 
 

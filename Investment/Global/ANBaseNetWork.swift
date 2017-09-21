@@ -107,15 +107,15 @@ class ANBaseNetWork: NSObject {
                 do {
                     let json = try response.mapJSON()
                     let data = JSON(json)
-                    if data["flag"].stringValue == "true" {
-                        if let json_array = data["info"].array {
+                    if data["code"].stringValue == "200" {
+                        if let json_array = data["data"].array {
                             if let handle = successHandle {
                                 handle(json_array)
                             }
                         }
                     } else {
                         if let handle = errorHandle {
-                            handle(data["info"].stringValue)
+                            handle(data["msg"].stringValue)
                         }
                     }
                 } catch {

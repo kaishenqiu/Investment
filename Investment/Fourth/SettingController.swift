@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import SVProgressHUD
 class SettingController: UIViewController {
 
     override func viewDidLoad() {
@@ -19,6 +19,19 @@ class SettingController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    @IBAction func logoutAction(_ sender: Any) {
+        
+        let appDomain = Bundle.main.bundleIdentifier
+        UserDefaults.standard.removePersistentDomain(forName: appDomain!)
+        
+        SVProgressHUD.showSuccess(withStatus: "退出成功")
+        
+        let deadlineTime = DispatchTime.now() + .seconds(1)
+        DispatchQueue.main.asyncAfter(deadline: deadlineTime) {
+            self.navigationController!.popViewController(animated: true)
+        }
+        
     }
     
 

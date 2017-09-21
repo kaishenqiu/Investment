@@ -73,12 +73,16 @@ class AddAddrController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
         //根据列、行索引判断需要改变数据的区域
         switch (component) {
         case 0:
-            self.getData(pid: provinceDic[provinceNameArray[row]]!,component: component)
+            provinceStr = provinceNameArray[row]
+            self.getDataCity(pid: provinceDic[provinceStr]!)
            break;
         case 1:
-            self.getData(pid: cityDic[cityNameArray[row]]!,component: component)
+            self.cityStr = cityNameArray[row]
+            self.getDataDistrict(pid: cityDic[cityNameArray[row]]!)
+            
             break;
         case 2:
+            self.districtStr = districtNameArray[row]
            break;
         default:
             break;
@@ -86,21 +90,19 @@ class AddAddrController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
         addrField.text = provinceStr + cityStr + districtStr
     }
     
-    private func getData(pid:String,component:Int) {
+    private func getDataCity(pid:String) {
         
-        // MARK: - 获取品种
+        // MARK: - 获取城市
         ANBaseNetWork.sharedInstance.networkForListNOHUD(.arealist(pid:pid), successHandle: { (result) in
+            
+            cityNameArray.removeAll()
+            cityDic.removeAll()
+            
             for dic in result {
                 var k = ""
                 var v = ""
-                if component == 0 {
-                 cityNameArray.removeAll()
-                 cityDic.removeAll()
-                }
-                if component == 1 {
-                    districtNameArray.removeAll()
-                    districtDic.removeAll()
-                }
+              
+ 
                 
                 for (key, value) in dic {
                     if key == "key"{
@@ -110,64 +112,91 @@ class AddAddrController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
                         v = value.stringValue
                     }
                     if v != ""{
-                        switch (component) {
-                        case 0:
+                   
                             //把 名称当做key ，到时直接用名称查出  id
                             cityDic.updateValue(k, forKey: v)
-                            break;
-                        case 1:
-                            districtDic.updateValue(k, forKey: v)
-                            break;
-
-                        default:
-                            break;
-                        }
   
                     }
                 }
-                if component == 0 {
-                    cityNameArray = Array(cityDic.keys)
-                    self.getData(pid: cityDic[cityNameArray[0]]!,component: 1)
-                }
-                if component == 1 {
-                   districtNameArray = Array(districtDic.keys)
-                }
+
             }
+            cityNameArray = Array(cityDic.keys)
+            self.cityStr = cityNameArray[0]
+            self.getDataDistrict(pid: cityDic[self.cityStr]!)
+            self.pickerView.reloadComponent(1)
             
         }) { (_) in
             
         }
-        print(cityNameArray)
-        print(districtNameArray)
-        pickerView.reloadAllComponents()
+        
+       
+        
+    }
+    private func getDataDistrict(pid:String) {
+             // MARK: - 获取区县
+        ANBaseNetWork.sharedInstance.networkForListNOHUD(.arealist(pid:pid), successHandle: { (result) in
+            districtNameArray.removeAll()
+            districtDic.removeAll()
+            for dic in result {
+                var k = ""
+                var v = ""
+       
+                
+                
+                for (key, value) in dic {
+                    if key == "key"{
+                        k = value.stringValue
+                    }
+                    if key == "name"{
+                        v = value.stringValue
+                    }
+                    if v != ""{
+                        
+                        //把 名称当做key ，到时直接用名称查出  id
+                        districtDic.updateValue(k, forKey: v)
+                        
+                    }
+                }
+           
+            }
+            districtNameArray = Array(districtDic.keys)
+            self.districtStr = districtNameArray[0]
+            self.pickerView.reloadComponent(2)
+            
+        }) { (_) in
+            
+        }
+        
+    
+        
         
     }
 
     @IBAction func saveAction(_ sender: Any) {
-//        guard let name = nameField.text, name.characters.count > 0 else {
-//            SVProgressHUD.showError(withStatus: "请输入账号")
-//            return
-//        }
-//        guard let bankno = bank_no.text, bankno.characters.count > 0 else {
-//            SVProgressHUD.showError(withStatus: "请输入卡号")
-//            return
-//        }
-//        guard let banknm = bank_nm.text, banknm.characters.count > 0 else {
-//            SVProgressHUD.showError(withStatus: "请输入开户行")
-//            return
-//        }
-//        
-//        
-//        ANBaseNetWork.sharedInstance.networkForBoolWithHeader(.createaddress(username: name, province: <#T##String#>, city: <#T##String#>, district: <#T##String#>, address: <#T##String#>, mobile: <#T##String#>), successHandle: { (result) in
-//            SVProgressHUD.showInfo(withStatus: "新增地址成功")
-//            NotificationCenter.default.post(name: NSNotification.Name(rawValue: CALL_CARD_REFRESH), object: nil)
-//            
-//            self.navigationController!.popViewController(animated: true)
-//            
-//            
-//        }, errorHandle: { (error) in
-//            SVProgressHUD.showInfo(withStatus: error)
-//        })
+        guard let name = nameField.text, name.characters.count > 0 else {
+            SVProgressHUD.showError(withStatus: "请输入姓名")
+            return
+        }
+        guard let mobile = mobileField.text, mobile.characters.count > 0 else {
+            SVProgressHUD.showError(withStatus: "请输入手机")
+            return
+        }
+        guard let detial = detailAddrField.text, detial.characters.count > 0 else {
+            SVProgressHUD.showError(withStatus: "请输入详细地址")
+            return
+        }
+        
+        
+        ANBaseNetWork.sharedInstance.networkForBoolWithHeader(.createaddress(username: name, province: self.provinceStr, city: self.cityStr, district: self.districtStr, address: detial, mobile: mobile    ), successHandle: { (result) in
+            SVProgressHUD.showInfo(withStatus: "新增地址成功")
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: CALL_ADDR_REFRESH), object: nil)
+            
+            self.navigationController!.popViewController(animated: true)
+            
+            
+        }, errorHandle: { (error) in
+            SVProgressHUD.showInfo(withStatus: error)
+        })
 
         
         
