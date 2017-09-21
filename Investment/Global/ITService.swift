@@ -16,6 +16,11 @@ public enum ITService {
     case goodsList(page:String)
     case mybank
     case bindbank(account_nm:String, bank_no:String, bank_nm:String)
+    case arealist(pid:String)
+    case createaddress(username:String, province:String, city:String, district:String, address:String, mobile:String)
+    
+
+
     
 }
 
@@ -41,7 +46,10 @@ extension ITService: TargetType {
             return "user/mybank"
         case .bindbank:
             return "user/bindbank"
-        
+        case .arealist:
+            return "area/list"
+        case .createaddress:
+            return "user/createaddress"
         }
     }
     
@@ -62,6 +70,10 @@ extension ITService: TargetType {
             return [:]
         case .bindbank(let account_nm,let bank_no,let bank_nm):
             return ["account_nm":account_nm, "bank_no":bank_no, "bank_nm":bank_nm]
+        case .arealist(let pid):
+            return ["pid": pid]
+        case .createaddress(let username,let province,let city,let district,let address,let mobile):
+            return ["username":username, "province":province, "city":city, "district":district, "address":address, "mobile":mobile]
 
         }
     }

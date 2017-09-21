@@ -49,6 +49,74 @@ public func isTelNumber(num:String)->Bool
 // MARK: - 获取数据字典
 public func getDataDictionary() {
     
+    ANBaseNetWork.sharedInstance.networkForListNOHUD(.arealist(pid:"0"), successHandle: { (result) in
+        for dic in result {
+            var k = ""
+            var v = ""
+            for (key, value) in dic {
+                if key == "key"{
+                    k = value.stringValue
+                }
+                if key == "name"{
+                    v = value.stringValue
+                }
+                if v != ""{
+                    //把 名称当做key ，到时直接用名称查出  id
+                    provinceDic.updateValue(k, forKey: v)
+                }
+            }
+        }
+        provinceNameArray = Array(provinceDic.keys)
+        ANBaseNetWork.sharedInstance.networkForListNOHUD(.arealist(pid:provinceDic[provinceNameArray[0]]!), successHandle: { (result) in
+            for dic in result {
+                var k = ""
+                var v = ""
+                for (key, value) in dic {
+                    if key == "key"{
+                        k = value.stringValue
+                    }
+                    if key == "name"{
+                        v = value.stringValue
+                    }
+                    if v != ""{
+                        //把 名称当做key ，到时直接用名称查出  id
+                        cityDic.updateValue(k, forKey: v)
+                    }
+                }
+            }
+            cityNameArray = Array(cityDic.keys)
+            ANBaseNetWork.sharedInstance.networkForListNOHUD(.arealist(pid:cityDic[cityNameArray[0]]!), successHandle: { (result) in
+                for dic in result {
+                    var k = ""
+                    var v = ""
+                    for (key, value) in dic {
+                        if key == "key"{
+                            k = value.stringValue
+                        }
+                        if key == "name"{
+                            v = value.stringValue
+                        }
+                        if v != ""{
+                            //把 名称当做key ，到时直接用名称查出  id
+                            districtDic.updateValue(k, forKey: v)
+                        }
+                    }
+                }
+                districtNameArray = Array(districtDic.keys)
+                
+            }) { (_) in
+                
+            }
+            
+        }) { (_) in
+            
+        }
+        
+        
+    }) { (_) in
+        
+    }
+    
 
     
 }

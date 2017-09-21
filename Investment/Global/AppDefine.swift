@@ -36,8 +36,17 @@ let TOKENAuthorization = "tokenAuthorization"
 
 
 // MARK: - 通知标识
-
 let CALL_CARD_REFRESH = "callcardrefresh"
+
+
+
+public var provinceDic: [String:String] = [:]
+public var cityDic: [String:String] = [:]
+public var districtDic: [String:String] = [:]
+
+public var provinceNameArray = [String]()
+public var cityNameArray = [String]()
+public var districtNameArray = [String]()
 
 //当前日期
 func today_s() -> String {

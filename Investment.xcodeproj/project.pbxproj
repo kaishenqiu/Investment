@@ -53,6 +53,8 @@
 		589F31AD1F60EE3B0004E83D /* OrderListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589F31AC1F60EE3B0004E83D /* OrderListController.swift */; };
 		589F31AF1F611B190004E83D /* AppDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589F31AE1F611B190004E83D /* AppDefine.swift */; };
 		589F31B21F627A5A0004E83D /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 589F31B11F627A5A0004E83D /* Login.storyboard */; };
+		58D102591F7218A6000EE176 /* AddressController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D102581F7218A6000EE176 /* AddressController.swift */; };
+		58D1025B1F7218C1000EE176 /* AddAddrController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D1025A1F7218C1000EE176 /* AddAddrController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -104,6 +106,8 @@
 		589F31AC1F60EE3B0004E83D /* OrderListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderListController.swift; sourceTree = "<group>"; };
 		589F31AE1F611B190004E83D /* AppDefine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDefine.swift; sourceTree = "<group>"; };
 		589F31B11F627A5A0004E83D /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		58D102581F7218A6000EE176 /* AddressController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressController.swift; sourceTree = "<group>"; };
+		58D1025A1F7218C1000EE176 /* AddAddrController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddAddrController.swift; sourceTree = "<group>"; };
 		AC62D6580094BFC44A6B8EF4 /* Pods_Investment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Investment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADC5CC48A22D8C8EAA110E1A /* Pods-Investment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Investment.release.xcconfig"; path = "Pods/Target Support Files/Pods-Investment/Pods-Investment.release.xcconfig"; sourceTree = "<group>"; };
 		E8A5407F8DC43D5C6BD37496 /* Pods-Investment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Investment.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Investment/Pods-Investment.debug.xcconfig"; sourceTree = "<group>"; };
@@ -234,6 +238,8 @@
 				582E79F21F6A618C00A81F67 /* SalaryController.swift */,
 				582E7A071F6FC8B500A81F67 /* AddCardController.swift */,
 				582E7A091F70C04500A81F67 /* SettingController.swift */,
+				58D102581F7218A6000EE176 /* AddressController.swift */,
+				58D1025A1F7218C1000EE176 /* AddAddrController.swift */,
 			);
 			path = Fourth;
 			sourceTree = "<group>";
@@ -413,6 +419,7 @@
 			files = (
 				582E79FE1F6D22C400A81F67 /* InsuranceController.swift in Sources */,
 				582E79E81F69234700A81F67 /* MyInvestmentController.swift in Sources */,
+				58D102591F7218A6000EE176 /* AddressController.swift in Sources */,
 				589F31A91F60D9870004E83D /* LeftCell.swift in Sources */,
 				589F315A1F5F9E330004E83D /* FirstController.swift in Sources */,
 				589F315E1F5F9E520004E83D /* ThirdController.swift in Sources */,
@@ -436,6 +443,7 @@
 				589F31731F5FC7520004E83D /* SecondCell.swift in Sources */,
 				582E79FC1F6BD1A100A81F67 /* LeftDetailController.swift in Sources */,
 				589F31621F5FA0050004E83D /* BaseNavController.swift in Sources */,
+				58D1025B1F7218C1000EE176 /* AddAddrController.swift in Sources */,
 				582E7A061F6FC44600A81F67 /* CardModel.swift in Sources */,
 				588755311F16028A00602D43 /* BaseTabbarController.swift in Sources */,
 				589F31641F5FA0A40004E83D /* GlobalFunction.swift in Sources */,

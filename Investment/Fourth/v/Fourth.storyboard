@@ -342,7 +342,7 @@
         <!--Title-->
         <scene sceneID="kPD-ni-DdT">
             <objects>
-                <tableViewController id="BfA-lA-hTi" sceneMemberID="viewController">
+                <tableViewController id="BfA-lA-hTi" customClass="AddressController" customModule="Investment" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="115" sectionHeaderHeight="28" sectionFooterHeight="28" id="z7S-K0-2QL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -447,7 +447,7 @@
         <!--Title-->
         <scene sceneID="Yo0-ZC-SDS">
             <objects>
-                <viewController id="BoO-o0-WwD" sceneMemberID="viewController">
+                <viewController id="BoO-o0-WwD" customClass="AddAddrController" customModule="Investment" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="yfL-l0-ex3"/>
                         <viewControllerLayoutGuide type="bottom" id="bRs-TT-7Nf"/>
@@ -476,11 +476,39 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eCM-MD-gbU">
                                 <rect key="frame" x="0.0" y="161" width="375" height="47"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MDL-Dl-33R">
+                                        <rect key="frame" x="10" y="0.0" width="355" height="47"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="MDL-Dl-33R" secondAttribute="bottom" id="9js-Ln-Ylc"/>
+                                    <constraint firstAttribute="trailing" secondItem="MDL-Dl-33R" secondAttribute="trailing" constant="10" id="Fee-IO-Z5b"/>
+                                    <constraint firstItem="MDL-Dl-33R" firstAttribute="leading" secondItem="eCM-MD-gbU" secondAttribute="leading" constant="10" id="qnk-JF-oRc"/>
+                                    <constraint firstItem="MDL-Dl-33R" firstAttribute="top" secondItem="eCM-MD-gbU" secondAttribute="top" id="rBs-76-uIf"/>
+                                </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YuT-0h-P5P">
                                 <rect key="frame" x="0.0" y="209" width="375" height="47"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="详细地址" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pcz-CJ-zbl">
+                                        <rect key="frame" x="10" y="0.0" width="355" height="47"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Pcz-CJ-zbl" secondAttribute="trailing" constant="10" id="eIl-fR-ohS"/>
+                                    <constraint firstItem="Pcz-CJ-zbl" firstAttribute="leading" secondItem="YuT-0h-P5P" secondAttribute="leading" constant="10" id="j5z-0V-l0W"/>
+                                    <constraint firstAttribute="bottom" secondItem="Pcz-CJ-zbl" secondAttribute="bottom" id="lNL-mj-YYx"/>
+                                    <constraint firstItem="Pcz-CJ-zbl" firstAttribute="top" secondItem="YuT-0h-P5P" secondAttribute="top" id="lXR-HN-6es"/>
+                                </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Gd-7f-Jcj">
                                 <rect key="frame" x="0.0" y="65" width="375" height="47"/>
@@ -529,9 +557,18 @@
                                 <state key="normal" title="保存">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="saveAction:" destination="BoO-o0-WwD" eventType="touchUpInside" id="R3T-lA-iWl"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="addrField" destination="MDL-Dl-33R" id="o7K-7L-TFg"/>
+                        <outlet property="detailAddrField" destination="Pcz-CJ-zbl" id="rjg-pe-aYC"/>
+                        <outlet property="mobileField" destination="mhm-Ds-rAL" id="GF5-7e-EZw"/>
+                        <outlet property="nameField" destination="2lu-fB-tFh" id="Rgq-i7-UeU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YBH-lP-3Oa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
