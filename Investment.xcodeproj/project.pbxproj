@@ -57,6 +57,14 @@
 		58D1027A1F73A836000EE176 /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D102791F73A836000EE176 /* CardModel.swift */; };
 		58D1027C1F73A8B4000EE176 /* AddrModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D1027B1F73A8B4000EE176 /* AddrModel.swift */; };
 		58D1027E1F73A951000EE176 /* AddrCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D1027D1F73A951000EE176 /* AddrCell.swift */; };
+		58D102861F74BF2C000EE176 /* DOPNavbarMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 58D102831F74BF2C000EE176 /* DOPNavbarMenu.m */; };
+		58D102871F74BF2C000EE176 /* UIView+DOPExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 58D102851F74BF2C000EE176 /* UIView+DOPExtension.m */; };
+		58D1028D1F74C123000EE176 /* ASValuePopUpView.m in Sources */ = {isa = PBXBuildFile; fileRef = 58D1028A1F74C123000EE176 /* ASValuePopUpView.m */; };
+		58D1028E1F74C123000EE176 /* ASValueTrackingSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 58D1028C1F74C123000EE176 /* ASValueTrackingSlider.m */; };
+		58D1029F1F75018C000EE176 /* GoodsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D1029E1F75018C000EE176 /* GoodsModel.swift */; };
+		58D102A11F750464000EE176 /* GoodsDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D102A01F750464000EE176 /* GoodsDetailController.swift */; };
+		58D102A31F7608E0000EE176 /* ChooseView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58D102A21F7608E0000EE176 /* ChooseView.xib */; };
+		58D102A51F7608F0000EE176 /* ChooseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D102A41F7608F0000EE176 /* ChooseView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -112,6 +120,22 @@
 		58D102791F73A836000EE176 /* CardModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
 		58D1027B1F73A8B4000EE176 /* AddrModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddrModel.swift; sourceTree = "<group>"; };
 		58D1027D1F73A951000EE176 /* AddrCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddrCell.swift; sourceTree = "<group>"; };
+		58D102821F74BF2C000EE176 /* DOPNavbarMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOPNavbarMenu.h; sourceTree = "<group>"; };
+		58D102831F74BF2C000EE176 /* DOPNavbarMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOPNavbarMenu.m; sourceTree = "<group>"; };
+		58D102841F74BF2C000EE176 /* UIView+DOPExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+DOPExtension.h"; sourceTree = "<group>"; };
+		58D102851F74BF2C000EE176 /* UIView+DOPExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+DOPExtension.m"; sourceTree = "<group>"; };
+		58D102891F74C123000EE176 /* ASValuePopUpView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASValuePopUpView.h; sourceTree = "<group>"; };
+		58D1028A1F74C123000EE176 /* ASValuePopUpView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASValuePopUpView.m; sourceTree = "<group>"; };
+		58D1028B1F74C123000EE176 /* ASValueTrackingSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASValueTrackingSlider.h; sourceTree = "<group>"; };
+		58D1028C1F74C123000EE176 /* ASValueTrackingSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASValueTrackingSlider.m; sourceTree = "<group>"; };
+		58D102961F74FF80000EE176 /* FarmDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FarmDetailViewController.swift; sourceTree = "<group>"; };
+		58D102971F74FF80000EE176 /* HttpRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpRequest.swift; sourceTree = "<group>"; };
+		58D102981F74FF80000EE176 /* MapSearchPig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapSearchPig.swift; sourceTree = "<group>"; };
+		58D102991F74FF80000EE176 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		58D1029E1F75018C000EE176 /* GoodsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoodsModel.swift; sourceTree = "<group>"; };
+		58D102A01F750464000EE176 /* GoodsDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoodsDetailController.swift; sourceTree = "<group>"; };
+		58D102A21F7608E0000EE176 /* ChooseView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChooseView.xib; sourceTree = "<group>"; };
+		58D102A41F7608F0000EE176 /* ChooseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseView.swift; sourceTree = "<group>"; };
 		AC62D6580094BFC44A6B8EF4 /* Pods_Investment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Investment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADC5CC48A22D8C8EAA110E1A /* Pods-Investment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Investment.release.xcconfig"; path = "Pods/Target Support Files/Pods-Investment/Pods-Investment.release.xcconfig"; sourceTree = "<group>"; };
 		E8A5407F8DC43D5C6BD37496 /* Pods-Investment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Investment.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Investment/Pods-Investment.debug.xcconfig"; sourceTree = "<group>"; };
@@ -152,6 +176,8 @@
 		582E79F81F6BA80200A81F67 /* vendor */ = {
 			isa = PBXGroup;
 			children = (
+				58D102881F74C123000EE176 /* ASValueTrackingSlider */,
+				58D102811F74BEF8000EE176 /* DOPNavbarMenu */,
 				582E7A031F6F689300A81F67 /* STCountDownButton.swift */,
 				582E7A0B1F70C14500A81F67 /* PersonButton.swift */,
 			);
@@ -214,9 +240,13 @@
 		589F31661F5FA0B60004E83D /* Second */ = {
 			isa = PBXGroup;
 			children = (
+				58D1029E1F75018C000EE176 /* GoodsModel.swift */,
 				589F315B1F5F9E420004E83D /* SecondController.swift */,
 				588755341F16043C00602D43 /* Second.storyboard */,
 				589F31721F5FC7520004E83D /* SecondCell.swift */,
+				58D102A01F750464000EE176 /* GoodsDetailController.swift */,
+				58D102A21F7608E0000EE176 /* ChooseView.xib */,
+				58D102A41F7608F0000EE176 /* ChooseView.swift */,
 			);
 			path = Second;
 			sourceTree = "<group>";
@@ -224,6 +254,7 @@
 		589F31671F5FA0BC0004E83D /* Third */ = {
 			isa = PBXGroup;
 			children = (
+				58D102951F74FF55000EE176 /* souzhu */,
 				588755361F16044700602D43 /* Third.storyboard */,
 				589F315D1F5F9E520004E83D /* ThirdController.swift */,
 			);
@@ -292,6 +323,39 @@
 				58D102791F73A836000EE176 /* CardModel.swift */,
 			);
 			path = m;
+			sourceTree = "<group>";
+		};
+		58D102811F74BEF8000EE176 /* DOPNavbarMenu */ = {
+			isa = PBXGroup;
+			children = (
+				58D102821F74BF2C000EE176 /* DOPNavbarMenu.h */,
+				58D102831F74BF2C000EE176 /* DOPNavbarMenu.m */,
+				58D102841F74BF2C000EE176 /* UIView+DOPExtension.h */,
+				58D102851F74BF2C000EE176 /* UIView+DOPExtension.m */,
+			);
+			path = DOPNavbarMenu;
+			sourceTree = "<group>";
+		};
+		58D102881F74C123000EE176 /* ASValueTrackingSlider */ = {
+			isa = PBXGroup;
+			children = (
+				58D102891F74C123000EE176 /* ASValuePopUpView.h */,
+				58D1028A1F74C123000EE176 /* ASValuePopUpView.m */,
+				58D1028B1F74C123000EE176 /* ASValueTrackingSlider.h */,
+				58D1028C1F74C123000EE176 /* ASValueTrackingSlider.m */,
+			);
+			path = ASValueTrackingSlider;
+			sourceTree = "<group>";
+		};
+		58D102951F74FF55000EE176 /* souzhu */ = {
+			isa = PBXGroup;
+			children = (
+				58D102961F74FF80000EE176 /* FarmDetailViewController.swift */,
+				58D102971F74FF80000EE176 /* HttpRequest.swift */,
+				58D102981F74FF80000EE176 /* MapSearchPig.swift */,
+				58D102991F74FF80000EE176 /* MapViewController.swift */,
+			);
+			path = souzhu;
 			sourceTree = "<group>";
 		};
 		DDFD7388A5BD36C21DED7DA1 /* Frameworks */ = {
@@ -369,6 +433,7 @@
 				582E79F51F6A693B00A81F67 /* Fourth.storyboard in Resources */,
 				588755351F16043C00602D43 /* Second.storyboard in Resources */,
 				588755291F1600FF00602D43 /* LaunchScreen.storyboard in Resources */,
+				58D102A31F7608E0000EE176 /* ChooseView.xib in Resources */,
 				589F31B21F627A5A0004E83D /* Login.storyboard in Resources */,
 				588755261F1600FF00602D43 /* Assets.xcassets in Resources */,
 				588755331F16043000602D43 /* First.storyboard in Resources */,
@@ -438,8 +503,11 @@
 				589F31A91F60D9870004E83D /* LeftCell.swift in Sources */,
 				589F315A1F5F9E330004E83D /* FirstController.swift in Sources */,
 				589F315E1F5F9E520004E83D /* ThirdController.swift in Sources */,
+				58D1028D1F74C123000EE176 /* ASValuePopUpView.m in Sources */,
 				589F316F1F5FB5660004E83D /* LeftController.swift in Sources */,
+				58D102A11F750464000EE176 /* GoodsDetailController.swift in Sources */,
 				589F315C1F5F9E420004E83D /* SecondController.swift in Sources */,
+				58D102871F74BF2C000EE176 /* UIView+DOPExtension.m in Sources */,
 				58D1027A1F73A836000EE176 /* CardModel.swift in Sources */,
 				582E79EC1F6A26BC00A81F67 /* CardController.swift in Sources */,
 				582E79F11F6A31A100A81F67 /* CardCell.swift in Sources */,
@@ -454,10 +522,13 @@
 				589F31A71F60D5190004E83D /* LeftModel.swift in Sources */,
 				582E79EF1F6A319400A81F67 /* MyInvestmentCell.swift in Sources */,
 				589F31A11F5FF7DC0004E83D /* ANLog.swift in Sources */,
+				58D102861F74BF2C000EE176 /* DOPNavbarMenu.m in Sources */,
 				582E7A001F6D22D800A81F67 /* RecordController.swift in Sources */,
 				582E79F71F6A741D00A81F67 /* AppDelegate.swift in Sources */,
 				589F31731F5FC7520004E83D /* SecondCell.swift in Sources */,
+				58D102A51F7608F0000EE176 /* ChooseView.swift in Sources */,
 				58D1027C1F73A8B4000EE176 /* AddrModel.swift in Sources */,
+				58D1029F1F75018C000EE176 /* GoodsModel.swift in Sources */,
 				582E79FC1F6BD1A100A81F67 /* LeftDetailController.swift in Sources */,
 				589F31621F5FA0050004E83D /* BaseNavController.swift in Sources */,
 				58D1025B1F7218C1000EE176 /* AddAddrController.swift in Sources */,
@@ -469,6 +540,7 @@
 				582E7A0A1F70C04500A81F67 /* SettingController.swift in Sources */,
 				589F31AF1F611B190004E83D /* AppDefine.swift in Sources */,
 				582E79E61F68DC8900A81F67 /* RegisterController.swift in Sources */,
+				58D1028E1F74C123000EE176 /* ASValueTrackingSlider.m in Sources */,
 				589F31A41F60D1DA0004E83D /* ANRefreshFooter.swift in Sources */,
 				582E7A081F6FC8B500A81F67 /* AddCardController.swift in Sources */,
 				589F319B1F5FF5AC0004E83D /* ANBaseNetWork.swift in Sources */,

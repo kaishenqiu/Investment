@@ -33,7 +33,9 @@ let ID = "loginid"
 let MONEY = "money"
 let TOKENAuthorization = "tokenAuthorization"
 
-
+//临时搜猪key
+//var constant_session_key = String()
+//var search_pig_list = [MapSearchPig]()
 
 // MARK: - 通知标识
 let CALL_CARD_REFRESH = "callcardrefresh"

@@ -14,11 +14,13 @@ public enum ITService {
     case register(mobile: String, password: String, code:String)
     case projectList(page:String)
     case goodsList(page:String)
+    case goodsinfo(goods_no:String)
     case mybank
     case bindbank(account_nm:String, bank_no:String, bank_nm:String)
     case arealist(pid:String)
     case createaddress(username:String, province:String, city:String, district:String, address:String, mobile:String)
     case myaddress
+    case makeorder(goods_list:String, address_id:String)
 
 
     
@@ -42,6 +44,8 @@ extension ITService: TargetType {
             return "project/list"
         case .goodsList:
             return "goods/list"
+        case .goodsinfo:
+            return "goods/info"
         case .mybank:
             return "user/mybank"
         case .bindbank:
@@ -52,6 +56,8 @@ extension ITService: TargetType {
             return "user/createaddress"
         case .myaddress:
             return "user/myaddress"
+        case .makeorder:
+            return "goods/makeorder"
         }
     }
     
@@ -68,6 +74,8 @@ extension ITService: TargetType {
             return ["page":page]
         case .goodsList(let page):
             return ["page":page]
+        case .goodsinfo(let goods_no):
+            return ["goods_no":goods_no]
         case .mybank():
             return [:]
         case .bindbank(let account_nm,let bank_no,let bank_nm):
@@ -78,6 +86,8 @@ extension ITService: TargetType {
             return ["username":username, "province":province, "city":city, "district":district, "address":address, "mobile":mobile]
         case .myaddress():
             return [:]
+        case .makeorder(let goods_list, let address_id):
+            return ["goods_list":goods_list,"address_id":address_id]
 
         }
     }

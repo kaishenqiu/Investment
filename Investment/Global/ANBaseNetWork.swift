@@ -247,5 +247,31 @@ class ANBaseNetWork: NSObject {
         }
 
     }
+    
+    // MARK: - 请求网络获取原始结果  没有加载提示  带请求头
+    
+    func networkForOriginalWithHeader(_ target: ITService, resultHandle: ((JSON?) -> Void)?) {
+        SVProgressHUD.show()
+        providerWithHeader.request(target) { result in
+            SVProgressHUD.dismiss()
+            switch result {
+            case let .success(response):
+                do {
+                    let json = try response.mapJSON()
+                    let data = JSON(json)
+                    
+                    if let handle = resultHandle {
+                        handle(data)
+                    }
+                    
+                } catch {
+                    ANLog("❌: Network connection is successful, but mapJSON error")
+                }
+            case let .failure(error):
+                ANLog(error.errorDescription)
+            }
+        }
+        
+    }
 
 }

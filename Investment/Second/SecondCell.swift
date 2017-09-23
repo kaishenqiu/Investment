@@ -7,8 +7,21 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class SecondCell: UITableViewCell {
+    
+    
+    var oneModel = GoodsModel(json:JSON.null) {
+        didSet {
+            titleLab.text = oneModel.goodsName
+ 
+            
+            
+            
+        }
+    }
+    @IBOutlet weak var titleLab: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
