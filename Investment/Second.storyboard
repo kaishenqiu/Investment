@@ -149,17 +149,6 @@
                                 <color key="textColor" red="0.89803921568627454" green="0.10980392156862745" blue="0.15686274509803921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tmt-Ii-GgY">
-                                <rect key="frame" x="142" y="516" width="90" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="90" id="EBT-lN-hdq"/>
-                                    <constraint firstAttribute="height" constant="30" id="mVx-pO-eRJ"/>
-                                </constraints>
-                                <state key="normal" title="下单"/>
-                                <connections>
-                                    <action selector="makeOrderAction:" destination="TUU-Ho-iS9" eventType="touchUpInside" id="FYO-16-pNd"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rmi-al-G0D">
                                 <rect key="frame" x="16" y="407" width="343" height="30"/>
                                 <constraints>
@@ -225,8 +214,6 @@
                             <constraint firstItem="g2R-Jm-bIN" firstAttribute="leading" secondItem="R9q-Ue-t9h" secondAttribute="leading" constant="10" id="nn3-Jq-0xV"/>
                             <constraint firstItem="ePB-o3-SRC" firstAttribute="top" secondItem="T5p-ca-RnQ" secondAttribute="bottom" id="oGQ-5N-ZKc"/>
                             <constraint firstItem="T5p-ca-RnQ" firstAttribute="leading" secondItem="R9q-Ue-t9h" secondAttribute="leading" id="p2m-Bx-BJN"/>
-                            <constraint firstItem="Tmt-Ii-GgY" firstAttribute="top" secondItem="vpD-Qi-pLF" secondAttribute="bottom" constant="200" id="y45-3u-olu"/>
-                            <constraint firstItem="Tmt-Ii-GgY" firstAttribute="centerX" secondItem="R9q-Ue-t9h" secondAttribute="centerX" id="y9M-wb-bhI"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="详情" id="42W-Zi-W1H"/>
@@ -341,6 +328,9 @@
                                         <state key="normal" title="确认下单">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="makeOrder:" destination="PHz-7v-E8T" eventType="touchUpInside" id="LXV-uO-Q8P"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="总价：89 元" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cfK-7u-beO">
                                         <rect key="frame" x="126.5" y="14.5" width="78.5" height="17"/>

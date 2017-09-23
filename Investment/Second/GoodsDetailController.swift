@@ -63,28 +63,7 @@ class GoodsDetailController: UIViewController {
         
         
     }
-    @IBAction func makeOrderAction(_ sender: Any) {
-        
-        var ff = [String:String]()
-        ff.updateValue("1", forKey: "number")
-        ff.updateValue("SKU10242017091508424142571", forKey: "pno")
-        
-        print(ff)
-        
-        
-        ANBaseNetWork.sharedInstance.networkForBoolWithHeader(.makeorder(goods_list: "[\'number\':\'1\',\'pno\':\'SKU10242017091508424142571\']", address_id: "2"), successHandle: { (result) in
-            SVProgressHUD.showInfo(withStatus: "成功")
-        
-            
-            
-        }, errorHandle: { (error) in
-            SVProgressHUD.showInfo(withStatus: error)
-        })
 
- 
-        
-    }
-    
     @IBAction func confirmAction(_ sender: Any) {
         self.performSegue(withIdentifier: "tochooseview", sender: nil)
         
