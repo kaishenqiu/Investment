@@ -15,6 +15,7 @@ class GoodsDetailController: UIViewController {
 
     var chooseV:ChooseView!
     @IBOutlet weak var goods_name: UILabel!
+    @IBOutlet weak var chooseBtn: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -54,17 +55,10 @@ class GoodsDetailController: UIViewController {
         self.chooseV = Bundle.main.loadNibNamed("ChooseView", owner: nil, options: nil)!.last as! ChooseView
         self.chooseV.frame = UIApplication.shared.keyWindow!.frame
 
-        
-//        self.searchV.saveBlock = {start,end,num,company,supplier in
-//            print(start,end,num,company,supplier)
-//            self.startDateStr = start
-//            self.endDateStr = end
-//            self.numStr =  num
-//            self.companyStr = company
-//            self.supplierStr = supplier
-//            self.tableView.mj_header.beginRefreshing()
-//            
-//        }
+        self.chooseV.saveBlock = {str in
+            self.chooseBtn.setTitle(str, for: .normal)
+            
+        }
         UIApplication.shared.keyWindow!.addSubview(self.chooseV)
         
         
@@ -91,6 +85,18 @@ class GoodsDetailController: UIViewController {
         
     }
     
+    @IBAction func confirmAction(_ sender: Any) {
+        self.performSegue(withIdentifier: "tochooseview", sender: nil)
+        
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "tochooseview" {
+//            let sd = sender as! IndexPath
+//            let dVC = segue.destination as! ChooseViewController
+//       
+            
+        }
+    }
 
     /*
     // MARK: - Navigation

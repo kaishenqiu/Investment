@@ -65,6 +65,7 @@
 		58D102A11F750464000EE176 /* GoodsDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D102A01F750464000EE176 /* GoodsDetailController.swift */; };
 		58D102A31F7608E0000EE176 /* ChooseView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58D102A21F7608E0000EE176 /* ChooseView.xib */; };
 		58D102A51F7608F0000EE176 /* ChooseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D102A41F7608F0000EE176 /* ChooseView.swift */; };
+		58D102A71F7640F0000EE176 /* ChooseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D102A61F7640F0000EE176 /* ChooseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -136,6 +137,7 @@
 		58D102A01F750464000EE176 /* GoodsDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoodsDetailController.swift; sourceTree = "<group>"; };
 		58D102A21F7608E0000EE176 /* ChooseView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChooseView.xib; sourceTree = "<group>"; };
 		58D102A41F7608F0000EE176 /* ChooseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseView.swift; sourceTree = "<group>"; };
+		58D102A61F7640F0000EE176 /* ChooseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseViewController.swift; sourceTree = "<group>"; };
 		AC62D6580094BFC44A6B8EF4 /* Pods_Investment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Investment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADC5CC48A22D8C8EAA110E1A /* Pods-Investment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Investment.release.xcconfig"; path = "Pods/Target Support Files/Pods-Investment/Pods-Investment.release.xcconfig"; sourceTree = "<group>"; };
 		E8A5407F8DC43D5C6BD37496 /* Pods-Investment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Investment.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Investment/Pods-Investment.debug.xcconfig"; sourceTree = "<group>"; };
@@ -247,6 +249,7 @@
 				58D102A01F750464000EE176 /* GoodsDetailController.swift */,
 				58D102A21F7608E0000EE176 /* ChooseView.xib */,
 				58D102A41F7608F0000EE176 /* ChooseView.swift */,
+				58D102A61F7640F0000EE176 /* ChooseViewController.swift */,
 			);
 			path = Second;
 			sourceTree = "<group>";
@@ -499,6 +502,7 @@
 				582E79FE1F6D22C400A81F67 /* InsuranceController.swift in Sources */,
 				582E79E81F69234700A81F67 /* MyInvestmentController.swift in Sources */,
 				58D1027E1F73A951000EE176 /* AddrCell.swift in Sources */,
+				58D102A71F7640F0000EE176 /* ChooseViewController.swift in Sources */,
 				58D102591F7218A6000EE176 /* AddressController.swift in Sources */,
 				589F31A91F60D9870004E83D /* LeftCell.swift in Sources */,
 				589F315A1F5F9E330004E83D /* FirstController.swift in Sources */,

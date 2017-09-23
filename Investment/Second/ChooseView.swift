@@ -9,12 +9,16 @@
 import UIKit
 
 class ChooseView: UIView {
+    
+    var saveBlock:((String) -> ())?
 
     @IBOutlet weak var partbgView: UIView!
     let spaceC:CGFloat = 10
     let heightC:CGFloat = 30
     let rowCount:CGFloat = 4
     
+    @IBOutlet weak var storageLab: UILabel!
+    @IBOutlet weak var chooseLab: UILabel!
     var selectedBtn:UIButton?
     /*
     // Only override draw() if you perform custom drawing.
@@ -25,6 +29,7 @@ class ChooseView: UIView {
     */
  
     var ddd = ["后腿","猪腿","前腿","猪头","猪尾巴","猪大肠","猪舌","猪腰","猪肺","猪大排","猪心","猪骨"]
+    var aaa = ["3","5","7","23","11","45","22","8","9","6","5","2"]
     
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -56,6 +61,7 @@ class ChooseView: UIView {
         
     }
     func buttonAction(sender:UIButton?) {
+
         if selectedBtn == nil {
            selectedBtn = sender
            selectedBtn?.layer.borderColor = GlobalColor.cgColor
@@ -64,11 +70,18 @@ class ChooseView: UIView {
            selectedBtn = sender
            selectedBtn?.layer.borderColor = GlobalColor.cgColor
         }
+        self.storageLab.text = "库存：" + aaa[(sender?.tag)!]
+        self.chooseLab.text = "已选择：" + ddd[(sender?.tag)!] + "   数量：1"
+        
  
-        
-        
         
     }
     
+    @IBAction func confirmAtion(_ sender: Any) {
+        
+        saveBlock!(self.chooseLab.text!)
+        self.removeFromSuperview()
+        
+    }
 
 }

@@ -45,6 +45,9 @@
                             <state key="normal" title="确认">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
+                            <connections>
+                                <action selector="confirmAtion:" destination="QAF-Xc-fYe" eventType="touchUpInside" id="U5K-Le-5N4"/>
+                            </connections>
                         </button>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="raw_1499416460" translatesAutoresizingMaskIntoConstraints="NO" id="GZs-2w-g5p">
                             <rect key="frame" x="10" y="51" width="70" height="70"/>
@@ -111,6 +114,12 @@
                                 <constraint firstAttribute="width" constant="100" id="gJH-Af-1se"/>
                             </constraints>
                         </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nRR-jp-YfO">
+                            <rect key="frame" x="360" y="94" width="0.0" height="0.0"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
@@ -122,10 +131,12 @@
                         <constraint firstAttribute="bottom" secondItem="Ehs-5H-Z9h" secondAttribute="bottom" id="AbR-u2-Wxm"/>
                         <constraint firstItem="Ehs-5H-Z9h" firstAttribute="leading" secondItem="drI-Th-5oY" secondAttribute="leading" id="HZ3-fu-F2n"/>
                         <constraint firstItem="mH1-6e-1T8" firstAttribute="top" secondItem="drI-Th-5oY" secondAttribute="top" constant="5" id="JgX-OK-xgH"/>
+                        <constraint firstItem="iJ8-er-v23" firstAttribute="top" secondItem="nRR-jp-YfO" secondAttribute="bottom" constant="10" id="KkR-4U-Qw8"/>
                         <constraint firstItem="X7F-oq-4gH" firstAttribute="top" secondItem="drI-Th-5oY" secondAttribute="top" constant="40" id="Mbt-1C-d0Y"/>
                         <constraint firstItem="GZs-2w-g5p" firstAttribute="top" secondItem="X7F-oq-4gH" secondAttribute="bottom" constant="10" id="Mwy-Yb-S7E"/>
                         <constraint firstItem="Ehs-5H-Z9h" firstAttribute="top" secondItem="oTd-QH-vZD" secondAttribute="bottom" constant="50" id="MxS-sL-EXs"/>
                         <constraint firstAttribute="trailing" secondItem="iJ8-er-v23" secondAttribute="trailing" constant="15" id="NpZ-Ac-nND"/>
+                        <constraint firstItem="iJ8-er-v23" firstAttribute="trailing" secondItem="nRR-jp-YfO" secondAttribute="trailing" id="OGj-dR-Iea"/>
                         <constraint firstAttribute="trailing" secondItem="X7F-oq-4gH" secondAttribute="trailing" constant="20" id="PYe-9q-AAP"/>
                         <constraint firstItem="Ehs-5H-Z9h" firstAttribute="centerX" secondItem="drI-Th-5oY" secondAttribute="centerX" id="PcN-X5-Ku6"/>
                         <constraint firstItem="X7F-oq-4gH" firstAttribute="top" secondItem="mH1-6e-1T8" secondAttribute="bottom" constant="5" id="R92-P9-F7v"/>
@@ -148,7 +159,9 @@
                 <constraint firstItem="9FE-C0-Tks" firstAttribute="top" secondItem="QAF-Xc-fYe" secondAttribute="top" id="upd-WW-aUb"/>
             </constraints>
             <connections>
+                <outlet property="chooseLab" destination="iJ8-er-v23" id="IoC-L3-R9G"/>
                 <outlet property="partbgView" destination="oTd-QH-vZD" id="lA2-wp-81u"/>
+                <outlet property="storageLab" destination="nRR-jp-YfO" id="APl-10-mT0"/>
             </connections>
             <point key="canvasLocation" x="-43.5" y="74.5"/>
         </view>
