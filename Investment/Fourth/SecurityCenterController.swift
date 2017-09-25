@@ -1,39 +1,40 @@
 //
-//  ThirdController.swift
+//  SecurityCenterController.swift
 //  Investment
 //
-//  Created by 邱仙凯 on 2017/9/6.
+//  Created by 邱仙凯 on 2017/9/23.
 //  Copyright © 2017年 kaishen. All rights reserved.
 //
 
 import UIKit
 
-class ThirdController: UIViewController,BMKMapViewDelegate {
-    var simingLatLon = CLLocationCoordinate2DMake(24.466881,118.148124)
+class SecurityCenterController: UIViewController {
 
-    @IBOutlet weak var _mapView: BMKMapView!
+    
+    var setPayPwdView:SetPayPwd!
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        _mapView.centerCoordinate = simingLatLon
-        _mapView.zoomLevel = 12
         // Do any additional setup after loading the view.
+    }
+    @IBAction func changePayPwd(_ sender: Any) {
+        
+        self.setPayPwdView = Bundle.main.loadNibNamed("SetPayPwd", owner: nil, options: nil)!.last as! SetPayPwd
+        self.setPayPwdView.frame = UIApplication.shared.keyWindow!.frame
+        
+//        self.setPayPwdView.saveBlock = {str in
+//            self.chooseBtn.setTitle(str, for: .normal)
+//            
+//        }
+        UIApplication.shared.keyWindow!.addSubview(self.setPayPwdView)
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        _mapView?.viewWillAppear()
-        _mapView?.delegate = self
-    }
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        _mapView?.viewWillDisappear()
-        _mapView?.delegate = nil
-    }
+    
 
     /*
     // MARK: - Navigation

@@ -66,6 +66,9 @@
 		58D102A31F7608E0000EE176 /* ChooseView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58D102A21F7608E0000EE176 /* ChooseView.xib */; };
 		58D102A51F7608F0000EE176 /* ChooseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D102A41F7608F0000EE176 /* ChooseView.swift */; };
 		58D102A71F7640F0000EE176 /* ChooseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D102A61F7640F0000EE176 /* ChooseViewController.swift */; };
+		58D102A91F7651AD000EE176 /* SetPayPwd.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58D102A81F7651AD000EE176 /* SetPayPwd.xib */; };
+		58D102AB1F7651C3000EE176 /* SetPayPwd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D102AA1F7651C3000EE176 /* SetPayPwd.swift */; };
+		58D102AD1F765334000EE176 /* SecurityCenterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D102AC1F765334000EE176 /* SecurityCenterController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -138,6 +141,9 @@
 		58D102A21F7608E0000EE176 /* ChooseView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChooseView.xib; sourceTree = "<group>"; };
 		58D102A41F7608F0000EE176 /* ChooseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseView.swift; sourceTree = "<group>"; };
 		58D102A61F7640F0000EE176 /* ChooseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseViewController.swift; sourceTree = "<group>"; };
+		58D102A81F7651AD000EE176 /* SetPayPwd.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SetPayPwd.xib; sourceTree = "<group>"; };
+		58D102AA1F7651C3000EE176 /* SetPayPwd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetPayPwd.swift; sourceTree = "<group>"; };
+		58D102AC1F765334000EE176 /* SecurityCenterController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecurityCenterController.swift; sourceTree = "<group>"; };
 		AC62D6580094BFC44A6B8EF4 /* Pods_Investment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Investment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADC5CC48A22D8C8EAA110E1A /* Pods-Investment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Investment.release.xcconfig"; path = "Pods/Target Support Files/Pods-Investment/Pods-Investment.release.xcconfig"; sourceTree = "<group>"; };
 		E8A5407F8DC43D5C6BD37496 /* Pods-Investment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Investment.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Investment/Pods-Investment.debug.xcconfig"; sourceTree = "<group>"; };
@@ -171,6 +177,8 @@
 				582E79EE1F6A319400A81F67 /* MyInvestmentCell.swift */,
 				582E79F01F6A31A100A81F67 /* CardCell.swift */,
 				58D1027D1F73A951000EE176 /* AddrCell.swift */,
+				58D102A81F7651AD000EE176 /* SetPayPwd.xib */,
+				58D102AA1F7651C3000EE176 /* SetPayPwd.swift */,
 			);
 			path = v;
 			sourceTree = "<group>";
@@ -279,6 +287,7 @@
 				582E7A091F70C04500A81F67 /* SettingController.swift */,
 				58D102581F7218A6000EE176 /* AddressController.swift */,
 				58D1025A1F7218C1000EE176 /* AddAddrController.swift */,
+				58D102AC1F765334000EE176 /* SecurityCenterController.swift */,
 			);
 			path = Fourth;
 			sourceTree = "<group>";
@@ -433,6 +442,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58D102A91F7651AD000EE176 /* SetPayPwd.xib in Resources */,
 				582E79F51F6A693B00A81F67 /* Fourth.storyboard in Resources */,
 				588755351F16043C00602D43 /* Second.storyboard in Resources */,
 				588755291F1600FF00602D43 /* LaunchScreen.storyboard in Resources */,
@@ -514,6 +524,7 @@
 				58D102871F74BF2C000EE176 /* UIView+DOPExtension.m in Sources */,
 				58D1027A1F73A836000EE176 /* CardModel.swift in Sources */,
 				582E79EC1F6A26BC00A81F67 /* CardController.swift in Sources */,
+				58D102AB1F7651C3000EE176 /* SetPayPwd.swift in Sources */,
 				582E79F11F6A31A100A81F67 /* CardCell.swift in Sources */,
 				589F316D1F5FB5130004E83D /* UIView+Extension.swift in Sources */,
 				589F31AD1F60EE3B0004E83D /* OrderListController.swift in Sources */,
@@ -536,6 +547,7 @@
 				582E79FC1F6BD1A100A81F67 /* LeftDetailController.swift in Sources */,
 				589F31621F5FA0050004E83D /* BaseNavController.swift in Sources */,
 				58D1025B1F7218C1000EE176 /* AddAddrController.swift in Sources */,
+				58D102AD1F765334000EE176 /* SecurityCenterController.swift in Sources */,
 				588755311F16028A00602D43 /* BaseTabbarController.swift in Sources */,
 				589F31641F5FA0A40004E83D /* GlobalFunction.swift in Sources */,
 				582E7A041F6F689300A81F67 /* STCountDownButton.swift in Sources */,

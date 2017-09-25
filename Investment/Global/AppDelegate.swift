@@ -11,9 +11,10 @@ import SVProgressHUD
 import IQKeyboardManagerSwift
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate,UITabBarControllerDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate,UITabBarControllerDelegate,BMKGeneralDelegate {
 
     var window: UIWindow?
+    var _mapManager: BMKMapManager?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
@@ -21,6 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,UITabBarControllerDelegate
         
         hudConfig()
         keyBoardManager()
+        mapManager()
         window = UIWindow.init(frame: UIScreen.main.bounds)
         let baseTabbarC = BaseTabbarController()
         baseTabbarC.delegate = self
@@ -62,6 +64,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate,UITabBarControllerDelegate
         SVProgressHUD.setDefaultStyle(.custom)
         SVProgressHUD.setBackgroundColor(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1))
         SVProgressHUD.setMinimumDismissTimeInterval(0.75)
+    }
+    func mapManager(){
+        _mapManager = BMKMapManager()
+        let ret = _mapManager?.start("RsKbrFcATx4NGQQTCXaZoFE5XX3tjWnn", generalDelegate: self)
+        if ret == false {
+            NSLog("manager start failed!")
+        }
     }
 
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
