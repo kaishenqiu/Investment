@@ -32,6 +32,7 @@
 		58302FD41F78E47A00D813DF /* NSBundle+CYPasswordView.m in Sources */ = {isa = PBXBuildFile; fileRef = 58302FCD1F78E47A00D813DF /* NSBundle+CYPasswordView.m */; };
 		58302FD51F78E47A00D813DF /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 58302FCF1F78E47A00D813DF /* UIView+Extension.m */; };
 		58302FD71F78EFD800D813DF /* RechargeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58302FD61F78EFD800D813DF /* RechargeController.swift */; };
+		58302FD91F79FF4A00D813DF /* RecordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58302FD81F79FF4A00D813DF /* RecordModel.swift */; };
 		588755261F1600FF00602D43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 588755251F1600FF00602D43 /* Assets.xcassets */; };
 		588755291F1600FF00602D43 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 588755271F1600FF00602D43 /* LaunchScreen.storyboard */; };
 		588755311F16028A00602D43 /* BaseTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588755301F16028A00602D43 /* BaseTabbarController.swift */; };
@@ -108,6 +109,7 @@
 		58302FCE1F78E47A00D813DF /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
 		58302FCF1F78E47A00D813DF /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		58302FD61F78EFD800D813DF /* RechargeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RechargeController.swift; sourceTree = "<group>"; };
+		58302FD81F79FF4A00D813DF /* RecordModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordModel.swift; sourceTree = "<group>"; };
 		5887551B1F1600FF00602D43 /* Investment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Investment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		588755251F1600FF00602D43 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		588755281F1600FF00602D43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -281,6 +283,7 @@
 				582E79FD1F6D22C400A81F67 /* InsuranceController.swift */,
 				582E79FF1F6D22D800A81F67 /* RecordController.swift */,
 				582E7A011F6D242200A81F67 /* RecordCell.swift */,
+				58302FD81F79FF4A00D813DF /* RecordModel.swift */,
 			);
 			path = First;
 			sourceTree = "<group>";
@@ -607,6 +610,7 @@
 				582E7A081F6FC8B500A81F67 /* AddCardController.swift in Sources */,
 				589F319B1F5FF5AC0004E83D /* ANBaseNetWork.swift in Sources */,
 				589F31601F5F9E600004E83D /* FourthController.swift in Sources */,
+				58302FD91F79FF4A00D813DF /* RecordModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

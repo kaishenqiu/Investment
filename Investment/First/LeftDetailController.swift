@@ -12,7 +12,7 @@ import SVProgressHUD
 class LeftDetailController: UIViewController {
     var number = ""
 
-    
+    var idn = ""
     @IBOutlet weak var moneyField: UITextField!
     var passwordView:CYPasswordView!
     override func viewDidLoad() {
@@ -32,9 +32,9 @@ class LeftDetailController: UIViewController {
                 SVProgressHUD.showInfo(withStatus: "请求失败")
                 return
             }
-//            let one = GoodsModel(json: jsonData["data"])
+            let one = GoodsModel(json: jsonData["data"])
 //            self.goods_name.text = one.goodsName!
-            
+            self.idn = one.id!
             print(jsonData["data"])
             
     }
@@ -85,6 +85,17 @@ class LeftDetailController: UIViewController {
 
 
         
+    }
+    @IBAction func recordAction(_ sender: Any) {
+        self.performSegue(withIdentifier: "torecord", sender: nil)
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "torecord" {
+         let deV = segue.destination as! RecordController
+            deV.idnum = self.idn
+        }
     }
 
     /*

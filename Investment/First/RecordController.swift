@@ -9,7 +9,9 @@
 import UIKit
 
 class RecordController: UIViewController,UITableViewDelegate,UITableViewDataSource {
-
+    
+    var idnum = ""
+     var dataArray = [RecordModel]()
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,7 +19,40 @@ class RecordController: UIViewController,UITableViewDelegate,UITableViewDataSour
         // Do any additional setup after loading the view.
         tableView.delegate = self
         tableView.dataSource = self
+        
+        tableView.tableFooterView = UIView()
+        tableView.separatorStyle = .none
+        
+        
+        tableView.mj_header = ANRefreshHeader {
+            self.network()
+        }
+        
+        
+        tableView.mj_header.beginRefreshing()
     }
+    func network() {
+        
+        ANBaseNetWork.sharedInstance.networkForListNOHUDWithHeader(.investlist(id: idnum), successHandle: { (result) in
+            
+            print(result)
+            self.dataArray.removeAll()
+            for item in result {
+                let one = RecordModel(json: item)
+                self.dataArray.append(one)
+                
+            }
+            self.tableView.mj_header.endRefreshing()
+            
+            self.tableView.reloadData()
+        }) { (errorStr) in
+            self.tableView.mj_header.endRefreshing()
+            
+        }
+        
+        
+    }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -27,13 +62,13 @@ class RecordController: UIViewController,UITableViewDelegate,UITableViewDataSour
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 8
+        return dataArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "RecordCell", for: indexPath) as! RecordCell
-//        cell.oneModel = dataArray[indexPath.section]
+        cell.oneModel = dataArray[indexPath.row]
         
         return cell
     }

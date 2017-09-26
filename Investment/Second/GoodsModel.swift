@@ -13,6 +13,7 @@ public struct GoodsModel {
   // MARK: Declaration for string constants to be used to decode and also serialize.
   private struct SerializationKeys {
     static let goodsNo = "goods_no"
+    static let id = "id"
     static let heightReviews = "height_reviews"
     static let express = "express"
     static let goodsImg = "goods_img"
@@ -23,6 +24,7 @@ public struct GoodsModel {
 
   // MARK: Properties
   public var goodsNo: String?
+  public var id: String?
   public var heightReviews: Int?
   public var express: String?
   public var goodsImg: String?
@@ -44,6 +46,7 @@ public struct GoodsModel {
   /// - parameter json: JSON object from SwiftyJSON.
   public init(json: JSON) {
     goodsNo = json[SerializationKeys.goodsNo].string
+    id = json[SerializationKeys.id].string
     heightReviews = json[SerializationKeys.heightReviews].int
     express = json[SerializationKeys.express].string
     goodsImg = json[SerializationKeys.goodsImg].string
@@ -58,6 +61,7 @@ public struct GoodsModel {
   public func dictionaryRepresentation() -> [String: Any] {
     var dictionary: [String: Any] = [:]
     if let value = goodsNo { dictionary[SerializationKeys.goodsNo] = value }
+    if let value = id { dictionary[SerializationKeys.id] = value }
     if let value = heightReviews { dictionary[SerializationKeys.heightReviews] = value }
     if let value = express { dictionary[SerializationKeys.express] = value }
     if let value = goodsImg { dictionary[SerializationKeys.goodsImg] = value }

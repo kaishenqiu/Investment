@@ -16,6 +16,7 @@ public enum ITService {
     case projectList(page:String)
     case projectinfo(no:String)
     case projectinvest(pid:String, money:String, pay_pwd:String)
+    case investlist(id:String)
     
     case goodsList(page:String)
     case goodsinfo(goods_no:String)
@@ -56,6 +57,8 @@ extension ITService: TargetType {
             return "project/info"
         case .projectinvest:
             return "project/invest"
+        case .investlist:
+            return "project/investlist"
         case .goodsList:
             return "goods/list"
         case .goodsinfo:
@@ -94,6 +97,8 @@ extension ITService: TargetType {
             return ["no":no]
         case .projectinvest(let pid,let money,let pay_pwd):
             return ["pid":pid, "money":money, "pay_pwd":pay_pwd]
+        case .investlist(let id):
+            return ["id":id]
         case .goodsList(let page):
             return ["page":page]
         case .goodsinfo(let goods_no):
