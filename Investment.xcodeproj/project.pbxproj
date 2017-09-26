@@ -25,6 +25,13 @@
 		582E7A081F6FC8B500A81F67 /* AddCardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582E7A071F6FC8B500A81F67 /* AddCardController.swift */; };
 		582E7A0A1F70C04500A81F67 /* SettingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582E7A091F70C04500A81F67 /* SettingController.swift */; };
 		582E7A0C1F70C14500A81F67 /* PersonButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582E7A0B1F70C14500A81F67 /* PersonButton.swift */; };
+		58302FD01F78E47A00D813DF /* CYConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 58302FC61F78E47A00D813DF /* CYConst.m */; };
+		58302FD11F78E47A00D813DF /* CYPasswordInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 58302FC81F78E47A00D813DF /* CYPasswordInputView.m */; };
+		58302FD21F78E47A00D813DF /* CYPasswordView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 58302FC91F78E47A00D813DF /* CYPasswordView.bundle */; };
+		58302FD31F78E47A00D813DF /* CYPasswordView.m in Sources */ = {isa = PBXBuildFile; fileRef = 58302FCB1F78E47A00D813DF /* CYPasswordView.m */; };
+		58302FD41F78E47A00D813DF /* NSBundle+CYPasswordView.m in Sources */ = {isa = PBXBuildFile; fileRef = 58302FCD1F78E47A00D813DF /* NSBundle+CYPasswordView.m */; };
+		58302FD51F78E47A00D813DF /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 58302FCF1F78E47A00D813DF /* UIView+Extension.m */; };
+		58302FD71F78EFD800D813DF /* RechargeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58302FD61F78EFD800D813DF /* RechargeController.swift */; };
 		588755261F1600FF00602D43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 588755251F1600FF00602D43 /* Assets.xcassets */; };
 		588755291F1600FF00602D43 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 588755271F1600FF00602D43 /* LaunchScreen.storyboard */; };
 		588755311F16028A00602D43 /* BaseTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588755301F16028A00602D43 /* BaseTabbarController.swift */; };
@@ -89,6 +96,18 @@
 		582E7A071F6FC8B500A81F67 /* AddCardController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCardController.swift; sourceTree = "<group>"; };
 		582E7A091F70C04500A81F67 /* SettingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingController.swift; sourceTree = "<group>"; };
 		582E7A0B1F70C14500A81F67 /* PersonButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonButton.swift; sourceTree = "<group>"; };
+		58302FC51F78E47A00D813DF /* CYConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYConst.h; sourceTree = "<group>"; };
+		58302FC61F78E47A00D813DF /* CYConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYConst.m; sourceTree = "<group>"; };
+		58302FC71F78E47A00D813DF /* CYPasswordInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYPasswordInputView.h; sourceTree = "<group>"; };
+		58302FC81F78E47A00D813DF /* CYPasswordInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYPasswordInputView.m; sourceTree = "<group>"; };
+		58302FC91F78E47A00D813DF /* CYPasswordView.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = CYPasswordView.bundle; sourceTree = "<group>"; };
+		58302FCA1F78E47A00D813DF /* CYPasswordView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYPasswordView.h; sourceTree = "<group>"; };
+		58302FCB1F78E47A00D813DF /* CYPasswordView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYPasswordView.m; sourceTree = "<group>"; };
+		58302FCC1F78E47A00D813DF /* NSBundle+CYPasswordView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+CYPasswordView.h"; sourceTree = "<group>"; };
+		58302FCD1F78E47A00D813DF /* NSBundle+CYPasswordView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+CYPasswordView.m"; sourceTree = "<group>"; };
+		58302FCE1F78E47A00D813DF /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		58302FCF1F78E47A00D813DF /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		58302FD61F78EFD800D813DF /* RechargeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RechargeController.swift; sourceTree = "<group>"; };
 		5887551B1F1600FF00602D43 /* Investment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Investment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		588755251F1600FF00602D43 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		588755281F1600FF00602D43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -186,12 +205,31 @@
 		582E79F81F6BA80200A81F67 /* vendor */ = {
 			isa = PBXGroup;
 			children = (
+				58302FC41F78E47A00D813DF /* CYPasswordView */,
 				58D102881F74C123000EE176 /* ASValueTrackingSlider */,
 				58D102811F74BEF8000EE176 /* DOPNavbarMenu */,
 				582E7A031F6F689300A81F67 /* STCountDownButton.swift */,
 				582E7A0B1F70C14500A81F67 /* PersonButton.swift */,
 			);
 			path = vendor;
+			sourceTree = "<group>";
+		};
+		58302FC41F78E47A00D813DF /* CYPasswordView */ = {
+			isa = PBXGroup;
+			children = (
+				58302FC51F78E47A00D813DF /* CYConst.h */,
+				58302FC61F78E47A00D813DF /* CYConst.m */,
+				58302FC71F78E47A00D813DF /* CYPasswordInputView.h */,
+				58302FC81F78E47A00D813DF /* CYPasswordInputView.m */,
+				58302FC91F78E47A00D813DF /* CYPasswordView.bundle */,
+				58302FCA1F78E47A00D813DF /* CYPasswordView.h */,
+				58302FCB1F78E47A00D813DF /* CYPasswordView.m */,
+				58302FCC1F78E47A00D813DF /* NSBundle+CYPasswordView.h */,
+				58302FCD1F78E47A00D813DF /* NSBundle+CYPasswordView.m */,
+				58302FCE1F78E47A00D813DF /* UIView+Extension.h */,
+				58302FCF1F78E47A00D813DF /* UIView+Extension.m */,
+			);
+			path = CYPasswordView;
 			sourceTree = "<group>";
 		};
 		588755121F1600FF00602D43 = {
@@ -288,6 +326,7 @@
 				58D102581F7218A6000EE176 /* AddressController.swift */,
 				58D1025A1F7218C1000EE176 /* AddAddrController.swift */,
 				58D102AC1F765334000EE176 /* SecurityCenterController.swift */,
+				58302FD61F78EFD800D813DF /* RechargeController.swift */,
 			);
 			path = Fourth;
 			sourceTree = "<group>";
@@ -451,6 +490,7 @@
 				588755261F1600FF00602D43 /* Assets.xcassets in Resources */,
 				588755331F16043000602D43 /* First.storyboard in Resources */,
 				588755371F16044700602D43 /* Third.storyboard in Resources */,
+				58302FD21F78E47A00D813DF /* CYPasswordView.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -513,14 +553,17 @@
 				582E79E81F69234700A81F67 /* MyInvestmentController.swift in Sources */,
 				58D1027E1F73A951000EE176 /* AddrCell.swift in Sources */,
 				58D102A71F7640F0000EE176 /* ChooseViewController.swift in Sources */,
+				58302FD71F78EFD800D813DF /* RechargeController.swift in Sources */,
 				58D102591F7218A6000EE176 /* AddressController.swift in Sources */,
 				589F31A91F60D9870004E83D /* LeftCell.swift in Sources */,
+				58302FD51F78E47A00D813DF /* UIView+Extension.m in Sources */,
 				589F315A1F5F9E330004E83D /* FirstController.swift in Sources */,
 				589F315E1F5F9E520004E83D /* ThirdController.swift in Sources */,
 				58D1028D1F74C123000EE176 /* ASValuePopUpView.m in Sources */,
 				589F316F1F5FB5660004E83D /* LeftController.swift in Sources */,
 				58D102A11F750464000EE176 /* GoodsDetailController.swift in Sources */,
 				589F315C1F5F9E420004E83D /* SecondController.swift in Sources */,
+				58302FD41F78E47A00D813DF /* NSBundle+CYPasswordView.m in Sources */,
 				58D102871F74BF2C000EE176 /* UIView+DOPExtension.m in Sources */,
 				58D1027A1F73A836000EE176 /* CardModel.swift in Sources */,
 				582E79EC1F6A26BC00A81F67 /* CardController.swift in Sources */,
@@ -529,6 +572,7 @@
 				589F316D1F5FB5130004E83D /* UIView+Extension.swift in Sources */,
 				589F31AD1F60EE3B0004E83D /* OrderListController.swift in Sources */,
 				589F31711F5FB5720004E83D /* RightController.swift in Sources */,
+				58302FD01F78E47A00D813DF /* CYConst.m in Sources */,
 				582E7A0C1F70C14500A81F67 /* PersonButton.swift in Sources */,
 				582E7A021F6D242200A81F67 /* RecordCell.swift in Sources */,
 				582E79E41F68DC7100A81F67 /* LoginController.swift in Sources */,
@@ -543,7 +587,9 @@
 				589F31731F5FC7520004E83D /* SecondCell.swift in Sources */,
 				58D102A51F7608F0000EE176 /* ChooseView.swift in Sources */,
 				58D1027C1F73A8B4000EE176 /* AddrModel.swift in Sources */,
+				58302FD31F78E47A00D813DF /* CYPasswordView.m in Sources */,
 				58D1029F1F75018C000EE176 /* GoodsModel.swift in Sources */,
+				58302FD11F78E47A00D813DF /* CYPasswordInputView.m in Sources */,
 				582E79FC1F6BD1A100A81F67 /* LeftDetailController.swift in Sources */,
 				589F31621F5FA0050004E83D /* BaseNavController.swift in Sources */,
 				58D1025B1F7218C1000EE176 /* AddAddrController.swift in Sources */,

@@ -7,13 +7,37 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class LeftDetailController: UIViewController {
+    var number = ""
 
+    
+    @IBOutlet weak var moneyField: UITextField!
+    var passwordView:CYPasswordView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        
+            
+        ANBaseNetWork.sharedInstance.networkForOriginal(.projectinfo(no: number)) { (result) in
+            
+            
+            guard let jsonData = result else {
+                SVProgressHUD.showInfo(withStatus: "请求失败")
+                return
+            }
+            let flag = jsonData["code"].stringValue
+            guard flag == "200" else {
+                SVProgressHUD.showInfo(withStatus: "请求失败")
+                return
+            }
+//            let one = GoodsModel(json: jsonData["data"])
+//            self.goods_name.text = one.goodsName!
+            
+            print(jsonData["data"])
+            
+    }
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,6 +45,47 @@ class LeftDetailController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func investAction(_ sender: Any) {
+        
+        
+        // 数字判断
+        guard let money = moneyField.text, money.characters.count > 0 else {
+                SVProgressHUD.showError(withStatus: "请输入金额")
+                return
+        }
+        
+        
+        
+        passwordView = CYPasswordView()
+        passwordView.title = "输入交易密码"
+        passwordView.loadingText = "提交中..."
+        passwordView.show(in: self.view.window)
+        passwordView.finish = { password in
+            self.passwordView.hideKeyboard()
+            self.passwordView.startLoading()
+            
+            
+                    ANBaseNetWork.sharedInstance.networkForBoolWithHeader(.projectinvest(pid: self.number, money: money, pay_pwd: password!), successHandle: { (result) in
+                        SVProgressHUD.showInfo(withStatus: "投资成功")
+                        self.navigationController!.popViewController(animated: true)
+                        self.passwordView.hide()
+            
+            
+                    }, errorHandle: { (error) in
+                        SVProgressHUD.showInfo(withStatus: error)
+                        self.passwordView.stopLoading()
+                    })
+        
+        }
+        
+        
+ 
+        
+        
+
+
+        
+    }
 
     /*
     // MARK: - Navigation

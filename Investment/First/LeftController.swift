@@ -83,6 +83,10 @@ class LeftController: UITableViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toleftdetail" {
+            let sd = sender as! IndexPath
+            let dVC = segue.destination as! LeftDetailController
+            let model = dataArray[sd.section]
+            dVC.number = model.no!
         
         }
     }

@@ -16,6 +16,8 @@ class GoodsDetailController: UIViewController {
     var chooseV:ChooseView!
     @IBOutlet weak var goods_name: UILabel!
     @IBOutlet weak var chooseBtn: UIButton!
+    @IBOutlet weak var des: UILabel!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -38,6 +40,17 @@ class GoodsDetailController: UIViewController {
             }
             let one = GoodsModel(json: jsonData["data"])
             self.goods_name.text = one.goodsName!
+            
+            
+            
+        
+            do{
+                let attrStr = try NSAttributedString(data: (one.descriptionValue?.data(using: String.Encoding.unicode, allowLossyConversion: true)!)!, options: [NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType], documentAttributes: nil)
+                
+                self.des.attributedText = attrStr
+            }catch let error as NSError {
+                print(error.localizedDescription)
+            }
             
             print(jsonData["data"])
             

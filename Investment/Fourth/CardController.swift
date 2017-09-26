@@ -10,10 +10,15 @@ import UIKit
 
 class CardController: UITableViewController {
     
+    
+      var selectBlock:((CardModel) -> ())?
      var dataArray = [CardModel]()
+     var fromChoose = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+      
 
         tableView.tableFooterView = UIView()
         tableView.separatorStyle = .none
@@ -69,8 +74,21 @@ class CardController: UITableViewController {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "CardCell", for: indexPath) as! CardCell
         cell.oneModel = dataArray[indexPath.row]
+        if fromChoose {
+            cell.selectionStyle = .default
+        } else {
+            cell.selectionStyle = .none
+        }
         
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if fromChoose {
+          self.selectBlock!(dataArray[indexPath.row])
+            self.navigationController?.popViewController(animated: true)
+        }
+        
     }
 
 

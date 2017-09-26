@@ -268,6 +268,9 @@
                                 <state key="normal" title="投资">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="investAction:" destination="F3R-ot-fTT" eventType="touchUpInside" id="R35-53-q8h"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -297,6 +300,9 @@
                             <constraint firstItem="Pvt-nJ-Xau" firstAttribute="top" secondItem="UOZ-Ym-BnH" secondAttribute="bottom" constant="50" id="xmX-yl-jFd"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="moneyField" destination="cZ8-qd-iGH" id="GSw-Gp-sZK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ljh-Uw-NDc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -12,16 +12,26 @@ import Moya
 public enum ITService {
     case login(username: String, password: String)
     case register(mobile: String, password: String, code:String)
+    
     case projectList(page:String)
+    case projectinfo(no:String)
+    case projectinvest(pid:String, money:String, pay_pwd:String)
+    
     case goodsList(page:String)
     case goodsinfo(goods_no:String)
+    
+    
     case mybank
     case bindbank(account_nm:String, bank_no:String, bank_nm:String)
+    case recharge(money:String, bank_id:String, pay_pwd:String)
+    
+    
     case arealist(pid:String)
     case createaddress(username:String, province:String, city:String, district:String, address:String, mobile:String)
     case myaddress
     case makeorder(goods_list:String, address_id:String)
     case setpaypwd(pay_pwd:String, mobile:String, code:String)
+    
 
     
 }
@@ -42,6 +52,10 @@ extension ITService: TargetType {
             return "register"
         case .projectList:
             return "project/list"
+        case .projectinfo:
+            return "project/info"
+        case .projectinvest:
+            return "project/invest"
         case .goodsList:
             return "goods/list"
         case .goodsinfo:
@@ -50,6 +64,8 @@ extension ITService: TargetType {
             return "user/mybank"
         case .bindbank:
             return "user/bindbank"
+        case .recharge:
+            return "user/recharge"
         case .arealist:
             return "area/list"
         case .createaddress:
@@ -74,6 +90,10 @@ extension ITService: TargetType {
             return ["mobile": mobile, "password": password, "code":code ]
         case .projectList(let page):
             return ["page":page]
+        case .projectinfo(let no):
+            return ["no":no]
+        case .projectinvest(let pid,let money,let pay_pwd):
+            return ["pid":pid, "money":money, "pay_pwd":pay_pwd]
         case .goodsList(let page):
             return ["page":page]
         case .goodsinfo(let goods_no):
@@ -82,6 +102,8 @@ extension ITService: TargetType {
             return [:]
         case .bindbank(let account_nm,let bank_no,let bank_nm):
             return ["account_nm":account_nm, "bank_no":bank_no, "bank_nm":bank_nm]
+        case .recharge(let money,let bank_id,let pay_pwd):
+            return ["money":money, "bank_id":bank_id, "pay_pwd":pay_pwd]
         case .arealist(let pid):
             return ["pid": pid]
         case .createaddress(let username,let province,let city,let district,let address,let mobile):
