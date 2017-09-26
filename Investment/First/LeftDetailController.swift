@@ -65,7 +65,7 @@ class LeftDetailController: UIViewController {
             self.passwordView.startLoading()
             
             
-                    ANBaseNetWork.sharedInstance.networkForBoolWithHeader(.projectinvest(pid: self.number, money: money, pay_pwd: password!), successHandle: { (result) in
+                    ANBaseNetWork.sharedInstance.networkForBoolWithHeader(.projectinvest(pid: self.idn, money: money, pay_pwd: password!), successHandle: { (result) in
                         SVProgressHUD.showInfo(withStatus: "投资成功")
                         self.navigationController!.popViewController(animated: true)
                         self.passwordView.hide()

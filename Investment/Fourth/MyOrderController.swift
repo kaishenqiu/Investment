@@ -14,7 +14,7 @@ class MyOrderController: UIViewController, UIScrollViewDelegate {
     fileprivate lazy var scrollView: UIScrollView = {
         let scrollView = UIScrollView()
         scrollView.backgroundColor = #colorLiteral(red: 0.9647058824, green: 0.9647058824, blue: 0.9647058824, alpha: 1)
-        scrollView.frame = CGRect(x: 0, y: 64 + 35 + 10, width: self.view.st_width, height: self.view.st_height - 49 - 45 - 64)
+        scrollView.frame = CGRect(x: 0, y: 35 + 10, width: self.view.st_width, height: self.view.st_height - 49 - 45 - 64)
         scrollView.isPagingEnabled = true
         scrollView.delegate = self
         scrollView.showsVerticalScrollIndicator = false
@@ -84,11 +84,11 @@ extension MyOrderController {
 extension MyOrderController {
     // MARK:添加子控制器
     fileprivate func setUpChildViewControllers() {
-        let storyboard = UIStoryboard(name: "First", bundle: nil)
-        let left = storyboard.instantiateViewController(withIdentifier: "left")
+        let storyboard = UIStoryboard(name: "Fourth", bundle: nil)
+        let left = storyboard.instantiateViewController(withIdentifier: "OrderListController")
         addChildViewController(left)
-        
-        let right = storyboard.instantiateViewController(withIdentifier: "right")
+        let storyboard2 = UIStoryboard(name: "First", bundle: nil)
+        let right = storyboard2.instantiateViewController(withIdentifier: "right")
         addChildViewController(right)
         
         
@@ -107,7 +107,7 @@ extension MyOrderController {
     // MARK:设置标题栏
     fileprivate  func setUpTitlesView() {
         titlesView.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-        titlesView.frame = CGRect(x: 0, y: 64, width: view.frame.size.width, height: 35)
+        titlesView.frame = CGRect(x: 0, y: 0, width: view.frame.size.width, height: 35)
         view.addSubview(titlesView)
         
         //添加标题
@@ -119,7 +119,7 @@ extension MyOrderController {
             let titleButton = UIButton()
             titleButton.tag = i
             titleButton.setTitleColor(#colorLiteral(red: 0.6392156863, green: 0.6392156863, blue: 0.6392156863, alpha: 1), for: .normal)
-            titleButton.setTitleColor(#colorLiteral(red: 0.09803921569, green: 0.6, blue: 0.9137254902, alpha: 1), for: .selected)
+            titleButton.setTitleColor(GlobalColor, for: .selected)
             titleButton.addTarget(self, action: #selector(titleClick), for: .touchUpInside)
             titlesView.addSubview(titleButton)
             titleButton.titleLabel?.font = UIFont.systemFont(ofSize: 14)

@@ -11,9 +11,11 @@ import UIKit
 class SecurityCenterController: UIViewController {
 
     
+    @IBOutlet weak var loginMobile: UILabel!
     var setPayPwdView:SetPayPwd!
     override func viewDidLoad() {
         super.viewDidLoad()
+        loginMobile.text = UserDefaults.standard.value(forKey: LOGINNAME) as! String!
 
         // Do any additional setup after loading the view.
     }

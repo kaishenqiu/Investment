@@ -589,7 +589,7 @@
             </objects>
             <point key="canvasLocation" x="1877.5999999999999" y="1644.8275862068967"/>
         </scene>
-        <!--My Investment Controller-->
+        <!--我的投资-->
         <scene sceneID="JQd-Ik-2pE">
             <objects>
                 <tableViewController id="YB3-U5-hHN" customClass="MyInvestmentController" customModule="Investment" customModuleProvider="target" sceneMemberID="viewController">
@@ -734,6 +734,14 @@
                                         <constraint firstItem="Tjp-LR-lCo" firstAttribute="width" secondItem="FoT-oS-EKE" secondAttribute="width" id="zsa-Zb-slB"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="bitTime" destination="UdO-Qf-hfx" id="0GZ-ED-2YE"/>
+                                    <outlet property="endDate" destination="Bbh-vK-94a" id="dK7-wa-fnl"/>
+                                    <outlet property="expect_money" destination="i36-zI-AsS" id="Lf6-KL-JSH"/>
+                                    <outlet property="money" destination="hvI-1S-qoO" id="xkw-Pn-0IY"/>
+                                    <outlet property="order_no" destination="dWD-6i-72p" id="Pe6-xd-EE9"/>
+                                    <outlet property="project_name" destination="mbQ-jB-ywE" id="WO5-Fs-rlT"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -741,6 +749,7 @@
                             <outlet property="delegate" destination="YB3-U5-hHN" id="hDp-Ne-KQf"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="我的投资" id="aKr-Gk-adZ"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JLe-4L-tdD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1056,10 +1065,87 @@
                             <constraint firstItem="UTk-VT-awK" firstAttribute="top" secondItem="RZe-FF-grg" secondAttribute="bottom" constant="5" id="wDT-Cw-r3i"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="loginMobile" destination="Qy3-5A-bVq" id="kPS-xS-vmt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9uM-ud-BO9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3743" y="794"/>
+        </scene>
+        <!--Order List Controller-->
+        <scene sceneID="640-6f-DZn">
+            <objects>
+                <tableViewController storyboardIdentifier="OrderListController" id="wKS-Jp-100" customClass="OrderListController" customModule="Investment" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="116" sectionHeaderHeight="28" sectionFooterHeight="28" id="Kbk-Iq-gmc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="OrderCell" rowHeight="116" id="MAY-pU-bu6" customClass="OrderCell" customModule="Investment" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="116"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MAY-pU-bu6" id="7nN-fI-d9Z">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="115.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DVu-f0-GtT">
+                                            <rect key="frame" x="15" y="25.5" width="65" height="65"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="65" id="2k7-Kv-yxx"/>
+                                                <constraint firstAttribute="width" constant="65" id="RXM-Zt-IHx"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="slN-c9-mZ8">
+                                            <rect key="frame" x="90" y="25" width="275" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YTb-Da-fJ9">
+                                            <rect key="frame" x="90" y="69" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8kl-fm-QJM">
+                                            <rect key="frame" x="142" y="69" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nmi-kG-d6X">
+                                            <rect key="frame" x="313" y="69" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="DVu-f0-GtT" firstAttribute="leading" secondItem="7nN-fI-d9Z" secondAttribute="leading" constant="15" id="048-7u-pt1"/>
+                                        <constraint firstAttribute="trailing" secondItem="slN-c9-mZ8" secondAttribute="trailing" constant="10" id="2y8-BY-cVW"/>
+                                        <constraint firstItem="8kl-fm-QJM" firstAttribute="centerY" secondItem="YTb-Da-fJ9" secondAttribute="centerY" id="JAo-jE-J5s"/>
+                                        <constraint firstItem="slN-c9-mZ8" firstAttribute="leading" secondItem="DVu-f0-GtT" secondAttribute="trailing" constant="10" id="OuU-D3-T1M"/>
+                                        <constraint firstItem="DVu-f0-GtT" firstAttribute="centerY" secondItem="7nN-fI-d9Z" secondAttribute="centerY" id="Pxu-h3-tab"/>
+                                        <constraint firstItem="YTb-Da-fJ9" firstAttribute="leading" secondItem="slN-c9-mZ8" secondAttribute="leading" id="VcF-vp-nTn"/>
+                                        <constraint firstItem="nmi-kG-d6X" firstAttribute="centerY" secondItem="YTb-Da-fJ9" secondAttribute="centerY" id="ZMf-ez-dcV"/>
+                                        <constraint firstAttribute="trailing" secondItem="nmi-kG-d6X" secondAttribute="trailing" constant="20" id="aSN-65-LFu"/>
+                                        <constraint firstItem="slN-c9-mZ8" firstAttribute="top" secondItem="DVu-f0-GtT" secondAttribute="top" id="bpx-Mr-Rcx"/>
+                                        <constraint firstItem="YTb-Da-fJ9" firstAttribute="bottom" secondItem="DVu-f0-GtT" secondAttribute="bottom" id="mMR-pH-k3K"/>
+                                        <constraint firstItem="8kl-fm-QJM" firstAttribute="leading" secondItem="YTb-Da-fJ9" secondAttribute="trailing" constant="10" id="yc4-JV-Em6"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="wKS-Jp-100" id="rij-y7-bIt"/>
+                            <outlet property="delegate" destination="wKS-Jp-100" id="dvN-mV-zPL"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dgz-XO-l7L" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2397.5999999999999" y="-1670.0149925037483"/>
         </scene>
         <!--关于产品-->
         <scene sceneID="FNQ-hg-1wj">
@@ -1256,10 +1342,10 @@
             </objects>
             <point key="canvasLocation" x="3369" y="-809"/>
         </scene>
-        <!--My Order Controller-->
+        <!--我的订单-->
         <scene sceneID="KvZ-8w-Niy">
             <objects>
-                <viewController id="p6G-FN-NAL" customClass="MyOrderController" customModule="Investment" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="p6G-FN-NAL" customClass="MyOrderController" customModule="Investment" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="4pE-Tj-nnR"/>
                         <viewControllerLayoutGuide type="bottom" id="QHs-Db-2JJ"/>
@@ -1269,6 +1355,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="我的订单" id="Kay-kH-DJM"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hXM-6q-OLc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

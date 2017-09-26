@@ -1,25 +1,14 @@
 //
-//  SecondCell.swift
+//  OrderCell.swift
 //  Investment
 //
-//  Created by 邱仙凯 on 2017/9/6.
+//  Created by 邱仙凯 on 2017/9/26.
 //  Copyright © 2017年 kaishen. All rights reserved.
 //
 
 import UIKit
-import SwiftyJSON
 
-class SecondCell: UITableViewCell {
-    
-    
-    var oneModel = GoodsModel(json:JSON.null) {
-        didSet {
-            titleLab.text = oneModel.goodsName
-    
-            
-        }
-    }
-    @IBOutlet weak var titleLab: UILabel!
+class OrderCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()

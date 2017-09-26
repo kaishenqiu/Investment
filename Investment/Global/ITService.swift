@@ -17,9 +17,13 @@ public enum ITService {
     case projectinfo(no:String)
     case projectinvest(pid:String, money:String, pay_pwd:String)
     case investlist(id:String)
+    case myinvest
+
     
     case goodsList(page:String)
     case goodsinfo(goods_no:String)
+    
+    case myorder(page:String)
     
     
     case mybank
@@ -59,10 +63,15 @@ extension ITService: TargetType {
             return "project/invest"
         case .investlist:
             return "project/investlist"
+        case .myinvest:
+            return "user/myInvest"
         case .goodsList:
             return "goods/list"
         case .goodsinfo:
             return "goods/info"
+        case .myorder:
+            return "user/myOrder"
+            
         case .mybank:
             return "user/mybank"
         case .bindbank:
@@ -99,10 +108,15 @@ extension ITService: TargetType {
             return ["pid":pid, "money":money, "pay_pwd":pay_pwd]
         case .investlist(let id):
             return ["id":id]
+        case .myinvest():
+            return [:]
         case .goodsList(let page):
             return ["page":page]
         case .goodsinfo(let goods_no):
             return ["goods_no":goods_no]
+        case .myorder(let page):
+            return ["page":page]
+            
         case .mybank():
             return [:]
         case .bindbank(let account_nm,let bank_no,let bank_nm):

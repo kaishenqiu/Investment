@@ -261,7 +261,7 @@
             </objects>
             <point key="canvasLocation" x="1685.5999999999999" y="-45.42728635682159"/>
         </scene>
-        <!--Choose View Controller-->
+        <!--下单-->
         <scene sceneID="dlB-ft-uJY">
             <objects>
                 <viewController id="PHz-7v-E8T" customClass="ChooseViewController" customModule="Investment" customModuleProvider="target" sceneMemberID="viewController">
@@ -403,6 +403,7 @@
                             <constraint firstItem="D47-4J-XtQ" firstAttribute="leading" secondItem="Ykq-18-Ffy" secondAttribute="leading" id="wu6-md-NJg"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="下单" id="dab-tc-kHw"/>
                     <connections>
                         <outlet property="addrView" destination="ejM-VI-XHE" id="xRl-wf-uuF"/>
                     </connections>

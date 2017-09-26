@@ -60,6 +60,8 @@
 		589F31AD1F60EE3B0004E83D /* OrderListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589F31AC1F60EE3B0004E83D /* OrderListController.swift */; };
 		589F31AF1F611B190004E83D /* AppDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589F31AE1F611B190004E83D /* AppDefine.swift */; };
 		589F31B21F627A5A0004E83D /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 589F31B11F627A5A0004E83D /* Login.storyboard */; };
+		58AF33F41F7A255300F3F082 /* InvestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58AF33F31F7A255300F3F082 /* InvestModel.swift */; };
+		58AF33F61F7A48C700F3F082 /* OrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58AF33F51F7A48C700F3F082 /* OrderCell.swift */; };
 		58D102591F7218A6000EE176 /* AddressController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D102581F7218A6000EE176 /* AddressController.swift */; };
 		58D1025B1F7218C1000EE176 /* AddAddrController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D1025A1F7218C1000EE176 /* AddAddrController.swift */; };
 		58D1027A1F73A836000EE176 /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D102791F73A836000EE176 /* CardModel.swift */; };
@@ -140,6 +142,8 @@
 		589F31AC1F60EE3B0004E83D /* OrderListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderListController.swift; sourceTree = "<group>"; };
 		589F31AE1F611B190004E83D /* AppDefine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDefine.swift; sourceTree = "<group>"; };
 		589F31B11F627A5A0004E83D /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		58AF33F31F7A255300F3F082 /* InvestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvestModel.swift; sourceTree = "<group>"; };
+		58AF33F51F7A48C700F3F082 /* OrderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderCell.swift; sourceTree = "<group>"; };
 		58D102581F7218A6000EE176 /* AddressController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressController.swift; sourceTree = "<group>"; };
 		58D1025A1F7218C1000EE176 /* AddAddrController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddAddrController.swift; sourceTree = "<group>"; };
 		58D102791F73A836000EE176 /* CardModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
@@ -200,6 +204,7 @@
 				58D1027D1F73A951000EE176 /* AddrCell.swift */,
 				58D102A81F7651AD000EE176 /* SetPayPwd.xib */,
 				58D102AA1F7651C3000EE176 /* SetPayPwd.swift */,
+				58AF33F51F7A48C700F3F082 /* OrderCell.swift */,
 			);
 			path = v;
 			sourceTree = "<group>";
@@ -373,6 +378,7 @@
 		58D102781F73A80A000EE176 /* m */ = {
 			isa = PBXGroup;
 			children = (
+				58AF33F31F7A255300F3F082 /* InvestModel.swift */,
 				58D1027B1F73A8B4000EE176 /* AddrModel.swift */,
 				58D102791F73A836000EE176 /* CardModel.swift */,
 			);
@@ -556,6 +562,7 @@
 				582E79E81F69234700A81F67 /* MyInvestmentController.swift in Sources */,
 				58D1027E1F73A951000EE176 /* AddrCell.swift in Sources */,
 				58D102A71F7640F0000EE176 /* ChooseViewController.swift in Sources */,
+				58AF33F61F7A48C700F3F082 /* OrderCell.swift in Sources */,
 				58302FD71F78EFD800D813DF /* RechargeController.swift in Sources */,
 				58D102591F7218A6000EE176 /* AddressController.swift in Sources */,
 				589F31A91F60D9870004E83D /* LeftCell.swift in Sources */,
@@ -594,6 +601,7 @@
 				58D1029F1F75018C000EE176 /* GoodsModel.swift in Sources */,
 				58302FD11F78E47A00D813DF /* CYPasswordInputView.m in Sources */,
 				582E79FC1F6BD1A100A81F67 /* LeftDetailController.swift in Sources */,
+				58AF33F41F7A255300F3F082 /* InvestModel.swift in Sources */,
 				589F31621F5FA0050004E83D /* BaseNavController.swift in Sources */,
 				58D1025B1F7218C1000EE176 /* AddAddrController.swift in Sources */,
 				58D102AD1F765334000EE176 /* SecurityCenterController.swift in Sources */,
