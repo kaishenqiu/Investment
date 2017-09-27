@@ -41,7 +41,7 @@ public struct AddrModel {
   public var zipcode: String?
   public var status: String?
   public var defau: String?
-  public var id: String?
+  public var id: Int?
   public var createdAt: String?
   public var userId: String?
   public var country: String?
@@ -70,7 +70,7 @@ public struct AddrModel {
     zipcode = json[SerializationKeys.zipcode].string
     status = json[SerializationKeys.status].string
     defau = json[SerializationKeys.defau].string
-    id = json[SerializationKeys.id].string
+    id = json[SerializationKeys.id].int
     createdAt = json[SerializationKeys.createdAt].string
     userId = json[SerializationKeys.userId].string
     country = json[SerializationKeys.country].string

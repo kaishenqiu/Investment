@@ -11,6 +11,8 @@ import SwiftyJSON
 
 class AddrCell: UITableViewCell {
     
+    var delBlock:(() -> ())?
+    
     @IBOutlet weak var mobileLab: UILabel!
     @IBOutlet weak var addrLab: UILabel!
     @IBOutlet weak var nameLab: UILabel!
@@ -22,6 +24,11 @@ class AddrCell: UITableViewCell {
             
             
         }
+    }
+    @IBAction func modifyAction(_ sender: Any) {
+    }
+    @IBAction func delAction(_ sender: Any) {
+        self.delBlock!()
     }
 
     override func awakeFromNib() {

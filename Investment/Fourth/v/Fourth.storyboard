@@ -400,16 +400,24 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xLR-Kh-MnT">
-                                            <rect key="frame" x="295" y="64" width="31" height="30"/>
+                                            <rect key="frame" x="292" y="64.5" width="30" height="29"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <state key="normal" title="编辑">
                                                 <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                             </state>
+                                            <connections>
+                                                <action selector="modifyAction:" destination="ejK-va-U9E" eventType="touchUpInside" id="iOf-hq-dyH"/>
+                                            </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eLo-9O-I9g">
                                             <rect key="frame" x="330" y="64" width="31" height="30"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <state key="normal" title="删除">
                                                 <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                             </state>
+                                            <connections>
+                                                <action selector="delAction:" destination="ejK-va-U9E" eventType="touchUpInside" id="1uE-kI-KD7"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <constraints>
@@ -417,7 +425,7 @@
                                         <constraint firstItem="Tcj-Ys-09i" firstAttribute="top" secondItem="W66-Ag-Ng6" secondAttribute="bottom" constant="8" id="2e4-pj-3jU"/>
                                         <constraint firstItem="W66-Ag-Ng6" firstAttribute="top" secondItem="QEA-uA-c0K" secondAttribute="bottom" constant="10" id="3PG-gD-Zqz"/>
                                         <constraint firstAttribute="trailing" secondItem="W66-Ag-Ng6" secondAttribute="trailing" id="6jQ-t2-2PL"/>
-                                        <constraint firstItem="eLo-9O-I9g" firstAttribute="leading" secondItem="xLR-Kh-MnT" secondAttribute="trailing" constant="3" id="A8i-kL-TSE"/>
+                                        <constraint firstItem="eLo-9O-I9g" firstAttribute="leading" secondItem="xLR-Kh-MnT" secondAttribute="trailing" constant="8" id="A8i-kL-TSE"/>
                                         <constraint firstItem="6Kv-dg-F8d" firstAttribute="top" secondItem="7iy-gA-mA9" secondAttribute="top" constant="5" id="EOY-0L-faE"/>
                                         <constraint firstItem="6Kv-dg-F8d" firstAttribute="leading" secondItem="7iy-gA-mA9" secondAttribute="leading" constant="10" id="H6M-Ul-8Ym"/>
                                         <constraint firstItem="BvA-jG-7Kp" firstAttribute="leading" secondItem="Tcj-Ys-09i" secondAttribute="trailing" constant="3" id="UoT-6c-ZyP"/>

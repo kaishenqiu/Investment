@@ -8,9 +8,15 @@
 
 import UIKit
 import SVProgressHUD
+import SwiftyJSON
 
 class ChooseViewController: UIViewController {
-
+    
+    
+    @IBOutlet weak var numLab: UILabel!
+    @IBOutlet weak var sumMoney: UILabel!
+    @IBOutlet weak var partLab: UILabel!
+    var oneModel = PartModel(json:JSON.null)
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -19,6 +25,12 @@ class ChooseViewController: UIViewController {
         addrView.addGestureRecognizer(viewG)
 
         // Do any additional setup after loading the view.
+        partLab.text = "部位：" + oneModel.name!
+        numLab.text = "数量： \(oneModel.number!)  单价： \(oneModel.wxprice!)"
+        let sum = oneModel.number! * Int(oneModel.wxprice!)!
+        sumMoney.text = "总价：\(sum) 元"
+        
+        
     }
     @IBOutlet weak var addrView: UIView!
  

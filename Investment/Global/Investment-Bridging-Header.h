@@ -20,6 +20,7 @@
 
 
 #import "CYPasswordView.h"
+#import "JWCountButton.h"
 
 #import "ASValuePopUpView.h"
 #import "ASValueTrackingSlider.h"

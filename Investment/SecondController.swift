@@ -80,7 +80,7 @@ class SecondController: UIViewController,UITableViewDelegate,UITableViewDataSour
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "left", for: indexPath) as! SecondCell
-        cell.oneModel = dataArray[indexPath.section]
+        cell.oneModel = dataArray[indexPath.row]
         return cell
     }
     
@@ -93,7 +93,7 @@ class SecondController: UIViewController,UITableViewDelegate,UITableViewDataSour
         if segue.identifier == "goodsdetailsegue" {
             let sd = sender as! IndexPath
             let dVC = segue.destination as! GoodsDetailController
-            let model = dataArray[sd.section]
+            let model = dataArray[sd.row]
             dVC.good_no = model.goodsNo!
             
         }

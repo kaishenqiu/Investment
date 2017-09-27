@@ -8,21 +8,22 @@
 
 import UIKit
 import SVProgressHUD
-
-class GoodsDetailController: UIViewController {
+import SwiftyJSON
+class GoodsDetailController: UIViewController,UIWebViewDelegate {
     
     var good_no = ""
 
     var chooseV:ChooseView!
+    var groupArray = [String]()
+    var partArray = [PartModel]()
     @IBOutlet weak var goods_name: UILabel!
-    @IBOutlet weak var chooseBtn: UIButton!
-    @IBOutlet weak var des: UILabel!
+    @IBOutlet weak var webView: UIWebView!
+    @IBOutlet weak var scrollView: UIScrollView!
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        
+ 
         
         
         
@@ -41,51 +42,87 @@ class GoodsDetailController: UIViewController {
             let one = GoodsModel(json: jsonData["data"])
             self.goods_name.text = one.goodsName!
             
-            
-            
-        
-            do{
-                let attrStr = try NSAttributedString(data: (one.descriptionValue?.data(using: String.Encoding.unicode, allowLossyConversion: true)!)!, options: [NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType], documentAttributes: nil)
-                
-                self.des.attributedText = attrStr
-            }catch let error as NSError {
-                print(error.localizedDescription)
+            let properties = jsonData["data"]["properties"].arrayValue
+            for item in properties {
+                let one = PartModel(json:item)
+                self.partArray.append(one)
             }
             
-            print(jsonData["data"])
+            print(self.partArray)
+            
+           let properties_group = jsonData["data"]["properties_group"].arrayValue
+            for dic in properties_group {
+                if dic["group_name"] == "部位" {
+                    self.groupArray = dic["list"].arrayObject as! [String]
+                
+                }
+            }
+            print(self.groupArray)
+            
+            
+            self.webView.loadHTMLString(one.descriptionValue!, baseURL: nil)
+            self.webView.delegate = self
+      
+      
             
         }
 
         // Do any additional setup after loading the view.
     }
+    
+    
+    func webViewDidFinishLoad(_ webView: UIWebView) {
+        
+        webView.stringByEvaluatingJavaScript(from: "var script = document.createElement('script');script.type = 'text/javascript';script.text = \"function ResizeImages() { var myimg,oldwidth;var maxwidth = 375;for(i=0;i <document.images.length;i++){myimg = document.images[i];if(myimg.width > maxwidth){oldwidth = myimg.width;myimg.width =360;}}}\";document.getElementsByTagName('head')[0].appendChild(script);")
+        
+        webView.stringByEvaluatingJavaScript(from: "ResizeImages();");
+        
+        let actualSize = webView.sizeThatFits(CGSize.zero)
+        var newFrame = webView.frame
+        newFrame.size.height = actualSize.height
+        webView.frame = newFrame
+        scrollView.contentSize = CGSize(width:newFrame.size.width,height:newFrame.size.height + 100)
+        
+       
+    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    @IBAction func chooseAction(_ sender: Any) {
+ 
+    @IBAction func confirmAction(_ sender: Any) {
         
         self.chooseV = Bundle.main.loadNibNamed("ChooseView", owner: nil, options: nil)!.last as! ChooseView
+        
+        self.chooseV.propertiesArray = self.partArray
+        self.chooseV.ddd = self.groupArray
         self.chooseV.frame = UIApplication.shared.keyWindow!.frame
-
-        self.chooseV.saveBlock = {str in
-            self.chooseBtn.setTitle(str, for: .normal)
+        
+        self.chooseV.saveBlock = {name,pno,number,wxprice in
+            
+            var one = PartModel(json:JSON.null)
+            one.name = name
+            one.pno = pno
+            one.number = number
+            one.wxprice = wxprice
+            
+            self.performSegue(withIdentifier: "tochooseview", sender: one)
             
         }
         UIApplication.shared.keyWindow!.addSubview(self.chooseV)
         
         
-    }
-
-    @IBAction func confirmAction(_ sender: Any) {
-        self.performSegue(withIdentifier: "tochooseview", sender: nil)
+        
         
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "tochooseview" {
-//            let sd = sender as! IndexPath
-//            let dVC = segue.destination as! ChooseViewController
-//       
+            let sd = sender as! PartModel
+            let dVC = segue.destination as! ChooseViewController
+            dVC.oneModel = sd
+
             
         }
     }

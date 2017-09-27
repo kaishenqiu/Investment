@@ -62,6 +62,8 @@
 		589F31B21F627A5A0004E83D /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 589F31B11F627A5A0004E83D /* Login.storyboard */; };
 		58AF33F41F7A255300F3F082 /* InvestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58AF33F31F7A255300F3F082 /* InvestModel.swift */; };
 		58AF33F61F7A48C700F3F082 /* OrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58AF33F51F7A48C700F3F082 /* OrderCell.swift */; };
+		58AF33F81F7B3B0200F3F082 /* PartModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58AF33F71F7B3B0200F3F082 /* PartModel.swift */; };
+		58AF33FC1F7B55A800F3F082 /* JWCountButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 58AF33FB1F7B55A800F3F082 /* JWCountButton.m */; };
 		58D102591F7218A6000EE176 /* AddressController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D102581F7218A6000EE176 /* AddressController.swift */; };
 		58D1025B1F7218C1000EE176 /* AddAddrController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D1025A1F7218C1000EE176 /* AddAddrController.swift */; };
 		58D1027A1F73A836000EE176 /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D102791F73A836000EE176 /* CardModel.swift */; };
@@ -144,6 +146,9 @@
 		589F31B11F627A5A0004E83D /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		58AF33F31F7A255300F3F082 /* InvestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvestModel.swift; sourceTree = "<group>"; };
 		58AF33F51F7A48C700F3F082 /* OrderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderCell.swift; sourceTree = "<group>"; };
+		58AF33F71F7B3B0200F3F082 /* PartModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PartModel.swift; sourceTree = "<group>"; };
+		58AF33FA1F7B55A700F3F082 /* JWCountButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWCountButton.h; sourceTree = "<group>"; };
+		58AF33FB1F7B55A800F3F082 /* JWCountButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWCountButton.m; sourceTree = "<group>"; };
 		58D102581F7218A6000EE176 /* AddressController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressController.swift; sourceTree = "<group>"; };
 		58D1025A1F7218C1000EE176 /* AddAddrController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddAddrController.swift; sourceTree = "<group>"; };
 		58D102791F73A836000EE176 /* CardModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
@@ -212,6 +217,7 @@
 		582E79F81F6BA80200A81F67 /* vendor */ = {
 			isa = PBXGroup;
 			children = (
+				58AF33F91F7B55A700F3F082 /* JWCountButton */,
 				58302FC41F78E47A00D813DF /* CYPasswordView */,
 				58D102881F74C123000EE176 /* ASValueTrackingSlider */,
 				58D102811F74BEF8000EE176 /* DOPNavbarMenu */,
@@ -296,6 +302,7 @@
 		589F31661F5FA0B60004E83D /* Second */ = {
 			isa = PBXGroup;
 			children = (
+				58AF33F71F7B3B0200F3F082 /* PartModel.swift */,
 				58D1029E1F75018C000EE176 /* GoodsModel.swift */,
 				589F315B1F5F9E420004E83D /* SecondController.swift */,
 				588755341F16043C00602D43 /* Second.storyboard */,
@@ -373,6 +380,15 @@
 				582E79E31F68DC7100A81F67 /* LoginController.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		58AF33F91F7B55A700F3F082 /* JWCountButton */ = {
+			isa = PBXGroup;
+			children = (
+				58AF33FA1F7B55A700F3F082 /* JWCountButton.h */,
+				58AF33FB1F7B55A800F3F082 /* JWCountButton.m */,
+			);
+			path = JWCountButton;
 			sourceTree = "<group>";
 		};
 		58D102781F73A80A000EE176 /* m */ = {
@@ -562,6 +578,7 @@
 				582E79E81F69234700A81F67 /* MyInvestmentController.swift in Sources */,
 				58D1027E1F73A951000EE176 /* AddrCell.swift in Sources */,
 				58D102A71F7640F0000EE176 /* ChooseViewController.swift in Sources */,
+				58AF33F81F7B3B0200F3F082 /* PartModel.swift in Sources */,
 				58AF33F61F7A48C700F3F082 /* OrderCell.swift in Sources */,
 				58302FD71F78EFD800D813DF /* RechargeController.swift in Sources */,
 				58D102591F7218A6000EE176 /* AddressController.swift in Sources */,
@@ -605,6 +622,7 @@
 				589F31621F5FA0050004E83D /* BaseNavController.swift in Sources */,
 				58D1025B1F7218C1000EE176 /* AddAddrController.swift in Sources */,
 				58D102AD1F765334000EE176 /* SecurityCenterController.swift in Sources */,
+				58AF33FC1F7B55A800F3F082 /* JWCountButton.m in Sources */,
 				588755311F16028A00602D43 /* BaseTabbarController.swift in Sources */,
 				589F31641F5FA0A40004E83D /* GlobalFunction.swift in Sources */,
 				582E7A041F6F689300A81F67 /* STCountDownButton.swift in Sources */,

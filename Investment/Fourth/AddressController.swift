@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import SVProgressHUD
 class AddressController: UITableViewController {
 
     var dataArray = [AddrModel]()
@@ -66,7 +66,20 @@ class AddressController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "AddrCell", for: indexPath) as! AddrCell
-        cell.oneModel = dataArray[indexPath.section]
+        let one = dataArray[indexPath.section]
+        cell.oneModel = one
+        cell.delBlock = {
+            ANBaseNetWork.sharedInstance.networkForBoolWithHeader(.deladdress(id: "\(one.id!)"), successHandle: { (result) in
+                SVProgressHUD.showInfo(withStatus: "删除成功")
+                self.tableView.mj_header.beginRefreshing()
+
+                
+            }, errorHandle: { (error) in
+                SVProgressHUD.showInfo(withStatus: error)
+            })
+
+          
+        }
         
         return cell
     }
