@@ -11,6 +11,8 @@ import SVProgressHUD
 class AddressController: UITableViewController {
 
     var dataArray = [AddrModel]()
+    var fromChoose = false
+    var selectAddrBlock:((AddrModel) -> ())?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -80,8 +82,30 @@ class AddressController: UITableViewController {
 
           
         }
+        cell.defauBlock = { str in
+            ANBaseNetWork.sharedInstance.networkForBoolWithHeader(.defauaddress(id: "\(one.id!)", defau: str), successHandle: { (result) in
+                SVProgressHUD.showInfo(withStatus: "更新成功")
+                self.tableView.mj_header.beginRefreshing()
+                
+                
+            }, errorHandle: { (error) in
+                SVProgressHUD.showInfo(withStatus: error)
+            })
+            
+            
+        }
+        
+        
         
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        tableView.deselectRow(at: indexPath, animated: true)
+        if fromChoose {
+            self.selectAddrBlock!(dataArray[indexPath.section])
+            self.navigationController?.popViewController(animated: true)
+        }
     }
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {

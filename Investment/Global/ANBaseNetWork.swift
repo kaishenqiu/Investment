@@ -72,6 +72,7 @@ class ANBaseNetWork: NSObject {
                 do {
                     let json = try response.mapJSON()
                     let data = JSON(json)
+                    print(data)
                     if data["code"].stringValue == "200" {
                         
                         if let handle = successHandle {

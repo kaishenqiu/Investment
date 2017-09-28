@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class OrderCell: UITableViewCell {
 
@@ -14,6 +15,10 @@ class OrderCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
+    @IBOutlet weak var statusBtn: UIButton!
+    @IBOutlet weak var numLab: UILabel!
+    @IBOutlet weak var titleLab: UILabel!
+    @IBOutlet weak var priceLab: UILabel!
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

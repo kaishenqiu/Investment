@@ -115,7 +115,7 @@ class ChooseView: UIView {
            selectedBtn?.layer.borderColor = GlobalColor.cgColor
         }
         let one = self.propertiesArray[(sender?.tag)!]
-        self.storageLab.text = one.name! + " 库存：" + one.stock! + " 单价:" + one.wxprice!
+        self.storageLab.text = one.name! + " 库存：" + one.stock! + " 单价: \(one.wxprice!)"
         self.chooseLab.text = "已选择：" + ddd[(sender?.tag)!]
         tempButton.maxValue = Int(one.stock!)!
         countNum = tempButton.currentNumber

@@ -7,9 +7,10 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class OrderListController: UITableViewController {
-    var dataArray = [LeftModel]()
+    var dataArray = [OrderModel]()
     var pageflag = 1
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +40,7 @@ class OrderListController: UITableViewController {
                 self.dataArray.removeAll()
             }
             for item in result {
-                let one = LeftModel(json: item)
+                let one = OrderModel(json: item)
                 self.dataArray.append(one)
                 
             }
@@ -75,7 +76,18 @@ class OrderListController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "OrderCell", for: indexPath) as! OrderCell
-//        cell.oneModel = dataArray[indexPath.section]
+
+        
+        let model = dataArray[indexPath.section]
+        let one = model.goodsitems![0]
+        cell.titleLab.text = one["goods_name"] as? String
+        cell.priceLab.text = "单价：\(one["price"]!)"
+        cell.numLab.text = "数量：\(one["number"]!)"
+        
+        
+        let dist = model.distribution! as! [String:Any]
+        cell.statusBtn.setTitle(statusGuide["\(dist["status"]!)"], for: .normal)
+        
         
         return cell
     }

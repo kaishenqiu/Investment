@@ -383,7 +383,10 @@
                     </view>
                     <navigationItem key="navigationItem" title="下单" id="dab-tc-kHw"/>
                     <connections>
+                        <outlet property="addrMobile" destination="uPU-tu-NHh" id="AK7-Rk-xhz"/>
+                        <outlet property="addrName" destination="HfG-tq-SbA" id="6c6-Ih-vyD"/>
                         <outlet property="addrView" destination="ejM-VI-XHE" id="xRl-wf-uuF"/>
+                        <outlet property="addrdes" destination="2ht-pm-VpM" id="nyS-sE-oLA"/>
                         <outlet property="numLab" destination="qsV-wO-b4X" id="tbX-ZB-vBr"/>
                         <outlet property="partLab" destination="bqr-eo-W83" id="QjB-C1-bGI"/>
                         <outlet property="sumMoney" destination="cfK-7u-beO" id="NwX-3n-f2X"/>

@@ -35,6 +35,7 @@ public enum ITService {
     case createaddress(username:String, province:String, city:String, district:String, address:String, mobile:String)
     case myaddress
     case deladdress(id:String)
+    case defauaddress(id:String,defau:String)
     
     case makeorder(goods_list:String, address_id:String)
     case setpaypwd(pay_pwd:String, mobile:String, code:String)
@@ -88,6 +89,8 @@ extension ITService: TargetType {
             return "user/myaddress"
         case .deladdress:
             return "user/deladdress"
+        case .defauaddress:
+            return "user/updateaddress"
         
         case .makeorder:
             return "goods/makeorder"
@@ -136,6 +139,9 @@ extension ITService: TargetType {
             return [:]
         case .deladdress( let id):
             return ["id":id]
+        case .defauaddress(let id,let defau):
+            return ["id":id, "defau":defau]
+        
         case .makeorder(let goods_list, let address_id):
             return ["goods_list":goods_list,"address_id":address_id]
         case .setpaypwd(let pay_pwd,let mobile,let code):

@@ -64,6 +64,7 @@
 		58AF33F61F7A48C700F3F082 /* OrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58AF33F51F7A48C700F3F082 /* OrderCell.swift */; };
 		58AF33F81F7B3B0200F3F082 /* PartModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58AF33F71F7B3B0200F3F082 /* PartModel.swift */; };
 		58AF33FC1F7B55A800F3F082 /* JWCountButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 58AF33FB1F7B55A800F3F082 /* JWCountButton.m */; };
+		58AF33FE1F7CD70600F3F082 /* OrderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58AF33FD1F7CD70600F3F082 /* OrderModel.swift */; };
 		58D102591F7218A6000EE176 /* AddressController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D102581F7218A6000EE176 /* AddressController.swift */; };
 		58D1025B1F7218C1000EE176 /* AddAddrController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D1025A1F7218C1000EE176 /* AddAddrController.swift */; };
 		58D1027A1F73A836000EE176 /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D102791F73A836000EE176 /* CardModel.swift */; };
@@ -149,6 +150,7 @@
 		58AF33F71F7B3B0200F3F082 /* PartModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PartModel.swift; sourceTree = "<group>"; };
 		58AF33FA1F7B55A700F3F082 /* JWCountButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWCountButton.h; sourceTree = "<group>"; };
 		58AF33FB1F7B55A800F3F082 /* JWCountButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWCountButton.m; sourceTree = "<group>"; };
+		58AF33FD1F7CD70600F3F082 /* OrderModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderModel.swift; sourceTree = "<group>"; };
 		58D102581F7218A6000EE176 /* AddressController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressController.swift; sourceTree = "<group>"; };
 		58D1025A1F7218C1000EE176 /* AddAddrController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddAddrController.swift; sourceTree = "<group>"; };
 		58D102791F73A836000EE176 /* CardModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
@@ -394,6 +396,7 @@
 		58D102781F73A80A000EE176 /* m */ = {
 			isa = PBXGroup;
 			children = (
+				58AF33FD1F7CD70600F3F082 /* OrderModel.swift */,
 				58AF33F31F7A255300F3F082 /* InvestModel.swift */,
 				58D1027B1F73A8B4000EE176 /* AddrModel.swift */,
 				58D102791F73A836000EE176 /* CardModel.swift */,
@@ -598,6 +601,7 @@
 				582E79F11F6A31A100A81F67 /* CardCell.swift in Sources */,
 				589F316D1F5FB5130004E83D /* UIView+Extension.swift in Sources */,
 				589F31AD1F60EE3B0004E83D /* OrderListController.swift in Sources */,
+				58AF33FE1F7CD70600F3F082 /* OrderModel.swift in Sources */,
 				589F31711F5FB5720004E83D /* RightController.swift in Sources */,
 				58302FD01F78E47A00D813DF /* CYConst.m in Sources */,
 				582E7A0C1F70C14500A81F67 /* PersonButton.swift in Sources */,
