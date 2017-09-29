@@ -27,7 +27,7 @@ class FourthController: UIViewController {
             return
         }
         
-        self .navigationController?.navigationBar.setBackgroundImage(getImageWithColor(color: GlobalColor, size: CGSize(width:1,height:1)), for: .any, barMetrics: .default)
+        self .navigationController?.navigationBar.setBackgroundImage(getImageWithColor(color: #colorLiteral(red: 0.9294117647, green: 0.2352941176, blue: 0.2196078431, alpha: 1), size: CGSize(width:1,height:1)), for: .any, barMetrics: .default)
         self .navigationController?.navigationBar.shadowImage = UIImage()
         self .navigationController?.navigationBar.isTranslucent = false
 

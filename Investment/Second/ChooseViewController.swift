@@ -59,18 +59,11 @@ class ChooseViewController: UIViewController {
     }
     
     @IBAction func makeOrder(_ sender: Any) {
+     
         
-            var ff = [String:String]()
-            ff.updateValue("\(self.oneModel.number!)", forKey: "number")
-            ff.updateValue("\(self.oneModel.pno!)", forKey: "pno")
-        
-            let aa = [ff]
-        
-            print(JSON(aa))
-        
-        
-            ANBaseNetWork.sharedInstance.networkForBoolWithHeader(.makeorder(goods_list: "\(JSON(aa))", address_id: self.addrid), successHandle: { (result) in
+            ANBaseNetWork.sharedInstance.networkForBoolWithHeader(.makeorder(goods_listpno: "\(self.oneModel.pno!)", goods_listnumber: "\(self.oneModel.number!)", address_id: self.addrid), successHandle: { (result) in
             SVProgressHUD.showInfo(withStatus: "成功")
+            self.navigationController?.popViewController(animated: true)
         
         
         
