@@ -759,7 +759,7 @@
             </objects>
             <point key="canvasLocation" x="1861.5999999999999" y="643.62818590704649"/>
         </scene>
-        <!--Salary Controller-->
+        <!--资产详情-->
         <scene sceneID="Kp8-vJ-lsx">
             <objects>
                 <viewController id="L1A-Xu-K7K" customClass="SalaryController" customModule="Investment" customModuleProvider="target" sceneMemberID="viewController">
@@ -944,6 +944,15 @@
                             <constraint firstItem="QKx-ac-9lG" firstAttribute="top" secondItem="NgW-xu-StJ" secondAttribute="bottom" constant="2" id="zva-3h-YFb"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="资产详情" id="pYU-vg-KCV"/>
+                    <connections>
+                        <outlet property="balance" destination="bFh-Il-Tgy" id="vRx-Td-emb"/>
+                        <outlet property="balance_fund" destination="bX8-Pt-qLU" id="z9K-i2-LJC"/>
+                        <outlet property="corpus_co" destination="wsF-tJ-xAK" id="q1T-9W-gB3"/>
+                        <outlet property="interest" destination="Rnf-tn-1se" id="qR8-BM-kAb"/>
+                        <outlet property="interest_co" destination="KHL-fq-fWq" id="jnN-zd-2LR"/>
+                        <outlet property="total" destination="xI2-Jo-e4L" id="z1G-PG-LC7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="siX-J0-2Y4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
