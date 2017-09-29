@@ -18,13 +18,21 @@ class PersonButton: UIButton {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        self.imageEdgeInsets = UIEdgeInsets(top: 0,left: 0,bottom: 0,right: self.st_width * 0.3)
-        self.titleEdgeInsets = UIEdgeInsets(top: 0,left: 0,bottom: 0,right: 0)
-        //        self.imageView?.st_centerX = self.st_centerX
-        ////        self.imageView?.st_y = self.st_y + 5
-        //        self.imageView?.st_width = self.st_width * 0.5
-        //        self.imageView?.st_height = self.st_height * 0.4
-        ////
+        
+        
+      
+    // 设置imageView
+    imageView?.frame = CGRect(x: 35 , y: 9, width: 32, height: 32)
+    // 设置title
+    titleLabel?.frame = CGRect(x: self.frame.width/2 - 10, y: 0, width: self.frame.width/2, height: self.frame.height)
+
+        
+  
+//                self.imageView?.st_x = self.st_x + 30
+//                self.imageView?.st_centerY = self.st_centerY
+//                self.imageView?.st_width = 35
+//                self.imageView?.st_height = 35
+//        ////
         //        self.titleLabel?.st_x = 0
         //        self.titleLabel?.st_bottom = self.st_bottom
         //        self.titleLabel?.st_width = self.st_width
