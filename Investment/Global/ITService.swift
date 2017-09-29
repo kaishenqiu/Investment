@@ -12,6 +12,7 @@ import Moya
 public enum ITService {
     case login(username: String, password: String)
     case register(mobile: String, password: String, code:String)
+    case userassert
     
     case projectList(page:String)
     case projectinfo(no:String)
@@ -29,6 +30,7 @@ public enum ITService {
     case mybank
     case bindbank(account_nm:String, bank_no:String, bank_nm:String)
     case recharge(money:String, bank_id:String, pay_pwd:String)
+    case draw(money:String, bank_id:String, pay_pwd:String)
     
     
     case arealist(pid:String)
@@ -58,6 +60,9 @@ extension ITService: TargetType {
             return "login"
         case .register:
             return "register"
+        case .userassert:
+            return "user/assert"
+            
         case .projectList:
             return "project/list"
         case .projectinfo:
@@ -81,6 +86,9 @@ extension ITService: TargetType {
             return "user/bindbank"
         case .recharge:
             return "user/recharge"
+        case .draw:
+            return "user/draw"
+            
         case .arealist:
             return "area/list"
         case .createaddress:
@@ -108,6 +116,9 @@ extension ITService: TargetType {
             
         case .register(let mobile,let password,let code):
             return ["mobile": mobile, "password": password, "code":code ]
+        case .userassert():
+            return [:]
+        
         case .projectList(let page):
             return ["page":page]
         case .projectinfo(let no):
@@ -131,6 +142,9 @@ extension ITService: TargetType {
             return ["account_nm":account_nm, "bank_no":bank_no, "bank_nm":bank_nm]
         case .recharge(let money,let bank_id,let pay_pwd):
             return ["money":money, "bank_id":bank_id, "pay_pwd":pay_pwd]
+        case .draw(let money,let bank_id,let pay_pwd):
+            return ["money":money, "bank_id":bank_id, "pay_pwd":pay_pwd]
+            
         case .arealist(let pid):
             return ["pid": pid]
         case .createaddress(let username,let province,let city,let district,let address,let mobile):
