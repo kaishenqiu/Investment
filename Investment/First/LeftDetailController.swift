@@ -8,10 +8,15 @@
 
 import UIKit
 import SVProgressHUD
+import SwiftyJSON
 
 class LeftDetailController: UIViewController {
     var number = ""
 
+    @IBOutlet weak var yitou: UILabel!
+    @IBOutlet weak var money: UILabel!
+    @IBOutlet weak var term: UILabel!
+    @IBOutlet weak var accrual: UILabel!
     var idn = ""
     @IBOutlet weak var moneyField: UITextField!
     var passwordView:CYPasswordView!
@@ -32,8 +37,15 @@ class LeftDetailController: UIViewController {
                 SVProgressHUD.showInfo(withStatus: "请求失败")
                 return
             }
-            let one = GoodsModel(json: jsonData["data"])
+            let one = LeftModel(json: jsonData["data"])
 //            self.goods_name.text = one.goodsName!
+            self.accrual.text = "\(one.termDay!)%"
+            let aa = JSON(one.properties!)
+    
+            
+            self.term.text = "期限\(one.termDay!)天|起投\(aa["min_money"])元"
+            self.money.text = "借贷总额\(one.money!)"
+            self.yitou.text = "已投金额\(one.investMoney!)"
             self.idn = one.id!
             print(jsonData["data"])
             

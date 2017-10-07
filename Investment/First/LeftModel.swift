@@ -20,6 +20,7 @@ public struct LeftModel {
     static let termDay = "term_day"
     static let accrual = "accrual"
     static let rn = "rn"
+    static let id = "id"
     static let investMoney = "invest_money"
     static let startDate = "start_date"
     static let endDate = "end_date"
@@ -31,14 +32,15 @@ public struct LeftModel {
   public var img: String?
   public var name: String?
   public var paperPassed: String?
-  public var money: String?
+  public var money: Double?
   public var termDay: String?
-  public var accrual: String?
+  public var accrual: Double?
   public var rn: String?
-  public var investMoney: String?
+  public var id: String?
+  public var investMoney: Double?
   public var startDate: String?
   public var endDate: String?
-  public var properties: String?
+  public var properties: Dictionary<String, Any>?
 
   // MARK: SwiftyJSON Initializers
   /// Initiates the instance based on the object.
@@ -57,14 +59,15 @@ public struct LeftModel {
     img = json[SerializationKeys.img].string
     name = json[SerializationKeys.name].string
     paperPassed = json[SerializationKeys.paperPassed].string
-    money = json[SerializationKeys.money].string
+    money = json[SerializationKeys.money].double
     termDay = json[SerializationKeys.termDay].string
-    accrual = json[SerializationKeys.accrual].string
+    accrual = json[SerializationKeys.accrual].double
     rn = json[SerializationKeys.rn].string
-    investMoney = json[SerializationKeys.investMoney].string
+    id = json[SerializationKeys.id].string
+    investMoney = json[SerializationKeys.investMoney].double
     startDate = json[SerializationKeys.startDate].string
     endDate = json[SerializationKeys.endDate].string
-    properties = json[SerializationKeys.properties].string
+    properties = json[SerializationKeys.properties].dictionaryValue
   }
 
   /// Generates description of the object in the form of a NSDictionary.
@@ -80,6 +83,7 @@ public struct LeftModel {
     if let value = termDay { dictionary[SerializationKeys.termDay] = value }
     if let value = accrual { dictionary[SerializationKeys.accrual] = value }
     if let value = rn { dictionary[SerializationKeys.rn] = value }
+    if let value = id { dictionary[SerializationKeys.id] = value }
     if let value = investMoney { dictionary[SerializationKeys.investMoney] = value }
     if let value = startDate { dictionary[SerializationKeys.startDate] = value }
     if let value = endDate { dictionary[SerializationKeys.endDate] = value }

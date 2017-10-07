@@ -123,7 +123,10 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="danbao" destination="xlq-qH-bQD" id="MX2-1d-Pvm"/>
+                                    <outlet property="minMoney" destination="z6h-qK-LNI" id="EtL-f2-GLk"/>
                                     <outlet property="num" destination="xlg-L7-bJh" id="6SF-i4-CSh"/>
+                                    <outlet property="term" destination="srg-S5-CzM" id="IqZ-gY-IQ2"/>
                                     <outlet property="tip" destination="z6h-qK-LNI" id="UPl-EJ-GUq"/>
                                     <outlet property="title" destination="jkO-bJ-PCk" id="RSa-md-QbT"/>
                                 </connections>
@@ -301,7 +304,11 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="accrual" destination="D4w-mx-I0v" id="qXY-RH-DVp"/>
+                        <outlet property="money" destination="4Ub-bD-Ux4" id="1Pb-CW-15k"/>
                         <outlet property="moneyField" destination="cZ8-qd-iGH" id="GSw-Gp-sZK"/>
+                        <outlet property="term" destination="xwd-Ha-Dfl" id="1fx-xo-Mad"/>
+                        <outlet property="yitou" destination="ovl-Ng-2b1" id="zEy-Ah-2xY"/>
                         <segue destination="feZ-FO-KpQ" kind="show" identifier="torecord" id="KTy-pv-p17"/>
                     </connections>
                 </viewController>
