@@ -251,7 +251,7 @@
                     <navigationItem key="navigationItem" title="我的" id="bse-jD-kBC">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="SCH-T0-K1J">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="0yO-aM-pwo">
-                                <rect key="frame" x="271" y="2" width="33" height="39"/>
+                                <rect key="frame" x="277" y="2" width="27" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="设置"/>
                                 <connections>
@@ -483,7 +483,7 @@
                                 <rect key="frame" x="0.0" y="113" width="320" height="47"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="手机号码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mhm-Ds-rAL">
-                                        <rect key="frame" x="10" y="0.0" width="300" height="47"/>
+                                        <rect key="frame" x="15" y="0.0" width="290" height="47"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -491,17 +491,17 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="mhm-Ds-rAL" firstAttribute="leading" secondItem="c0Z-1V-li6" secondAttribute="leading" constant="10" id="2MK-2U-MBC"/>
+                                    <constraint firstItem="mhm-Ds-rAL" firstAttribute="leading" secondItem="c0Z-1V-li6" secondAttribute="leading" constant="15" id="2MK-2U-MBC"/>
                                     <constraint firstAttribute="bottom" secondItem="mhm-Ds-rAL" secondAttribute="bottom" id="NaB-Gx-ZkJ"/>
                                     <constraint firstItem="mhm-Ds-rAL" firstAttribute="top" secondItem="c0Z-1V-li6" secondAttribute="top" id="d9k-xH-In8"/>
-                                    <constraint firstAttribute="trailing" secondItem="mhm-Ds-rAL" secondAttribute="trailing" constant="10" id="iK9-do-32T"/>
+                                    <constraint firstAttribute="trailing" secondItem="mhm-Ds-rAL" secondAttribute="trailing" constant="15" id="iK9-do-32T"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eCM-MD-gbU">
                                 <rect key="frame" x="0.0" y="161" width="320" height="47"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请选择地址" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MDL-Dl-33R">
-                                        <rect key="frame" x="10" y="0.0" width="300" height="47"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请选择地址" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MDL-Dl-33R">
+                                        <rect key="frame" x="15" y="0.0" width="290" height="47"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -510,8 +510,8 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="MDL-Dl-33R" secondAttribute="bottom" id="9js-Ln-Ylc"/>
-                                    <constraint firstAttribute="trailing" secondItem="MDL-Dl-33R" secondAttribute="trailing" constant="10" id="Fee-IO-Z5b"/>
-                                    <constraint firstItem="MDL-Dl-33R" firstAttribute="leading" secondItem="eCM-MD-gbU" secondAttribute="leading" constant="10" id="qnk-JF-oRc"/>
+                                    <constraint firstAttribute="trailing" secondItem="MDL-Dl-33R" secondAttribute="trailing" constant="15" id="Fee-IO-Z5b"/>
+                                    <constraint firstItem="MDL-Dl-33R" firstAttribute="leading" secondItem="eCM-MD-gbU" secondAttribute="leading" constant="15" id="qnk-JF-oRc"/>
                                     <constraint firstItem="MDL-Dl-33R" firstAttribute="top" secondItem="eCM-MD-gbU" secondAttribute="top" id="rBs-76-uIf"/>
                                 </constraints>
                             </view>
@@ -519,7 +519,7 @@
                                 <rect key="frame" x="0.0" y="209" width="320" height="47"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="详细地址" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pcz-CJ-zbl">
-                                        <rect key="frame" x="10" y="0.0" width="300" height="47"/>
+                                        <rect key="frame" x="15" y="0.0" width="290" height="47"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -527,8 +527,8 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="Pcz-CJ-zbl" secondAttribute="trailing" constant="10" id="eIl-fR-ohS"/>
-                                    <constraint firstItem="Pcz-CJ-zbl" firstAttribute="leading" secondItem="YuT-0h-P5P" secondAttribute="leading" constant="10" id="j5z-0V-l0W"/>
+                                    <constraint firstAttribute="trailing" secondItem="Pcz-CJ-zbl" secondAttribute="trailing" constant="15" id="eIl-fR-ohS"/>
+                                    <constraint firstItem="Pcz-CJ-zbl" firstAttribute="leading" secondItem="YuT-0h-P5P" secondAttribute="leading" constant="15" id="j5z-0V-l0W"/>
                                     <constraint firstAttribute="bottom" secondItem="Pcz-CJ-zbl" secondAttribute="bottom" id="lNL-mj-YYx"/>
                                     <constraint firstItem="Pcz-CJ-zbl" firstAttribute="top" secondItem="YuT-0h-P5P" secondAttribute="top" id="lXR-HN-6es"/>
                                 </constraints>
@@ -537,7 +537,7 @@
                                 <rect key="frame" x="0.0" y="65" width="320" height="47"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="收货人姓名" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2lu-fB-tFh">
-                                        <rect key="frame" x="10" y="0.0" width="300" height="47"/>
+                                        <rect key="frame" x="15" y="0.0" width="290" height="47"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -546,8 +546,8 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="2lu-fB-tFh" secondAttribute="bottom" id="2Aq-Xx-hvB"/>
-                                    <constraint firstAttribute="trailing" secondItem="2lu-fB-tFh" secondAttribute="trailing" constant="10" id="Jzm-xl-7fO"/>
-                                    <constraint firstItem="2lu-fB-tFh" firstAttribute="leading" secondItem="3Gd-7f-Jcj" secondAttribute="leading" constant="10" id="RPq-po-UPl"/>
+                                    <constraint firstAttribute="trailing" secondItem="2lu-fB-tFh" secondAttribute="trailing" constant="15" id="Jzm-xl-7fO"/>
+                                    <constraint firstItem="2lu-fB-tFh" firstAttribute="leading" secondItem="3Gd-7f-Jcj" secondAttribute="leading" constant="15" id="RPq-po-UPl"/>
                                     <constraint firstAttribute="height" constant="47" id="lyu-Go-VzE"/>
                                     <constraint firstItem="2lu-fB-tFh" firstAttribute="top" secondItem="3Gd-7f-Jcj" secondAttribute="top" id="vMj-wp-YoM"/>
                                 </constraints>
@@ -575,7 +575,7 @@
                     <navigationItem key="navigationItem" title="新增地址" id="dQs-wI-HPO">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="GGe-io-0kM">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="5qS-pG-4Zk">
-                                <rect key="frame" x="316" y="7" width="43" height="30"/>
+                                <rect key="frame" x="261" y="7" width="43" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="保存">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -791,7 +791,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.94117647058823528" green="0.33333333333333331" blue="0.29803921568627451" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.92549019607843142" green="0.23529411764705882" blue="0.2196078431372549" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="xI2-Jo-e4L" firstAttribute="centerX" secondItem="vGk-JX-YyM" secondAttribute="centerX" id="44j-L9-Fm6"/>
                                     <constraint firstItem="Nfw-8U-gzJ" firstAttribute="centerX" secondItem="vGk-JX-YyM" secondAttribute="centerX" id="dDq-pZ-MdU"/>
@@ -1584,6 +1584,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="u0J-Us-HaR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.92941176470588238" green="0.23529411764705882" blue="0.2196078431372549" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

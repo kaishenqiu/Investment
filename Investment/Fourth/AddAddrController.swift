@@ -55,17 +55,29 @@ class AddAddrController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
             
         }
     }
-    //设置选择框各选项的内容，继承于UIPickerViewDelegate协议
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int,
-                    forComponent component: Int) -> String? {
+
+    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
+        
+        var str = ""
         if component == 0 {
-            return provinceNameArray[row]
+            str = provinceNameArray[row]
         }else if component == 1 {
-            return cityNameArray[row]
+            str =  cityNameArray[row]
         }else {
-            return districtNameArray[row]
+            str = districtNameArray[row]
         }
+        
+        
+        let lable=UILabel()
+        lable.sizeToFit()
+        lable.textAlignment = .center
+        lable.font=UIFont.systemFont(ofSize: 13)
+        lable.text = str
+ 
+        return  lable
+ 
     }
+
     
     //选中项改变事件（将在滑动停止后触发）
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int,

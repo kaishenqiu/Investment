@@ -14,6 +14,8 @@ public enum ITService {
     case register(mobile: String, password: String, code:String)
     case userassert
     
+    case userinfo
+    
     case projectList(page:String)
     case projectinfo(no:String)
     case projectinvest(pid:String, money:String, pay_pwd:String)
@@ -62,6 +64,8 @@ extension ITService: TargetType {
             return "register"
         case .userassert:
             return "user/assert"
+        case .userinfo:
+            return "user/info"
             
         case .projectList:
             return "project/list"
@@ -117,6 +121,8 @@ extension ITService: TargetType {
         case .register(let mobile,let password,let code):
             return ["mobile": mobile, "password": password, "code":code ]
         case .userassert():
+            return [:]
+        case .userinfo():
             return [:]
         
         case .projectList(let page):

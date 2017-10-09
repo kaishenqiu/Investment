@@ -26,12 +26,43 @@ class FourthController: UIViewController {
             tabbar.selectedIndex = 0
             return
         }
-        
-        self .navigationController?.navigationBar.setBackgroundImage(getImageWithColor(color: GlobalColor, size: CGSize(width:1,height:1)), for: .any, barMetrics: .default)
         self .navigationController?.navigationBar.shadowImage = UIImage()
         self .navigationController?.navigationBar.isTranslucent = false
+        
+        self .navigationController?.navigationBar.setBackgroundImage(#imageLiteral(resourceName: "qqq"), for: .any, barMetrics: .default)
+     
 
         moneyLab.text = UserDefaults.standard.value(forKey: MONEY) as! String!
+        
+        
+        
+//        
+//        
+//        // Do any additional setup after loading the view.
+//        ANBaseNetWork.sharedInstance.networkForOriginalWithHeader(.userassert) { (result) in
+//            
+//            
+//            guard let jsonData = result else {
+//                SVProgressHUD.showInfo(withStatus: "请求失败")
+//                return
+//            }
+//            let flag = jsonData["code"].stringValue
+//            guard flag == "200" else {
+//                SVProgressHUD.showInfo(withStatus: "请求失败")
+//                return
+//            }
+//            
+//            print(jsonData["data"])
+//            
+//            self.balance.text = jsonData["data"]["balance"].stringValue
+//            self.balance_fund.text = jsonData["data"]["balance_fund"].stringValue
+//            self.interest.text = jsonData["data"]["interest"].stringValue
+//            self.interest_co.text = jsonData["data"]["interest_co"].stringValue
+//            self.corpus_co.text = jsonData["data"]["corpus_co"].stringValue
+//
+//            
+//        }
+        
     
     
     
