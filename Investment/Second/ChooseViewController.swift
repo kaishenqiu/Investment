@@ -24,6 +24,15 @@ class ChooseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        for item in AddressArray {
+            if item.defau == "1" {
+                self.addrName.text = item.realname!
+                self.addrMobile.text = item.mobile!
+                self.addrdes.text =  item.province! + item.city! + item.district! + item.address!
+                self.addrid = "\(item.id!)"
+            }
+        }
+        
         
         let viewG = UITapGestureRecognizer(target: self, action: #selector(addrAction))
         addrView.addGestureRecognizer(viewG)

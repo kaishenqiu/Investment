@@ -46,7 +46,10 @@ public func isTelNumber(num:String)->Bool
 // MARK: - 地址列表获取
 public func getAddressList(netendHandle: (() -> Void)?) {
     
-    
+    guard (UserDefaults.standard.value(forKey: TOKEN) != nil) else {
+
+        return
+    }
     let token = UserDefaults.standard.value(forKey: TOKEN) as! String
     if token.characters.count > 0 {
     

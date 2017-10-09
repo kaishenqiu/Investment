@@ -8,6 +8,7 @@
 
 import UIKit
 import SVProgressHUD
+import SwiftyJSON
 
 class WithdrawController: UIViewController {
     @IBOutlet weak var bg: UIView!
@@ -17,7 +18,7 @@ class WithdrawController: UIViewController {
     @IBOutlet weak var chooseLab: UILabel!
     @IBOutlet weak var moneyField: UITextField!
     var passwordView:CYPasswordView!
-    var cardModel:CardModel!
+    var cardModel = CardModel(json:JSON.null)
     override func viewDidLoad() {
         super.viewDidLoad()
         img.isHidden = true
@@ -28,6 +29,7 @@ class WithdrawController: UIViewController {
         
         let viewG = UITapGestureRecognizer(target: self, action: #selector(chooseCardAction))
         bg.addGestureRecognizer(viewG)
+        
 
         // Do any additional setup after loading the view.
     }
@@ -54,7 +56,11 @@ class WithdrawController: UIViewController {
     }
     @IBAction func withdrawAction(_ sender: Any) {
         
-            // 数字判断
+            guard let cardid = self.cardModel.id, cardid.characters.count > 0 else {
+                SVProgressHUD.showError(withStatus: "请选择银行卡")
+                return
+            }
+            
             guard let money = moneyField.text, money.characters.count > 0 else {
             SVProgressHUD.showError(withStatus: "请输入金额")
             return
@@ -70,7 +76,7 @@ class WithdrawController: UIViewController {
             self.passwordView.startLoading()
         
         
-            ANBaseNetWork.sharedInstance.networkForBoolWithHeader(.draw(money:money , bank_id: self.cardModel.id!, pay_pwd: password!), successHandle: { (result) in
+            ANBaseNetWork.sharedInstance.networkForBoolWithHeader(.draw(money:money , bank_id: cardid, pay_pwd: password!), successHandle: { (result) in
             SVProgressHUD.showInfo(withStatus: "提现成功")
             self.navigationController!.popViewController(animated: true)
             self.passwordView.hide()

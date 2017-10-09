@@ -8,6 +8,7 @@
 
 import UIKit
 import SVProgressHUD
+import SwiftyJSON
 
 class RechargeController: UIViewController {
 
@@ -18,7 +19,7 @@ class RechargeController: UIViewController {
     @IBOutlet weak var chooseLab: UILabel!
     @IBOutlet weak var bg: UIView!
     var passwordView:CYPasswordView!
-    var cardModel:CardModel!
+    var cardModel = CardModel(json:JSON.null)
     override func viewDidLoad() {
         super.viewDidLoad()
         img.isHidden = true
@@ -54,7 +55,12 @@ class RechargeController: UIViewController {
     }
     @IBAction func rechargeAction(_ sender: Any) {
         
-        // 数字判断
+  
+        guard let cardid = self.cardModel.id, cardid.characters.count > 0 else {
+            SVProgressHUD.showError(withStatus: "请选择银行卡")
+            return
+        }
+   
         guard let money = moneyField.text, money.characters.count > 0 else {
             SVProgressHUD.showError(withStatus: "请输入金额")
             return
@@ -70,7 +76,7 @@ class RechargeController: UIViewController {
             self.passwordView.startLoading()
             
             
-            ANBaseNetWork.sharedInstance.networkForBoolWithHeader(.recharge(money:money , bank_id: self.cardModel.id!, pay_pwd: password!), successHandle: { (result) in
+            ANBaseNetWork.sharedInstance.networkForBoolWithHeader(.recharge(money:money , bank_id: cardid, pay_pwd: password!), successHandle: { (result) in
                 SVProgressHUD.showInfo(withStatus: "充值成功")
                 self.navigationController!.popViewController(animated: true)
                 self.passwordView.hide()
