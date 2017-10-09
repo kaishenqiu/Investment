@@ -10,9 +10,13 @@ import UIKit
 import SVProgressHUD
 class AddressController: UITableViewController {
 
-    var dataArray = [AddrModel]()
     var fromChoose = false
     var selectAddrBlock:((AddrModel) -> ())?
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,44 +24,13 @@ class AddressController: UITableViewController {
         tableView.tableFooterView = UIView()
         tableView.separatorStyle = .none
         
+ 
         
-        tableView.mj_header = ANRefreshHeader {
-            self.network()
-        }
-        
-        
-        tableView.mj_header.beginRefreshing()
-        
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(network), name: NSNotification.Name(rawValue: CALL_ADDR_REFRESH), object: nil)
+  
     }
-    
-    deinit {
-        NotificationCenter.default.removeObserver(self)
-    }
-
-    func network() {
-        
-        ANBaseNetWork.sharedInstance.networkForListNOHUDWithHeader(.myaddress, successHandle: { (result) in
-            
-            self.dataArray.removeAll()
-            for item in result {
-                let one = AddrModel(json: item)
-                self.dataArray.append(one)
-                
-            }
-            self.tableView.mj_header.endRefreshing()
-            
-            self.tableView.reloadData()
-        }) { (errorStr) in
-            self.tableView.mj_header.endRefreshing()
-            
-        }
-        
-        
-    }
+ 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return self.dataArray.count
+        return AddressArray.count
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -68,12 +41,14 @@ class AddressController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "AddrCell", for: indexPath) as! AddrCell
-        let one = dataArray[indexPath.section]
+        let one = AddressArray[indexPath.section]
         cell.oneModel = one
         cell.delBlock = {
             ANBaseNetWork.sharedInstance.networkForBoolWithHeader(.deladdress(id: "\(one.id!)"), successHandle: { (result) in
                 SVProgressHUD.showInfo(withStatus: "删除成功")
-                self.tableView.mj_header.beginRefreshing()
+                getAddressList(netendHandle: {
+                    self.tableView.reloadData()
+                })
 
                 
             }, errorHandle: { (error) in
@@ -85,8 +60,9 @@ class AddressController: UITableViewController {
         cell.defauBlock = { str in
             ANBaseNetWork.sharedInstance.networkForBoolWithHeader(.defauaddress(id: "\(one.id!)", defau: str), successHandle: { (result) in
                 SVProgressHUD.showInfo(withStatus: "更新成功")
-                self.tableView.mj_header.beginRefreshing()
-                
+                getAddressList(netendHandle: { 
+                    self.tableView.reloadData()
+                })
                 
             }, errorHandle: { (error) in
                 SVProgressHUD.showInfo(withStatus: error)
@@ -103,7 +79,7 @@ class AddressController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 //        tableView.deselectRow(at: indexPath, animated: true)
         if fromChoose {
-            self.selectAddrBlock!(dataArray[indexPath.section])
+            self.selectAddrBlock!(AddressArray[indexPath.section])
             self.navigationController?.popViewController(animated: true)
         }
     }

@@ -27,7 +27,7 @@ class GoodsDetailController: UIViewController,UIWebViewDelegate {
         
         
         
-        ANBaseNetWork.sharedInstance.networkForOriginalWithHeader(.goodsinfo(goods_no: good_no)) { (result) in
+        ANBaseNetWork.sharedInstance.networkForOriginal(.goodsinfo(goods_no: good_no)) { (result) in
  
             
             guard let jsonData = result else {
@@ -91,8 +91,18 @@ class GoodsDetailController: UIViewController,UIWebViewDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
- 
+    // MARK: - 立即购买
     @IBAction func confirmAction(_ sender: Any) {
+        
+        // MARK: - 未登录不能购买
+        guard (UserDefaults.standard.value(forKey: TOKEN) != nil) else {
+            let currentC = UIApplication.shared.keyWindow?.rootViewController
+            let vc = UIStoryboard.init(name: "Login", bundle: nil).instantiateInitialViewController()!
+            currentC?.present(vc, animated: true, completion: nil)
+            return
+        }
+        
+        
         
         self.chooseV = Bundle.main.loadNibNamed("ChooseView", owner: nil, options: nil)!.last as! ChooseView
         

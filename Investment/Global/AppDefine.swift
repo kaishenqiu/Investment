@@ -27,6 +27,8 @@ func SCREEN_ADAPTER_W (x:Float) -> CGFloat
 
 let GlobalColor = #colorLiteral(red: 0.9294117647, green: 0.2352941176, blue: 0.2196078431, alpha: 1)
 
+public var AddressArray = [AddrModel]()
+
 
 let TOKEN = "token"
 let LOGINNAME = "loginname"

@@ -201,9 +201,10 @@ class AddAddrController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
         
         ANBaseNetWork.sharedInstance.networkForBoolWithHeader(.createaddress(username: name, province: self.provinceStr, city: self.cityStr, district: self.districtStr, address: detial, mobile: mobile    ), successHandle: { (result) in
             SVProgressHUD.showInfo(withStatus: "新增地址成功")
-            NotificationCenter.default.post(name: NSNotification.Name(rawValue: CALL_ADDR_REFRESH), object: nil)
-            
+            getAddressList(netendHandle: {
             self.navigationController!.popViewController(animated: true)
+            })
+
             
             
         }, errorHandle: { (error) in

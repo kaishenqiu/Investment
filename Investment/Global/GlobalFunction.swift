@@ -43,7 +43,31 @@ public func isTelNumber(num:String)->Bool
         return false
     }
 }
+// MARK: - 地址列表获取
+public func getAddressList(netendHandle: (() -> Void)?) {
+    
+    
+    let token = UserDefaults.standard.value(forKey: TOKEN) as! String
+    if token.characters.count > 0 {
+    
+        ANBaseNetWork.sharedInstance.networkForListNOHUDWithHeader(.myaddress, successHandle: { (result) in
+            
+            AddressArray.removeAll()
+            for item in result {
+                let one = AddrModel(json: item)
+                AddressArray.append(one)
+                
+            }
+            if let handle = netendHandle {
+                handle()
+            }
+            
+        }) { (errorStr) in
+            
+        }
+    }
 
+}
 
 
 // MARK: - 获取数据字典

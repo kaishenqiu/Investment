@@ -23,6 +23,7 @@ class BaseTabbarController: UITabBarController {
         setUpChildController(vc: UIStoryboard.init(name: "Third", bundle: nil).instantiateInitialViewController()!, title: "地图", image: #imageLiteral(resourceName: "search"), selectedImage: #imageLiteral(resourceName: "search_enter"))
         setUpChildController(vc: UIStoryboard.init(name: "Fourth", bundle: nil).instantiateInitialViewController()!, title: "我的", image: #imageLiteral(resourceName: "my"), selectedImage: #imageLiteral(resourceName: "my_enter"))
         getDataDictionary()
+        getAddressList(netendHandle: {})
         
         
         

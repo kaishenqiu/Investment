@@ -62,11 +62,11 @@ class LoginController: UIViewController {
             UserDefaults.standard.set(tokenA, forKey: TOKENAuthorization)
             
             
-
-            let deadlineTime = DispatchTime.now() + .seconds(1)
-            DispatchQueue.main.asyncAfter(deadline: deadlineTime) {
-                self.dismiss(animated: true, completion: nil)
-            }
+            getAddressList(netendHandle: {
+            
+            self.dismiss(animated: true, completion: nil)
+            })
+      
      
             
             
