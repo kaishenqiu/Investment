@@ -33,6 +33,9 @@
 		58302FD51F78E47A00D813DF /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 58302FCF1F78E47A00D813DF /* UIView+Extension.m */; };
 		58302FD71F78EFD800D813DF /* RechargeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58302FD61F78EFD800D813DF /* RechargeController.swift */; };
 		58302FD91F79FF4A00D813DF /* RecordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58302FD81F79FF4A00D813DF /* RecordModel.swift */; };
+		5865D8E21F8C5C5A00CE1AFF /* MapModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5865D8E11F8C5C5A00CE1AFF /* MapModel.swift */; };
+		5865D8E41F8C65BA00CE1AFF /* STMyAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5865D8E31F8C65BA00CE1AFF /* STMyAnnotation.swift */; };
+		5865D8E61F8C6F1600CE1AFF /* STMyAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5865D8E51F8C6F1600CE1AFF /* STMyAnnotationView.swift */; };
 		588755261F1600FF00602D43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 588755251F1600FF00602D43 /* Assets.xcassets */; };
 		588755291F1600FF00602D43 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 588755271F1600FF00602D43 /* LaunchScreen.storyboard */; };
 		588755311F16028A00602D43 /* BaseTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588755301F16028A00602D43 /* BaseTabbarController.swift */; };
@@ -116,6 +119,9 @@
 		58302FCF1F78E47A00D813DF /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		58302FD61F78EFD800D813DF /* RechargeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RechargeController.swift; sourceTree = "<group>"; };
 		58302FD81F79FF4A00D813DF /* RecordModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordModel.swift; sourceTree = "<group>"; };
+		5865D8E11F8C5C5A00CE1AFF /* MapModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapModel.swift; sourceTree = "<group>"; };
+		5865D8E31F8C65BA00CE1AFF /* STMyAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STMyAnnotation.swift; sourceTree = "<group>"; };
+		5865D8E51F8C6F1600CE1AFF /* STMyAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STMyAnnotationView.swift; sourceTree = "<group>"; };
 		5887551B1F1600FF00602D43 /* Investment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Investment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		588755251F1600FF00602D43 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		588755281F1600FF00602D43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -324,6 +330,9 @@
 			children = (
 				58D102951F74FF55000EE176 /* souzhu */,
 				588755361F16044700602D43 /* Third.storyboard */,
+				5865D8E11F8C5C5A00CE1AFF /* MapModel.swift */,
+				5865D8E51F8C6F1600CE1AFF /* STMyAnnotationView.swift */,
+				5865D8E31F8C65BA00CE1AFF /* STMyAnnotation.swift */,
 				589F315D1F5F9E520004E83D /* ThirdController.swift */,
 			);
 			path = Third;
@@ -608,9 +617,11 @@
 				58AF33FE1F7CD70600F3F082 /* OrderModel.swift in Sources */,
 				589F31711F5FB5720004E83D /* RightController.swift in Sources */,
 				58302FD01F78E47A00D813DF /* CYConst.m in Sources */,
+				5865D8E21F8C5C5A00CE1AFF /* MapModel.swift in Sources */,
 				582E7A0C1F70C14500A81F67 /* PersonButton.swift in Sources */,
 				582E7A021F6D242200A81F67 /* RecordCell.swift in Sources */,
 				582E79E41F68DC7100A81F67 /* LoginController.swift in Sources */,
+				5865D8E41F8C65BA00CE1AFF /* STMyAnnotation.swift in Sources */,
 				589F31AB1F60ED990004E83D /* MyOrderController.swift in Sources */,
 				589F31A51F60D1DA0004E83D /* ANRefreshHeader.swift in Sources */,
 				589F31A71F60D5190004E83D /* LeftModel.swift in Sources */,
@@ -620,6 +631,7 @@
 				582E7A001F6D22D800A81F67 /* RecordController.swift in Sources */,
 				582E79F71F6A741D00A81F67 /* AppDelegate.swift in Sources */,
 				589F31731F5FC7520004E83D /* SecondCell.swift in Sources */,
+				5865D8E61F8C6F1600CE1AFF /* STMyAnnotationView.swift in Sources */,
 				58D102A51F7608F0000EE176 /* ChooseView.swift in Sources */,
 				58D1027C1F73A8B4000EE176 /* AddrModel.swift in Sources */,
 				58302FD31F78E47A00D813DF /* CYPasswordView.m in Sources */,
