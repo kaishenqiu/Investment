@@ -189,10 +189,16 @@ class AddAddrController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
             SVProgressHUD.showError(withStatus: "请输入姓名")
             return
         }
-        guard let mobile = mobileField.text, mobile.characters.count > 0 else {
-            SVProgressHUD.showError(withStatus: "请输入手机")
+        guard let mobile = mobileField.text, isTelNumber(num: mobile) else {
+            SVProgressHUD.showError(withStatus: "请输入正确手机号码")
             return
         }
+        guard self.provinceStr.characters.count > 0 , self.cityStr.characters.count > 0 , self.districtStr.characters.count > 0 else {
+            SVProgressHUD.showError(withStatus: "请选择地址")
+            return
+        }
+        
+        
         guard let detial = detailAddrField.text, detial.characters.count > 0 else {
             SVProgressHUD.showError(withStatus: "请输入详细地址")
             return

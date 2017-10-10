@@ -7,9 +7,12 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class FourthController: UIViewController {
 
+    @IBOutlet weak var availableLab: UILabel!
+    @IBOutlet weak var totalLab: UILabel!
     @IBOutlet weak var moneyLab: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,36 +35,33 @@ class FourthController: UIViewController {
         self .navigationController?.navigationBar.setBackgroundImage(#imageLiteral(resourceName: "qqq"), for: .any, barMetrics: .default)
      
 
-        moneyLab.text = UserDefaults.standard.value(forKey: MONEY) as! String!
         
         
         
-//        
-//        
-//        // Do any additional setup after loading the view.
-//        ANBaseNetWork.sharedInstance.networkForOriginalWithHeader(.userassert) { (result) in
-//            
-//            
-//            guard let jsonData = result else {
-//                SVProgressHUD.showInfo(withStatus: "请求失败")
-//                return
-//            }
-//            let flag = jsonData["code"].stringValue
-//            guard flag == "200" else {
-//                SVProgressHUD.showInfo(withStatus: "请求失败")
-//                return
-//            }
-//            
-//            print(jsonData["data"])
-//            
-//            self.balance.text = jsonData["data"]["balance"].stringValue
-//            self.balance_fund.text = jsonData["data"]["balance_fund"].stringValue
-//            self.interest.text = jsonData["data"]["interest"].stringValue
-//            self.interest_co.text = jsonData["data"]["interest_co"].stringValue
-//            self.corpus_co.text = jsonData["data"]["corpus_co"].stringValue
-//
-//            
-//        }
+        
+        
+        
+        // Do any additional setup after loading the view.
+        ANBaseNetWork.sharedInstance.networkForOriginalWithHeader(.userassert) { (result) in
+            
+            
+            guard let jsonData = result else {
+                SVProgressHUD.showInfo(withStatus: "请求失败")
+                return
+            }
+            let flag = jsonData["code"].stringValue
+            guard flag == "200" else {
+                SVProgressHUD.showInfo(withStatus: "请求失败")
+                return
+            }
+        
+            self.moneyLab.text = jsonData["data"]["interest"].stringValue
+            self.totalLab.text = "\(jsonData["data"]["balance"].intValue + jsonData["data"]["balance_fund"].intValue)"
+            self.availableLab.text = jsonData["data"]["balance"].stringValue
+      
+
+            
+        }
         
     
     

@@ -36,7 +36,7 @@ class SalaryController: UIViewController {
             }
             
             print(jsonData["data"])
-            
+            self.total.text = "\(jsonData["data"]["balance"].intValue + jsonData["data"]["balance_fund"].intValue)"
             self.balance.text = jsonData["data"]["balance"].stringValue
             self.balance_fund.text = jsonData["data"]["balance_fund"].stringValue
             self.interest.text = jsonData["data"]["interest"].stringValue

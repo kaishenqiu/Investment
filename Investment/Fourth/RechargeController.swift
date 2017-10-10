@@ -85,6 +85,7 @@ class RechargeController: UIViewController {
             }, errorHandle: { (error) in
                 SVProgressHUD.showInfo(withStatus: error)
                 self.passwordView.stopLoading()
+                self.passwordView.hide()
             })
             
         }
