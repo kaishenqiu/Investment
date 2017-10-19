@@ -12,6 +12,7 @@ import SwiftyJSON
 class AddrCell: UITableViewCell {
     
     var delBlock:(() -> ())?
+    var modifyBlock:(() -> ())?
     var defauBlock:((String) -> ())?
     
     var defau = false {
@@ -43,6 +44,7 @@ class AddrCell: UITableViewCell {
     }
     
     @IBAction func modifyAction(_ sender: Any) {
+        self.modifyBlock!()
        
     }
     @IBAction func delAction(_ sender: Any) {

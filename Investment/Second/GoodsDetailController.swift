@@ -68,6 +68,18 @@ class GoodsDetailController: UIViewController,UIWebViewDelegate {
         }
 
         // Do any additional setup after loading the view.
+        NotificationCenter.default.addObserver(self, selector: #selector(jumptoorder), name: NSNotification.Name(rawValue: CALL_JUMPTOORDER), object: nil)
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
+    func jumptoorder(){
+        
+        let storyboard = UIStoryboard(name: "Fourth", bundle: nil)
+        let orderVC = storyboard.instantiateViewController(withIdentifier: "myorder")
+        self.navigationController?.pushViewController(orderVC, animated: true)
     }
     
     

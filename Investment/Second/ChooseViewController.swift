@@ -19,6 +19,7 @@ class ChooseViewController: UIViewController {
     @IBOutlet weak var numLab: UILabel!
     @IBOutlet weak var sumMoney: UILabel!
     @IBOutlet weak var partLab: UILabel!
+    var passwordView:CYPasswordView!
     var oneModel = PartModel(json:JSON.null)
     var addrid = ""
     override func viewDidLoad() {
@@ -68,17 +69,55 @@ class ChooseViewController: UIViewController {
     }
     
     @IBAction func makeOrder(_ sender: Any) {
-     
         
-            ANBaseNetWork.sharedInstance.networkForBoolWithHeader(.makeorder(goods_listpno: "\(self.oneModel.pno!)", goods_listnumber: "\(self.oneModel.number!)", address_id: self.addrid), successHandle: { (result) in
-            SVProgressHUD.showInfo(withStatus: "成功")
-            self.navigationController?.popViewController(animated: true)
+    
         
+            ANBaseNetWork.sharedInstance.networkForOriginalWithHeader(.makeorder(goods_listpno: "\(self.oneModel.pno!)", goods_listnumber: "\(self.oneModel.number!)", address_id: self.addrid), resultHandle: { (result) in
+                
+                guard let jsonData = result else {
+                    SVProgressHUD.showInfo(withStatus: "请求失败")
+                    return
+                }
+                let flag = jsonData["code"].stringValue
+                guard flag == "200" else {
+                    SVProgressHUD.showInfo(withStatus: "请求失败")
+                    return
+                }
+ 
+                
+                
+                self.passwordView = CYPasswordView()
+                self.passwordView.title = "输入交易密码"
+                self.passwordView.loadingText = "提交中..."
+               self.passwordView.show(in: self.view.window)
+                self.passwordView.finish = { password in
+                    self.passwordView.hideKeyboard()
+                    self.passwordView.startLoading()
+                    
+                    // MARK: - 支付
+                    ANBaseNetWork.sharedInstance.networkForBoolWithHeader(.goodspay(order_no: jsonData["data"]["order_no"].stringValue, pay_pwd: password!), successHandle: { (result) in
+                        
+                        SVProgressHUD.showInfo(withStatus: "支付成功")
+                        self.navigationController!.popViewController(animated: true)
+                        self.passwordView.hide()
+                        
+                        
+                    }, errorHandle: { (error) in
+                        SVProgressHUD.showInfo(withStatus: error)
+                        self.passwordView.stopLoading()
+                        self.passwordView.hide()
+                        self.navigationController!.popViewController(animated: true)
+                        NotificationCenter.default.post(name: NSNotification.Name(rawValue: CALL_JUMPTOORDER), object: nil)
+                        
+                        // MARK: - 跳到我的订单
+                        
+                        
+                    })
+                    
+                }
+       
         
-        
-            }, errorHandle: { (error) in
-            SVProgressHUD.showInfo(withStatus: error)
-            })
+                })
     }
 
     

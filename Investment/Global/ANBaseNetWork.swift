@@ -67,6 +67,7 @@ class ANBaseNetWork: NSObject {
         SVProgressHUD.show()
         providerWithHeader.request(target) { result in
             SVProgressHUD.dismiss()
+            ANLog(result)
             switch result {
             case let .success(response):
                 do {

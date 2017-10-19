@@ -8,8 +8,17 @@
 
 import UIKit
 import SVProgressHUD
+import SwiftyJSON
 
 class AddAddrController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+    
+    var oneModel = AddrModel(json:JSON.null) {
+        didSet {
+         fromModify = true
+        }
+    }
+    
+    var fromModify = false
 
     @IBOutlet weak var mobileField: UITextField!
     @IBOutlet weak var nameField: UITextField!
@@ -33,6 +42,22 @@ class AddAddrController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
 
         
         addrField.inputView = pickerView
+        
+        
+        if fromModify {
+            if let name = oneModel.realname {
+                nameField.text = name
+            }
+            if let mobile = oneModel.mobile {
+                mobileField.text = mobile
+            }
+            self.provinceStr = oneModel.province!
+            self.cityStr = oneModel.city!
+            self.districtStr = oneModel.district!
+            addrField.text = oneModel.province! + oneModel.city! + oneModel.district!
+            detailAddrField.text = oneModel.address!
+        
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -204,18 +229,33 @@ class AddAddrController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
             return
         }
         
-        
-        ANBaseNetWork.sharedInstance.networkForBoolWithHeader(.createaddress(username: name, province: self.provinceStr, city: self.cityStr, district: self.districtStr, address: detial, mobile: mobile    ), successHandle: { (result) in
-            SVProgressHUD.showInfo(withStatus: "新增地址成功")
-            getAddressList(netendHandle: {
-            self.navigationController!.popViewController(animated: true)
+        if fromModify {
+            
+            ANBaseNetWork.sharedInstance.networkForBoolWithHeader(.updateaddress(id: "\(oneModel.id!)", username: name, province: self.provinceStr, city: self.cityStr, district: self.districtStr, address: detial, mobile: mobile, defau: oneModel.defau!), successHandle: { (result) in
+                SVProgressHUD.showInfo(withStatus: "更新地址成功")
+                getAddressList(netendHandle: {
+                    self.navigationController!.popViewController(animated: true)
+                })
+                
+            }, errorHandle: { (error) in
+                SVProgressHUD.showInfo(withStatus: error)
             })
-
             
+        } else {
+            ANBaseNetWork.sharedInstance.networkForBoolWithHeader(.createaddress(username: name, province: self.provinceStr, city: self.cityStr, district: self.districtStr, address: detial, mobile: mobile    ), successHandle: { (result) in
+                SVProgressHUD.showInfo(withStatus: "新增地址成功")
+                getAddressList(netendHandle: {
+                    self.navigationController!.popViewController(animated: true)
+                })
+                
+            }, errorHandle: { (error) in
+                SVProgressHUD.showInfo(withStatus: error)
+            })
             
-        }, errorHandle: { (error) in
-            SVProgressHUD.showInfo(withStatus: error)
-        })
+        }
+        
+        
+      
 
         
         

@@ -43,6 +43,10 @@ class AddressController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "AddrCell", for: indexPath) as! AddrCell
         let one = AddressArray[indexPath.section]
         cell.oneModel = one
+        cell.modifyBlock = {
+            self.performSegue(withIdentifier: "modifyaddr", sender: one)
+        
+        }
         cell.delBlock = {
             ANBaseNetWork.sharedInstance.networkForBoolWithHeader(.deladdress(id: "\(one.id!)"), successHandle: { (result) in
                 SVProgressHUD.showInfo(withStatus: "删除成功")
@@ -86,6 +90,15 @@ class AddressController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 8
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "modifyaddr" {
+         let one = sender as! AddrModel
+         let vc = segue.destination as! AddAddrController
+            vc.oneModel = one
+        
+        }
     }
 
 }

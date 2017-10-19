@@ -31,8 +31,8 @@ class BaseNavController: UINavigationController, UIGestureRecognizerDelegate {
         if childViewControllers.count > 0 {
             let backButton = UIButton(type: .custom)
             backButton.frame.size = CGSize(width: 20, height: 20)
-            backButton.contentEdgeInsets = UIEdgeInsetsMake(1, -3, 1, 12)
-            backButton.setImage(#imageLiteral(resourceName: "return_navi"), for: .normal)
+            backButton.contentEdgeInsets = UIEdgeInsetsMake(1, -10 , 1, 15)
+            backButton.setImage(UIImage(named:"返回"), for: .normal)
             backButton.addTarget(self, action: #selector(back), for: .touchUpInside)
             viewController.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: backButton)
             viewController.hidesBottomBarWhenPushed = true

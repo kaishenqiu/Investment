@@ -43,6 +43,7 @@ let TOKENAuthorization = "tokenAuthorization"
 // MARK: - 通知标识
 let CALL_CARD_REFRESH = "callcardrefresh"
 let CALL_ADDR_REFRESH = "calladdrrefresh"
+let CALL_JUMPTOORDER = "calljumptoorder"
 
 let statusGuide = ["-4":"退款失败","-3":"取消退款","-2":"取消订单","-1":"付款失败","0":"未付款","1":"已付款","2":"退款中","3":"退款完成","4":"发货","5":"完成"]
 
