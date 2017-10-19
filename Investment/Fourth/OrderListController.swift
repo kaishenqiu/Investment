@@ -8,10 +8,12 @@
 
 import UIKit
 import SwiftyJSON
+import SVProgressHUD
 
 class OrderListController: UITableViewController {
     var dataArray = [OrderModel]()
     var pageflag = 1
+    var passwordView:CYPasswordView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -84,12 +86,52 @@ class OrderListController: UITableViewController {
         cell.priceLab.text = "单价：\(one["price"]!)"
         cell.numLab.text = "数量：\(one["number"]!)"
         
-        
-        let dist = model.distribution! as! [String:Any]
-        cell.statusBtn.setTitle(statusGuide["\(dist["status"]!)"], for: .normal)
-        
+ 
+        cell.statusBtn.setTitle(statusGuide[model.status!], for: .normal)
+        cell.statusBtn.setTitleColor(statusColorGuide[model.status!]!.toUIColor(), for: .normal)
+        cell.statusBtn.layer.masksToBounds = true
+        cell.statusBtn.layer.borderWidth = 1
+        cell.statusBtn.layer.borderColor = statusColorGuide[model.status!]!.toUIColor().cgColor
+        cell.statusBtn.tag = indexPath.section
+        if model.status == "0" {
+            cell.statusBtn.addTarget(self, action: #selector(payAction(sender:)), for: .touchUpInside)
+        }
         
         return cell
+    }
+    
+    func payAction(sender:UIButton) {
+        let model = dataArray[sender.tag]
+        
+        self.passwordView = CYPasswordView()
+        self.passwordView.title = "输入交易密码"
+        self.passwordView.loadingText = "提交中..."
+        self.passwordView.show(in: self.view.window)
+        self.passwordView.finish = { password in
+            self.passwordView.hideKeyboard()
+            self.passwordView.startLoading()
+            
+            // MARK: - 支付
+            ANBaseNetWork.sharedInstance.networkForBoolWithHeader(.goodspay(order_no:model.orderNo!, pay_pwd: password!), successHandle: { (result) in
+                
+                SVProgressHUD.showInfo(withStatus: "支付成功")
+                self.passwordView.hide()
+                self.tableView.mj_header.beginRefreshing()
+                
+                
+            }, errorHandle: { (error) in
+                SVProgressHUD.showInfo(withStatus: error)
+                self.passwordView.stopLoading()
+                self.passwordView.hide()
+ 
+                
+                
+            })
+            
+        }
+        
+        
+        
     }
 
 }

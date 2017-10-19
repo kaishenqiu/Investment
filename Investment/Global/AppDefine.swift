@@ -46,6 +46,7 @@ let CALL_ADDR_REFRESH = "calladdrrefresh"
 let CALL_JUMPTOORDER = "calljumptoorder"
 
 let statusGuide = ["-4":"退款失败","-3":"取消退款","-2":"取消订单","-1":"付款失败","0":"未付款","1":"已付款","2":"退款中","3":"退款完成","4":"发货","5":"完成"]
+let statusColorGuide = ["-4":"eeeeee","-3":"eeeeee","-2":"eeeeee","-1":"eeeeee","0":"ED3C38","1":"437EED","2":"eeeeee","3":"eeeeee","4":"eeeeee","5":"eeeeee"]
 
 
 public var provinceDic: [String:String] = [:]
@@ -149,6 +150,45 @@ func today_pre_s(_ predays: Int) -> String {
     return curDate
 }
 
+extension String{
+    /// 将十六进制颜色转伟UIColor
+    /// - Returns: UIColor
+    public func toUIColor() -> UIColor {
+        //处理数值
+        var cString = self.uppercased().trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
+        
+        let length = (cString as NSString).length
+        //错误处理
+        if (length < 6 || length > 7 || (!cString.hasPrefix("#") && length == 7)){
+            return UIColor.white
+        }
+        
+        if cString.hasPrefix("#"){
+            cString = (cString as NSString).substring(from: 1)
+        }
+        //字符chuan截取
+        var range = NSRange()
+        range.location = 0
+        range.length = 2
+        
+        let rString = (cString as NSString).substring(with: range)
+        
+        range.location = 2
+        let gString = (cString as NSString).substring(with: range)
+        
+        range.location = 4
+        let bString = (cString as NSString).substring(with: range)
+        
+        //存储转换后的数值
+        var r:UInt32 = 0,g:UInt32 = 0,b:UInt32 = 0
+        //进行转换
+        Scanner(string: rString).scanHexInt32(&r)
+        Scanner(string: gString).scanHexInt32(&g)
+        Scanner(string: bString).scanHexInt32(&b)
+        //根据颜色值创建UIColor
+        return UIColor(red: CGFloat(r)/255.0, green: CGFloat(g)/255.0, blue: CGFloat(b)/255.0, alpha: 1.0)
+    }
+}
 
 
 

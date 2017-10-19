@@ -14,7 +14,7 @@ class MyOrderController: UIViewController, UIScrollViewDelegate {
     fileprivate lazy var scrollView: UIScrollView = {
         let scrollView = UIScrollView()
         scrollView.backgroundColor = #colorLiteral(red: 0.9647058824, green: 0.9647058824, blue: 0.9647058824, alpha: 1)
-        scrollView.frame = CGRect(x: 0, y: 35 + 10, width: self.view.st_width, height: self.view.st_height - 49 - 45 - 64)
+        scrollView.frame = CGRect(x: 0, y: 35 + 10, width: self.view.st_width, height: self.view.st_height - 45 - 64)
         scrollView.isPagingEnabled = true
         scrollView.delegate = self
         scrollView.showsVerticalScrollIndicator = false
