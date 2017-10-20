@@ -93,7 +93,8 @@ class OrderListController: UITableViewController {
         cell.statusBtn.layer.borderWidth = 1
         cell.statusBtn.layer.borderColor = statusColorGuide[model.status!]!.toUIColor().cgColor
         cell.statusBtn.tag = indexPath.section
-        if model.status == "0" {
+        ANLog(model.status)
+        if model.status! == "0" {
             cell.statusBtn.addTarget(self, action: #selector(payAction(sender:)), for: .touchUpInside)
         }
         

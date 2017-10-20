@@ -15,10 +15,12 @@ class SecondCell: UITableViewCell {
     var oneModel = GoodsModel(json:JSON.null) {
         didSet {
             titleLab.text = oneModel.goodsName
-    
+            let url = URL(string: "http://10.0.13.93/\(oneModel.goodsImg!)")
+            img.kf.setImage(with: url, placeholder: #imageLiteral(resourceName: "图片占位"))
             
         }
     }
+    @IBOutlet weak var img: UIImageView!
     @IBOutlet weak var titleLab: UILabel!
 
     override func awakeFromNib() {
